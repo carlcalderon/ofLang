@@ -22,5 +22,8 @@
         { "trigger": "ofBackground (brightness, alpha)", "contents": "ofBackground(${1:int brightness}, ${2:int alpha=255})" },
         { "trigger": "ofBackground (ofColor)", "contents": "ofBackground(${1:const ofColor &c})" }
 
+        // =====================================================================
+        // ofCamera
+        
     ]
 }
