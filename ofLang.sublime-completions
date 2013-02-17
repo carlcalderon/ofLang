@@ -1,0 +1,26 @@
+// openFrameworks - completions
+// 
+// syntax:
+// 
+// {
+//  "trigger": "namespace::method (variation)",
+//  "contents": "namespace::method()"
+// }
+// 
+// example:
+// { "trigger": "ofBackground (ofColor)", "contents": "ofBackground(${1:const ofColor &c})" },
+// 
+{
+    "scope": "source.c++",
+
+    "completions":
+    [
+        // =====================================================================
+        // ofGraphics
+        { "trigger": "ofBackground (rgb)", "contents": "ofBackground(${1:int r}, ${2:int g}, ${3:int b})" },
+        { "trigger": "ofBackground (rgba)", "contents": "ofBackground(${1:int r}, ${2:int g}, ${3:int b)}, ${4:int a})" },
+        { "trigger": "ofBackground (brightness, alpha)", "contents": "ofBackground(${1:int brightness}, ${2:int alpha=255})" },
+        { "trigger": "ofBackground (ofColor)", "contents": "ofBackground(${1:const ofColor &c})" }
+
+    ]
+}
