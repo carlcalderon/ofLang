@@ -1,15 +1,15 @@
 // openFrameworks - completions
-// 
+//
 // syntax:
-// 
+//
 // {
 //  "trigger": "namespace::method \t(variation)",
 //  "contents": "namespace::method()"
 // }
-// 
+//
 // example:
-// { "trigger": "ofBackground \t(ofColor)", "contents": "ofBackground(${1:const ofColor &c})" },
-// 
+// { "trigger": "ofBackground \t(ofColor)"                                           ,"contents": "ofBackground(${1:const ofColor &c})" },
+//
 {
     "scope": "source.c++",
 
@@ -17,549 +17,549 @@
     [
         // =====================================================================
         // ofGraphics
-        
+
         // ofBackground
-        { "trigger": "ofBackground \t(rgb)"       ,"contents": "ofBackground(${1:int r}, ${2:int g}, ${3:int b})"},
-        { "trigger": "ofBackground \t(rgba)", "contents": "ofBackground(${1:int r}, ${2:int g}, ${3:int b}, ${4:int a})" },
-        { "trigger": "ofBackground \t(brightness, alpha)", "contents": "ofBackground(${1:int brightness}, ${2:int alpha=255})" },
-        { "trigger": "ofBackground \t(ofColor)", "contents": "ofBackground(${1:const ofColor &c})" },
+        { "trigger": "ofBackground \t(rgb)"                                          ,"contents": "ofBackground(${1:int r}, ${2:int g}, ${3:int b})"},
+        { "trigger": "ofBackground \t(rgba)"                                         ,"contents": "ofBackground(${1:int r}, ${2:int g}, ${3:int b}, ${4:int a})" },
+        { "trigger": "ofBackground \t(brightness, alpha)"                            ,"contents": "ofBackground(${1:int brightness}, ${2:int alpha=255})" },
+        { "trigger": "ofBackground \t(ofColor)"                                      ,"contents": "ofBackground(${1:const ofColor &c})" },
 
         // ofBackgroundGradient
-        { "trigger": "ofBackgroundGradient", "contents": "ofBackgroundGradient(${1:const ofColor &start}, ${2:const ofColor &end}, ${2:ofGradientMode mode=OF_GRADIENT_CIRCULAR})" },
+        { "trigger": "ofBackgroundGradient"                                          ,"contents": "ofBackgroundGradient(${1:const ofColor &start}, ${2:const ofColor &end}, ${2:ofGradientMode mode=OF_GRADIENT_CIRCULAR})" },
 
         // ofBackgroundHex
-        { "trigger": "ofBackgroundHex", "contents": "ofBackgroundHex(${1:int hexColor}, ${2:int alpha=255})" },
+        { "trigger": "ofBackgroundHex"                                               ,"contents": "ofBackgroundHex(${1:int hexColor}, ${2:int alpha=255})" },
 
         // ofBeginSaveScreenAsPDF
-        { "trigger": "ofBeginSaveScreenAsPDF", "contents": "ofBeginSaveScreenAsPDF(${1:string filename}, ${2:bool bMultipage=false}, ${3:bool b3D=false}, ${4:ofRectangle viewport=ofRectangle(0, 0, 0, 0)})" },
-        
+        { "trigger": "ofBeginSaveScreenAsPDF"                                        ,"contents": "ofBeginSaveScreenAsPDF(${1:string filename}, ${2:bool bMultipage=false}, ${3:bool b3D=false}, ${4:ofRectangle viewport=ofRectangle(0, 0, 0, 0)})" },
+
         // ofBeginShape
-        { "trigger": "ofBeginShape", "contents": "ofBeginShape()" },
+        { "trigger": "ofBeginShape"                                                  ,"contents": "ofBeginShape()" },
 
         // ofBezier
-        { "trigger": "ofBezier \t(xy)", "contents": "ofBezier(${1:float x0}, ${2:float y0}, ${3:float x1}, ${4:float y1}, ${5:float x2}, ${6:float y2}, ${7:float x3}, ${8:float y3})" },
-        { "trigger": "ofBezier \t(xyz)", "contents": "ofBezier(${1:float x0}, ${2:float y0}, ${3:float z0}, ${4:float x1}, ${5:float y1}, ${6:float z1}, ${7:float x2}, ${8:float y2}, ${9:float z2}, ${10:float x3}, ${11:float y3}, ${12:float z3})" },
-        
+        { "trigger": "ofBezier \t(xy)"                                               ,"contents": "ofBezier(${1:float x0}, ${2:float y0}, ${3:float x1}, ${4:float y1}, ${5:float x2}, ${6:float y2}, ${7:float x3}, ${8:float y3})" },
+        { "trigger": "ofBezier \t(xyz)"                                              ,"contents": "ofBezier(${1:float x0}, ${2:float y0}, ${3:float z0}, ${4:float x1}, ${5:float y1}, ${6:float z1}, ${7:float x2}, ${8:float y2}, ${9:float z2}, ${10:float x3}, ${11:float y3}, ${12:float z3})" },
+
         // ofBezierVertex
-        { "trigger": "ofBezierVertex \t(xy)", "contents": "ofBezierVertex(${1:float x1}, ${2:float y1}, ${3:float x2}, ${4:float y2}, ${5:float x3}, ${6:float y3})" },
-        { "trigger": "ofBezierVertex \t(xyz)", "contents": "ofBezierVertex(${1:float x1}, ${2:float y1}, ${3:float z1}, ${4:float x2}, ${5:float y2}, ${6:float z2}, ${7:float x3}, ${8:float y3}, ${9:float z3})" },
-        { "trigger": "ofBezierVertex \t(ofPoint)", "contents": "ofBezierVertex(${1:const ofPoint &p1}, ${2:const ofPoint &p2}, ${3:const ofPoint &p3})" },
-        
+        { "trigger": "ofBezierVertex \t(xy)"                                         ,"contents": "ofBezierVertex(${1:float x1}, ${2:float y1}, ${3:float x2}, ${4:float y2}, ${5:float x3}, ${6:float y3})" },
+        { "trigger": "ofBezierVertex \t(xyz)"                                        ,"contents": "ofBezierVertex(${1:float x1}, ${2:float y1}, ${3:float z1}, ${4:float x2}, ${5:float y2}, ${6:float z2}, ${7:float x3}, ${8:float y3}, ${9:float z3})" },
+        { "trigger": "ofBezierVertex \t(ofPoint)"                                    ,"contents": "ofBezierVertex(${1:const ofPoint &p1}, ${2:const ofPoint &p2}, ${3:const ofPoint &p3})" },
+
         // ofBgColorPtr
-        { "trigger": "ofBgColorPtr", "contents": "ofBgColorPtr()" },
-        
+        { "trigger": "ofBgColorPtr"                                                  ,"contents": "ofBgColorPtr()" },
+
         // ofBox
-        { "trigger": "ofBox", "contents": "ofBox(${1:float size})" },
-        { "trigger": "ofBox \t(xy)", "contents": "ofBox(${1:float x}, ${2:float y}, ${3:float size})" },
-        { "trigger": "ofBox \t(xyz)", "contents": "ofBox(${1:float x}, ${2:float y}, ${3:float z}, ${4:float size})" },
-        { "trigger": "ofBox \t(ofPoint)", "contents": "ofBox(${1:const ofPoint &position}, ${2:float size})" },
+        { "trigger": "ofBox"                                                         ,"contents": "ofBox(${1:float size})" },
+        { "trigger": "ofBox \t(xy)"                                                  ,"contents": "ofBox(${1:float x}, ${2:float y}, ${3:float size})" },
+        { "trigger": "ofBox \t(xyz)"                                                 ,"contents": "ofBox(${1:float x}, ${2:float y}, ${3:float z}, ${4:float size})" },
+        { "trigger": "ofBox \t(ofPoint)"                                             ,"contents": "ofBox(${1:const ofPoint &position}, ${2:float size})" },
 
         // ofCircle
-        { "trigger": "ofCircle \t(xy)", "contents": "ofCircle(${1:float x}, ${2:float y}, ${3:float radius})" },
-        { "trigger": "ofCircle \t(xyz)", "contents": "ofCircle(${1:float x}, ${2:float y}, ${3:float z}, ${4:float radius})" },
-        { "trigger": "ofCircle \t(ofPoint)", "contents": "ofCircle(${1:const ofPoint &p}, ${2:float radius})" },
+        { "trigger": "ofCircle \t(xy)"                                               ,"contents": "ofCircle(${1:float x}, ${2:float y}, ${3:float radius})" },
+        { "trigger": "ofCircle \t(xyz)"                                              ,"contents": "ofCircle(${1:float x}, ${2:float y}, ${3:float z}, ${4:float radius})" },
+        { "trigger": "ofCircle \t(ofPoint)"                                          ,"contents": "ofCircle(${1:const ofPoint &p}, ${2:float radius})" },
 
         // ofClear
-        { "trigger": "ofClear \t(rgba)", "contents": "ofClear(${1:float r}, ${2:float g}, ${3:float b}, ${4:float a=0})" },
-        { "trigger": "ofClear \t(brightness, alpha)", "contents": "ofClear(${1:float brightness}, ${2:float a=0})" },
-        { "trigger": "ofClear \t(ofColor)", "contents": "ofClear(${1:const ofColor &c})" },
-        
+        { "trigger": "ofClear \t(rgba)"                                              ,"contents": "ofClear(${1:float r}, ${2:float g}, ${3:float b}, ${4:float a=0})" },
+        { "trigger": "ofClear \t(brightness, alpha)"                                 ,"contents": "ofClear(${1:float brightness}, ${2:float a=0})" },
+        { "trigger": "ofClear \t(ofColor)"                                           ,"contents": "ofClear(${1:const ofColor &c})" },
+
         // ofClearAlpha
-        { "trigger": "ofClearAlpha", "contents": "ofClearAlpha()" },
-        
+        { "trigger": "ofClearAlpha"                                                  ,"contents": "ofClearAlpha()" },
+
         // ofCone
-        { "trigger": "ofCone \t(size)", "contents": "ofCone(${1:float size})" },
-        { "trigger": "ofCone \t(radius size)", "contents": "ofCone(${1:float radius}, ${2:float height})" },
-        { "trigger": "ofCone \t(xy)", "contents": "ofCone(${1:float x}, ${2:float y}, ${3:float radius}, ${4:float height})" },
-        { "trigger": "ofCone \t(xyz)", "contents": "ofCone(${1:float x}, ${2:float y}, ${3:float z}, ${4:float radius}, ${5:float height})" },
-        { "trigger": "ofCone \t(ofPoint)", "contents": "ofCone(${1:const ofPoint &position}, ${2:float radius}, ${3:float height})" },
-        
+        { "trigger": "ofCone \t(size)"                                               ,"contents": "ofCone(${1:float size})" },
+        { "trigger": "ofCone \t(radius size)"                                        ,"contents": "ofCone(${1:float radius}, ${2:float height})" },
+        { "trigger": "ofCone \t(xy)"                                                 ,"contents": "ofCone(${1:float x}, ${2:float y}, ${3:float radius}, ${4:float height})" },
+        { "trigger": "ofCone \t(xyz)"                                                ,"contents": "ofCone(${1:float x}, ${2:float y}, ${3:float z}, ${4:float radius}, ${5:float height})" },
+        { "trigger": "ofCone \t(ofPoint)"                                            ,"contents": "ofCone(${1:const ofPoint &position}, ${2:float radius}, ${3:float height})" },
+
         // ofCurve
-        { "trigger": "ofCurve \t(xy)", "contents": "ofCurve(${1:float x0}, ${2:float y0}, ${3:float x1}, ${4:float y1}, ${5:float x2}, ${6:float y2}, ${7:float x3}, ${8:float y3})" },
-        { "trigger": "ofCurve \t(xyz)", "contents": "ofCurve(${1:float x0}, ${2:float y0}, ${3:float z0}, ${4:float x1}, ${5:float y1}, ${6:float z1}, ${7:float x2}, ${8:float y2}, ${9:float z2}, ${10:float x3}, ${11:float y3}, ${12:float z3})" },
-        
+        { "trigger": "ofCurve \t(xy)"                                                ,"contents": "ofCurve(${1:float x0}, ${2:float y0}, ${3:float x1}, ${4:float y1}, ${5:float x2}, ${6:float y2}, ${7:float x3}, ${8:float y3})" },
+        { "trigger": "ofCurve \t(xyz)"                                               ,"contents": "ofCurve(${1:float x0}, ${2:float y0}, ${3:float z0}, ${4:float x1}, ${5:float y1}, ${6:float z1}, ${7:float x2}, ${8:float y2}, ${9:float z2}, ${10:float x3}, ${11:float y3}, ${12:float z3})" },
+
         // ofCurveVertex
-        { "trigger": "ofCurveVertex \t(xy)", "contents": "ofCurveVertex(${1:float x}, ${2:float y})" },
-        { "trigger": "ofCurveVertex \t(ofPoint)", "contents": "ofCurveVertex(${1:ofPoint &p})" },
-        
+        { "trigger": "ofCurveVertex \t(xy)"                                          ,"contents": "ofCurveVertex(${1:float x}, ${2:float y})" },
+        { "trigger": "ofCurveVertex \t(ofPoint)"                                     ,"contents": "ofCurveVertex(${1:ofPoint &p})" },
+
         // ofCurveVertices
-        { "trigger": "ofCurveVertices", "contents": "ofCurveVertices(${1:const vector< ofPoint > &curvePoints})" },
-        
+        { "trigger": "ofCurveVertices"                                               ,"contents": "ofCurveVertices(${1:const vector< ofPoint > &curvePoints})" },
+
         // ofDisableAlphaBlending
-        { "trigger": "ofDisableAlphaBlending", "contents": "ofDisableAlphaBlending()" },
+        { "trigger": "ofDisableAlphaBlending"                                        ,"contents": "ofDisableAlphaBlending()" },
 
         // ofDisableBlendMode
-        { "trigger": "ofDisableBlendMode", "contents": "ofDisableBlendMode()" },
-        
+        { "trigger": "ofDisableBlendMode"                                            ,"contents": "ofDisableBlendMode()" },
+
         // ofDisablePointSprites
-        { "trigger": "ofDisablePointSprites", "contents": "ofDisablePointSprites()" },
-        
+        { "trigger": "ofDisablePointSprites"                                         ,"contents": "ofDisablePointSprites()" },
+
         // ofDisableSmoothing
-        { "trigger": "ofDisableSmoothing", "contents": "ofDisableSmoothing()" },
-        
+        { "trigger": "ofDisableSmoothing"                                            ,"contents": "ofDisableSmoothing()" },
+
         // ofDrawBitmapString
-        { "trigger": "ofDrawBitmapString \t(xy)", "contents": "ofDrawBitmapString(${1:string textString}, ${2:float x}, ${3:float y}})" },
-        { "trigger": "ofDrawBitmapString \t(xyz)", "contents": "ofDrawBitmapString(${1:string textString}, ${2:float x}, ${3:float y}, ${4:float z})" },
-        { "trigger": "ofDrawBitmapString \t(ofPoint)", "contents": "ofDrawBitmapString(${1:string textString}, ${2:const ofPoint &p})" },
-        
+        { "trigger": "ofDrawBitmapString \t(xy)"                                     ,"contents": "ofDrawBitmapString(${1:string textString}, ${2:float x}, ${3:float y}})" },
+        { "trigger": "ofDrawBitmapString \t(xyz)"                                    ,"contents": "ofDrawBitmapString(${1:string textString}, ${2:float x}, ${3:float y}, ${4:float z})" },
+        { "trigger": "ofDrawBitmapString \t(ofPoint)"                                ,"contents": "ofDrawBitmapString(${1:string textString}, ${2:const ofPoint &p})" },
+
         // ofDrawBitmapStringHighlight
-        { "trigger": "ofDrawBitmapStringHighlight \t(xy)", "contents": "ofDrawBitmapStringHighlight(${1:string text}, ${2:int x}, ${3:int x}, ${4:const ofColor &background=ofColor::black}, ${5:const ofColor &foreground=ofColor::white})" },
-        { "trigger": "ofDrawBitmapStringHighlight \t(ofPoint)", "contents": "ofDrawBitmapStringHighlight(${1:string text}, ${2:const ofPoint &position}, ${3:const ofColor &background=ofColor::black}, ${4:const ofColor &foreground=ofColor::white})" },
-        
+        { "trigger": "ofDrawBitmapStringHighlight \t(xy)"                            ,"contents": "ofDrawBitmapStringHighlight(${1:string text}, ${2:int x}, ${3:int x}, ${4:const ofColor &background=ofColor::black}, ${5:const ofColor &foreground=ofColor::white})" },
+        { "trigger": "ofDrawBitmapStringHighlight \t(ofPoint)"                       ,"contents": "ofDrawBitmapStringHighlight(${1:string text}, ${2:const ofPoint &position}, ${3:const ofColor &background=ofColor::black}, ${4:const ofColor &foreground=ofColor::white})" },
+
         // ofEllipse
-        { "trigger": "ofEllipse \t(xy)", "contents": "ofEllipse(${1:float x}, ${2:float y}, ${3:float width}, ${4:float height})" },
-        { "trigger": "ofEllipse \t(xyz)", "contents": "ofEllipse(${1:float x}, ${2:float y}, ${3:float z}, ${4:float width}, ${5:float height})" },
-        { "trigger": "ofEllipse \t(ofPoint)", "contents": "ofEllipse(${1:const ofPoint &p}, ${2:float width}, ${3:float height})" },
+        { "trigger": "ofEllipse \t(xy)"                                              ,"contents": "ofEllipse(${1:float x}, ${2:float y}, ${3:float width}, ${4:float height})" },
+        { "trigger": "ofEllipse \t(xyz)"                                             ,"contents": "ofEllipse(${1:float x}, ${2:float y}, ${3:float z}, ${4:float width}, ${5:float height})" },
+        { "trigger": "ofEllipse \t(ofPoint)"                                         ,"contents": "ofEllipse(${1:const ofPoint &p}, ${2:float width}, ${3:float height})" },
 
         // ofEnableAlphaBlending
-        { "trigger": "ofEnableAlphaBlending", "contents": "ofEnableAlphaBlending()" },
-        
+        { "trigger": "ofEnableAlphaBlending"                                         ,"contents": "ofEnableAlphaBlending()" },
+
         // ofEnableBlendMode
-        { "trigger": "ofEnableBlendMode", "contents": "ofEnableBlendMode(${1:ofBlendMode blendMode})" },
-        
+        { "trigger": "ofEnableBlendMode"                                             ,"contents": "ofEnableBlendMode(${1:ofBlendMode blendMode})" },
+
         // ofEnablePointSprites
-        { "trigger": "ofEnablePointSprites", "contents": "ofEnablePointSprites()" },
+        { "trigger": "ofEnablePointSprites"                                          ,"contents": "ofEnablePointSprites()" },
 
         // ofEnableSmoothing
-        { "trigger": "ofEnableSmoothing", "contents": "ofEnableSmoothing()" },
-        
+        { "trigger": "ofEnableSmoothing"                                             ,"contents": "ofEnableSmoothing()" },
+
         // ofEndSaveScreenAsPDF
-        { "trigger": "ofEndSaveScreenAsPDF", "contents": "ofEndSaveScreenAsPDF()" },
-        
+        { "trigger": "ofEndSaveScreenAsPDF"                                          ,"contents": "ofEndSaveScreenAsPDF()" },
+
         // ofEndShape
-        { "trigger": "ofEndShape", "contents": "ofEndShape(${1:bool bClose=false)}" },
-        
+        { "trigger": "ofEndShape"                                                    ,"contents": "ofEndShape(${1:bool bClose=false)}" },
+
         // ofFill
-        { "trigger": "ofFill", "contents": "ofFill()" },
-        
+        { "trigger": "ofFill"                                                        ,"contents": "ofFill()" },
+
         // ofGetCoordHandedness
-        { "trigger": "ofGetCoordHandedness", "contents": "ofGetCoordHandedness()" },
-        
+        { "trigger": "ofGetCoordHandedness"                                          ,"contents": "ofGetCoordHandedness()" },
+
         // ofGetCurrentRenderer
-        { "trigger": "ofGetCurrentRenderer", "contents": "ofGetCurrentRenderer()" },
-        
+        { "trigger": "ofGetCurrentRenderer"                                          ,"contents": "ofGetCurrentRenderer()" },
+
         // ofGetCurrentViewport
-        { "trigger": "ofGetCurrentViewport", "contents": "ofGetCurrentViewport()" },
+        { "trigger": "ofGetCurrentViewport"                                          ,"contents": "ofGetCurrentViewport()" },
 
         // ofGetFill
-        { "trigger": "ofGetFill", "contents": "ofGetFill()" },
+        { "trigger": "ofGetFill"                                                     ,"contents": "ofGetFill()" },
 
         // ofGetGLRenderer
-        { "trigger": "ofGetGLRenderer", "contents": "ofGetGLRenderer()" },
+        { "trigger": "ofGetGLRenderer"                                               ,"contents": "ofGetGLRenderer()" },
 
         // ofGetRectMode
-        { "trigger": "ofGetRectMode", "contents": "ofGetRectMode()" },
+        { "trigger": "ofGetRectMode"                                                 ,"contents": "ofGetRectMode()" },
 
         // ofGetStyle
-        { "trigger": "ofGetStyle", "contents": "ofGetStyle()" },
+        { "trigger": "ofGetStyle"                                                    ,"contents": "ofGetStyle()" },
 
         // ofGetViewportHeight
-        { "trigger": "ofGetViewportHeight", "contents": "ofGetViewportHeight()" },
+        { "trigger": "ofGetViewportHeight"                                           ,"contents": "ofGetViewportHeight()" },
 
         // ofGetViewportWidth
-        { "trigger": "ofGetViewportWidth", "contents": "ofGetViewportWidth()" },
+        { "trigger": "ofGetViewportWidth"                                            ,"contents": "ofGetViewportWidth()" },
 
         // ofLine
-        { "trigger": "ofLine \t(xy)", "contents": "ofLine(${1:float x1}, ${2:float y1}, ${3:float x2}, ${4:float y2})" },
-        { "trigger": "ofLine \t(xyz)", "contents": "ofLine(${1:float x1}, ${2:float y1}, ${3:float z1}, ${4:float x2}, ${5:float y2}, ${6:float z2})" },
-        { "trigger": "ofLine \t(ofPoint)", "contents": "ofLine(${1:const ofPoint &p1}, ${2:const ofPoint &p2})" },
-        
+        { "trigger": "ofLine \t(xy)"                                                 ,"contents": "ofLine(${1:float x1}, ${2:float y1}, ${3:float x2}, ${4:float y2})" },
+        { "trigger": "ofLine \t(xyz)"                                                ,"contents": "ofLine(${1:float x1}, ${2:float y1}, ${3:float z1}, ${4:float x2}, ${5:float y2}, ${6:float z2})" },
+        { "trigger": "ofLine \t(ofPoint)"                                            ,"contents": "ofLine(${1:const ofPoint &p1}, ${2:const ofPoint &p2})" },
+
         // ofLoadIdentityMatrix
-        { "trigger": "ofLoadIdentityMatrix", "contents": "ofLoadIdentityMatrix()" },
+        { "trigger": "ofLoadIdentityMatrix"                                          ,"contents": "ofLoadIdentityMatrix()" },
 
         // ofLoadMatrix
-        { "trigger": "ofLoadMatrix \t(ofMatrix4x4)", "contents": "ofLoadMatrix(${1:const ofMatrix4x4 &m})" },
-        { "trigger": "ofLoadMatrix \t(float)", "contents": "ofLoadMatrix(${1:const float *m})" },
-        
+        { "trigger": "ofLoadMatrix \t(ofMatrix4x4)"                                  ,"contents": "ofLoadMatrix(${1:const ofMatrix4x4 &m})" },
+        { "trigger": "ofLoadMatrix \t(float)"                                        ,"contents": "ofLoadMatrix(${1:const float *m})" },
+
         // ofMultMatrix
-        { "trigger": "ofMultMatrix \t(ofMatrix4x4)", "contents": "ofMultMatrix(${1:const ofMatrix4x4 &m})" },
-        { "trigger": "ofMultMatrix \t(float)", "contents": "ofMultMatrix(${1:const float *m})" },
-        
+        { "trigger": "ofMultMatrix \t(ofMatrix4x4)"                                  ,"contents": "ofMultMatrix(${1:const ofMatrix4x4 &m})" },
+        { "trigger": "ofMultMatrix \t(float)"                                        ,"contents": "ofMultMatrix(${1:const float *m})" },
+
         // ofNextContour
-        { "trigger": "ofNextContour", "contents": "ofNextContour(${1:bool bClose=false})" },
-        
+        { "trigger": "ofNextContour"                                                 ,"contents": "ofNextContour(${1:bool bClose=false})" },
+
         // ofNoFill
-        { "trigger": "ofNoFill", "contents": "ofNoFill()" },
+        { "trigger": "ofNoFill"                                                      ,"contents": "ofNoFill()" },
 
         // ofOrientationToDegrees
-        { "trigger": "ofOrientationToDegrees", "contents": "ofOrientationToDegrees(${1:ofOrientation orientation})" },
+        { "trigger": "ofOrientationToDegrees"                                        ,"contents": "ofOrientationToDegrees(${1:ofOrientation orientation})" },
 
         // ofPopMatrix
-        { "trigger": "ofPopMatrix", "contents": "ofPopMatrix()" },
+        { "trigger": "ofPopMatrix"                                                   ,"contents": "ofPopMatrix()" },
 
         // ofPopStyle
-        { "trigger": "ofPopStyle", "contents": "ofPopStyle()" },
+        { "trigger": "ofPopStyle"                                                    ,"contents": "ofPopStyle()" },
 
         // ofPopView
-        { "trigger": "ofPopView", "contents": "ofPopView()" },
+        { "trigger": "ofPopView"                                                     ,"contents": "ofPopView()" },
 
         // ofPushMatrix
-        { "trigger": "ofPushMatrix", "contents": "ofPushMatrix()" },
+        { "trigger": "ofPushMatrix"                                                  ,"contents": "ofPushMatrix()" },
 
         // ofPushStyle
-        { "trigger": "ofPushStyle", "contents": "ofPushStyle()" },
+        { "trigger": "ofPushStyle"                                                   ,"contents": "ofPushStyle()" },
 
         // ofPushView
-        { "trigger": "ofPushView", "contents": "ofPushView()" },
+        { "trigger": "ofPushView"                                                    ,"contents": "ofPushView()" },
 
         // ofRect
-        { "trigger": "ofRect \t(xywh)", "contents": "ofRect(${1:float x}, ${2:float y}, ${3:float w}, ${4:float h})" },
-        { "trigger": "ofRect \t(xyzwh)", "contents": "ofRect(${1:float x}, ${2:float y}, ${3:float z}, ${4:float w}, ${5:float h})" },
-        { "trigger": "ofRect \t(ofPoint)", "contents": "ofRect(${1:const ofPoint &p}, ${2:float w}, ${3:float h})" },
-        { "trigger": "ofRect \t(ofRectangle)", "contents": "ofRect(${1:const ofRectangle &r})" },
+        { "trigger": "ofRect \t(xywh)"                                               ,"contents": "ofRect(${1:float x}, ${2:float y}, ${3:float w}, ${4:float h})" },
+        { "trigger": "ofRect \t(xyzwh)"                                              ,"contents": "ofRect(${1:float x}, ${2:float y}, ${3:float z}, ${4:float w}, ${5:float h})" },
+        { "trigger": "ofRect \t(ofPoint)"                                            ,"contents": "ofRect(${1:const ofPoint &p}, ${2:float w}, ${3:float h})" },
+        { "trigger": "ofRect \t(ofRectangle)"                                        ,"contents": "ofRect(${1:const ofRectangle &r})" },
 
         // ofRectRounded
-        { "trigger": "ofRectRounded \t(xy)", "contents": "ofRectRounded(${1:float x}, ${2:float y}, ${3:float w}, ${4:float h}, ${5:float r})" },
-        { "trigger": "ofRectRounded \t(xyz)", "contents": "ofRectRounded(${1:float x}, ${2:float y}, ${3:float z}, ${4:float w}, ${5:float h}, ${6:float r})" },
-        { "trigger": "ofRectRounded \t(ofPoint)", "contents": "ofRectRounded(${1:const ofPoint &p}, ${2:float w}, ${3:float h}, ${4:float r})" },
-        { "trigger": "ofRectRounded \t(ofRectangle)", "contents": "ofRectRounded(${1:const ofRectangle &b}, ${2:float r})" },
-        
+        { "trigger": "ofRectRounded \t(xy)"                                          ,"contents": "ofRectRounded(${1:float x}, ${2:float y}, ${3:float w}, ${4:float h}, ${5:float r})" },
+        { "trigger": "ofRectRounded \t(xyz)"                                         ,"contents": "ofRectRounded(${1:float x}, ${2:float y}, ${3:float z}, ${4:float w}, ${5:float h}, ${6:float r})" },
+        { "trigger": "ofRectRounded \t(ofPoint)"                                     ,"contents": "ofRectRounded(${1:const ofPoint &p}, ${2:float w}, ${3:float h}, ${4:float r})" },
+        { "trigger": "ofRectRounded \t(ofRectangle)"                                 ,"contents": "ofRectRounded(${1:const ofRectangle &b}, ${2:float r})" },
+
         // ofRotate
-        { "trigger": "ofRotate", "contents": "ofRotate(${1:float degrees})" },
-        { "trigger": "ofRotate \t(xyz)", "contents": "ofRotate(${1:float degrees}, ${2:float vecX}, ${3:float vecY}, ${4:float vecZ})" },
-        
+        { "trigger": "ofRotate"                                                      ,"contents": "ofRotate(${1:float degrees})" },
+        { "trigger": "ofRotate \t(xyz)"                                              ,"contents": "ofRotate(${1:float degrees}, ${2:float vecX}, ${3:float vecY}, ${4:float vecZ})" },
+
         // ofRotateX
-        { "trigger": "ofRotateX", "contents": "ofRotateX(${1:float degrees})" },
+        { "trigger": "ofRotateX"                                                     ,"contents": "ofRotateX(${1:float degrees})" },
 
         // ofRotateY
-        { "trigger": "ofRotateY", "contents": "ofRotateY(${1:float degrees})" },
+        { "trigger": "ofRotateY"                                                     ,"contents": "ofRotateY(${1:float degrees})" },
 
         // ofRotateZ
-        { "trigger": "ofRotateZ", "contents": "ofRotateZ(${1:float degrees})" },
+        { "trigger": "ofRotateZ"                                                     ,"contents": "ofRotateZ(${1:float degrees})" },
 
         // ofScale
-        { "trigger": "ofScale", "contents": "ofScale(${1:float xAmnt}, ${2:float yAmnt}, ${3:float zAmnt=1})" },
+        { "trigger": "ofScale"                                                       ,"contents": "ofScale(${1:float xAmnt}, ${2:float yAmnt}, ${3:float zAmnt=1})" },
 
         // ofSetBackgroundAuto
-        { "trigger": "ofSetBackgroundAuto", "contents": "ofSetBackgroundAuto(${1:bool bManual})" },
+        { "trigger": "ofSetBackgroundAuto"                                           ,"contents": "ofSetBackgroundAuto(${1:bool bManual})" },
 
         // ofSetBackgroundColor
-        { "trigger": "ofSetBackgroundColor \t(rgba)", "contents": "ofSetBackgroundColor(${1:int r}, ${2:int g}, ${3:int b)}, ${4:int a=255})" },
-        { "trigger": "ofSetBackgroundColor \t(brightness, alpha)", "contents": "ofSetBackgroundColor(${1:int brightness}, ${2:int alpha=255})" },
-        { "trigger": "ofSetBackgroundColor \t(ofColor)", "contents": "ofSetBackgroundColor(${1:const ofColor &c})" },
+        { "trigger": "ofSetBackgroundColor \t(rgba)"                                 ,"contents": "ofSetBackgroundColor(${1:int r}, ${2:int g}, ${3:int b)}, ${4:int a=255})" },
+        { "trigger": "ofSetBackgroundColor \t(brightness, alpha)"                    ,"contents": "ofSetBackgroundColor(${1:int brightness}, ${2:int alpha=255})" },
+        { "trigger": "ofSetBackgroundColor \t(ofColor)"                              ,"contents": "ofSetBackgroundColor(${1:const ofColor &c})" },
 
         // ofSetBackgroundColorHex
-        { "trigger": "ofSetBackgroundColorHex", "contents": "ofSetBackgroundColorHex(${1:int hexColor}, ${2:int alpha=255})" },
+        { "trigger": "ofSetBackgroundColorHex"                                       ,"contents": "ofSetBackgroundColorHex(${1:int hexColor}, ${2:int alpha=255})" },
 
         // ofSetCircleResolution
-        { "trigger": "ofSetCircleResolution", "contents": "ofSetCircleResolution(${1:int res})" },
+        { "trigger": "ofSetCircleResolution"                                         ,"contents": "ofSetCircleResolution(${1:int res})" },
 
         // ofSetColor
-        { "trigger": "ofSetColor \t(rgb)", "contents": "ofSetColor(${1:int r}, ${2:int g}, ${3:int b})" },
-        { "trigger": "ofSetColor \t(rgba)", "contents": "ofSetColor(${1:int r}, ${2:int g}, ${3:int b}, ${4:int a})" },
-        { "trigger": "ofSetColor \t(gray)", "contents": "ofSetColor(${1:int gray})" },
-        { "trigger": "ofSetColor \t(ofColor)", "contents": "ofSetColor(${1:const ofColor &color})" },
-        { "trigger": "ofSetColor \t(ofColor, alpha)", "contents": "ofSetColor(${1:const ofColor &color}, ${2:int _a})" },
+        { "trigger": "ofSetColor \t(rgb)"                                            ,"contents": "ofSetColor(${1:int r}, ${2:int g}, ${3:int b})" },
+        { "trigger": "ofSetColor \t(rgba)"                                           ,"contents": "ofSetColor(${1:int r}, ${2:int g}, ${3:int b}, ${4:int a})" },
+        { "trigger": "ofSetColor \t(gray)"                                           ,"contents": "ofSetColor(${1:int gray})" },
+        { "trigger": "ofSetColor \t(ofColor)"                                        ,"contents": "ofSetColor(${1:const ofColor &color})" },
+        { "trigger": "ofSetColor \t(ofColor, alpha)"                                 ,"contents": "ofSetColor(${1:const ofColor &color}, ${2:int _a})" },
 
         // ofSetCoordHandedness
-        { "trigger": "ofSetCoordHandedness", "contents": "ofSetCoordHandedness(${1:ofHandednessType handedness})" },
+        { "trigger": "ofSetCoordHandedness"                                          ,"contents": "ofSetCoordHandedness(${1:ofHandednessType handedness})" },
 
         // ofSetCurrentRenderer
-        { "trigger": "ofSetCurrentRenderer", "contents": "ofSetCurrentRenderer(${1:ofPtr< ofBaseRenderer > renderer})" },
+        { "trigger": "ofSetCurrentRenderer"                                          ,"contents": "ofSetCurrentRenderer(${1:ofPtr< ofBaseRenderer > renderer})" },
 
         // ofSetCurveResolution
-        { "trigger": "ofSetCurveResolution", "contents": "ofSetCurveResolution(${1:int res})" },
+        { "trigger": "ofSetCurveResolution"                                          ,"contents": "ofSetCurveResolution(${1:int res})" },
 
         // ofSetDrawBitmapMode
-        { "trigger": "ofSetDrawBitmapMode", "contents": "ofSetDrawBitmapMode(${1:ofDrawBitmapMode mode})" },
+        { "trigger": "ofSetDrawBitmapMode"                                           ,"contents": "ofSetDrawBitmapMode(${1:ofDrawBitmapMode mode})" },
 
         // ofSetHexColor
-        { "trigger": "ofSetHexColor", "contents": "ofSetHexColor(${1:int hexColor})" },
+        { "trigger": "ofSetHexColor"                                                 ,"contents": "ofSetHexColor(${1:int hexColor})" },
 
         // ofSetLineWidth
-        { "trigger": "ofSetLineWidth", "contents": "ofSetLineWidth(${1:float lineWidth})" },
+        { "trigger": "ofSetLineWidth"                                                ,"contents": "ofSetLineWidth(${1:float lineWidth})" },
 
         // ofSetPolyMode
-        { "trigger": "ofSetPolyMode", "contents": "ofSetPolyMode(${1:int mode})" },
-        { "trigger": "ofSetPolyMode \t(ofPolyWindingMode)", "contents": "ofSetPolyMode(${1:ofPolyWindingMode mode})" },
+        { "trigger": "ofSetPolyMode"                                                 ,"contents": "ofSetPolyMode(${1:int mode})" },
+        { "trigger": "ofSetPolyMode \t(ofPolyWindingMode)"                           ,"contents": "ofSetPolyMode(${1:ofPolyWindingMode mode})" },
 
         // ofSetRectMode
-        { "trigger": "ofSetRectMode", "contents": "ofSetRectMode(${1:int mode})" },
-        { "trigger": "ofSetRectMode \t(ofRectMode)", "contents": "ofSetRectMode(${1:ofRectMode mode})" },
+        { "trigger": "ofSetRectMode"                                                 ,"contents": "ofSetRectMode(${1:int mode})" },
+        { "trigger": "ofSetRectMode \t(ofRectMode)"                                  ,"contents": "ofSetRectMode(${1:ofRectMode mode})" },
 
         // ofSetSphereResolution
-        { "trigger": "ofSetSphereResolution", "contents": "ofSetSphereResolution(${1:int res})" },
+        { "trigger": "ofSetSphereResolution"                                         ,"contents": "ofSetSphereResolution(${1:int res})" },
 
         // ofSetStyle
-        { "trigger": "ofSetStyle", "contents": "ofSetStyle(${1:ofStyle style})" },
+        { "trigger": "ofSetStyle"                                                    ,"contents": "ofSetStyle(${1:ofStyle style})" },
 
         // ofSetupScreen
-        { "trigger": "ofSetupScreen", "contents": "ofSetupScreen()" },
+        { "trigger": "ofSetupScreen"                                                 ,"contents": "ofSetupScreen()" },
 
         // ofSetupScreenOrtho
-        { "trigger": "ofSetupScreenOrtho", "contents": "ofSetupScreenOrtho(${1:float width=0}, ${2:float height=0}, ${3:ofOrientation orientation=OF_ORIENTATION_UNKNOWN}, ${4:bool vFlip=true}, ${5:float nearDist=-1}, ${6:float farDist=-1})" },
-        
+        { "trigger": "ofSetupScreenOrtho"                                            ,"contents": "ofSetupScreenOrtho(${1:float width=0}, ${2:float height=0}, ${3:ofOrientation orientation=OF_ORIENTATION_UNKNOWN}, ${4:bool vFlip=true}, ${5:float nearDist=-1}, ${6:float farDist=-1})" },
+
         // ofSetupScreenPerspective
-        { "trigger": "ofSetupScreenPerspective", "contents": "ofSetupScreenPerspective(${1:float width=0}, ${2:float height=0}, ${3:ofOrientation orientation=OF_ORIENTATION_UNKNOWN}, ${4:bool vFlip=true}, ${5:float fov=60}, ${6:float nearDist=0}, ${7:float farDist=0})" },
+        { "trigger": "ofSetupScreenPerspective"                                      ,"contents": "ofSetupScreenPerspective(${1:float width=0}, ${2:float height=0}, ${3:ofOrientation orientation=OF_ORIENTATION_UNKNOWN}, ${4:bool vFlip=true}, ${5:float fov=60}, ${6:float nearDist=0}, ${7:float farDist=0})" },
 
         // ofSphere
-        { "trigger": "ofSphere", "contents": "ofSphere(${1:float radius})" },
-        { "trigger": "ofSphere \t(xy)", "contents": "ofSphere(${1:float x}, ${2:float y}, ${3:float radius})" },
-        { "trigger": "ofSphere \t(xyz)", "contents": "ofSphere(${1:float x}, ${2:float y}, ${3:float z}, ${4:float radius})" },
-        { "trigger": "ofSphere \t(ofPoint)", "contents": "ofSphere(${1:const ofPoint &position}, ${2:float radius})" },
+        { "trigger": "ofSphere"                                                      ,"contents": "ofSphere(${1:float radius})" },
+        { "trigger": "ofSphere \t(xy)"                                               ,"contents": "ofSphere(${1:float x}, ${2:float y}, ${3:float radius})" },
+        { "trigger": "ofSphere \t(xyz)"                                              ,"contents": "ofSphere(${1:float x}, ${2:float y}, ${3:float z}, ${4:float radius})" },
+        { "trigger": "ofSphere \t(ofPoint)"                                          ,"contents": "ofSphere(${1:const ofPoint &position}, ${2:float radius})" },
 
         // ofTranslate
-        { "trigger": "ofTranslate \t(xyz)", "contents": "ofTranslate(${1:float x}, ${2:float y}, ${3:float z=0})" },
-        { "trigger": "ofTranslate \t(ofPoint)", "contents": "ofTranslate(${1:const ofPoint &p})" },
+        { "trigger": "ofTranslate \t(xyz)"                                           ,"contents": "ofTranslate(${1:float x}, ${2:float y}, ${3:float z=0})" },
+        { "trigger": "ofTranslate \t(ofPoint)"                                       ,"contents": "ofTranslate(${1:const ofPoint &p})" },
 
         // ofTriangle
-        { "trigger": "ofTriangle \t(xy)", "contents": "ofTriangle(${1:float x1}, ${2:float y1}, ${3:float x2}, ${4:float y2}, ${5:float x3}, ${6:float y3})" },
-        { "trigger": "ofTriangle \t(xyz)", "contents": "ofTriangle(${1:float x1}, ${2:float y1}, ${3:float z1}, ${4:float x2}, ${5:float y2}, ${6:float z2}, ${7:float x3}, ${8:float y3}, ${9:float z3})" },
-        { "trigger": "ofTriangle \t(ofPoint, ofPoint, ofPoint)", "contents": "ofTriangle(${1:const ofPoint &p1}, ${2:const ofPoint &p2}, ${3:const ofPoint &p3})" },
-        
+        { "trigger": "ofTriangle \t(xy)"                                             ,"contents": "ofTriangle(${1:float x1}, ${2:float y1}, ${3:float x2}, ${4:float y2}, ${5:float x3}, ${6:float y3})" },
+        { "trigger": "ofTriangle \t(xyz)"                                            ,"contents": "ofTriangle(${1:float x1}, ${2:float y1}, ${3:float z1}, ${4:float x2}, ${5:float y2}, ${6:float z2}, ${7:float x3}, ${8:float y3}, ${9:float z3})" },
+        { "trigger": "ofTriangle \t(ofPoint, ofPoint, ofPoint)"                      ,"contents": "ofTriangle(${1:const ofPoint &p1}, ${2:const ofPoint &p2}, ${3:const ofPoint &p3})" },
+
         // ofVertex
-        { "trigger": "ofVertex \t(float, float)", "contents": "ofVertex(${1:float x}, ${2:float y})" },
-        { "trigger": "ofVertex \t(float, float, float)", "contents": "ofVertex(${1:float x}, ${2:float y}, ${3:float z})" },
-        { "trigger": "ofVertex \t(ofPoint)", "contents": "ofVertex(${1:ofPoint &p})" },
-        
+        { "trigger": "ofVertex \t(xy)"                                               ,"contents": "ofVertex(${1:float x}, ${2:float y})" },
+        { "trigger": "ofVertex \t(xyz)"                                              ,"contents": "ofVertex(${1:float x}, ${2:float y}, ${3:float z})" },
+        { "trigger": "ofVertex \t(ofPoint)"                                          ,"contents": "ofVertex(${1:ofPoint &p})" },
+
         // ofVertices
-        { "trigger": "ofVertices", "contents": "ofVertices(${1:const vector< ofPoint > &polyPoints})" },
+        { "trigger": "ofVertices"                                                    ,"contents": "ofVertices(${1:const vector< ofPoint > &polyPoints})" },
 
         // ofViewport
-        { "trigger": "ofViewport", "contents": "ofViewport(${1:float x=0}, ${2:float y=0}, ${3:float width=0}, ${4:float height=0}, ${5:bool invertY=true})" },
-        { "trigger": "ofViewport \t(ofRectangle)", "contents": "ofViewport(${1:ofRectangle viewport})" },
+        { "trigger": "ofViewport"                                                    ,"contents": "ofViewport(${1:float x=0}, ${2:float y=0}, ${3:float width=0}, ${4:float height=0}, ${5:bool invertY=true})" },
+        { "trigger": "ofViewport \t(ofRectangle)"                                    ,"contents": "ofViewport(${1:ofRectangle viewport})" },
 
         // ofbClearBg
-        { "trigger": "ofbClearBg", "contents": "ofbClearBg()" },
+        { "trigger": "ofbClearBg"                                                    ,"contents": "ofbClearBg()" },
 
         // =====================================================================
         // ofCamera
-        { "trigger": "ofCamera::begin \t(ofRectangle)"                                       ,"contents": "begin(${1:ofRectangle viewport=ofGetCurrentViewport()})"},
-        { "trigger": "ofCamera::cacheMatrices \t(bool)"                                      ,"contents": "cacheMatrices(${1:bool cache=true})"},
-        { "trigger": "ofCamera::cameraToWorld \t(ofVec3f, ofRectangle)"                      ,"contents": "cameraToWorld(${1:ofVec3f CameraXYZ}, ${2:ofRectangle viewport=ofGetCurrentViewport()})"},
-        { "trigger": "ofCamera::disableOrtho"                                                ,"contents": "disableOrtho()"},
-        { "trigger": "ofCamera::enableOrtho"                                                 ,"contents": "enableOrtho()"},
-        { "trigger": "ofCamera::end"                                                         ,"contents": "end()"},
-        { "trigger": "ofCamera::getFarClip"                                                  ,"contents": "getFarClip()"},
-        { "trigger": "ofCamera::getImagePlaneDistance \t(ofRectangle)"                       ,"contents": "getImagePlaneDistance(${1:ofRectangle viewport=ofGetCurrentViewport()})"},
-        { "trigger": "ofCamera::getModelViewMatrix"                                          ,"contents": "getModelViewMatrix()"},
-        { "trigger": "ofCamera::getModelViewProjectionMatrix \t(ofRectangle)"                ,"contents": "getModelViewProjectionMatrix(${1:ofRectangle viewport=ofGetCurrentViewport()})"},
-        { "trigger": "ofCamera::getNearClip"                                                 ,"contents": "getNearClip()"},
-        { "trigger": "ofCamera::getOrtho"                                                    ,"contents": "getOrtho()"},
-        { "trigger": "ofCamera::getProjectionMatrix"                                         ,"contents": "getProjectionMatrix(${1:ofRectangle viewport=ofGetCurrentViewport()})"},
-        { "trigger": "ofCamera::screenToWorld \t(ofVec3f, ofRectangle)"                      ,"contents": "screenToWorld(${1:ofVec3f ScreenXYZ, ofRectangle viewport=ofGetCurrentViewport()})"},
-        { "trigger": "ofCamera::setFarClip \t(float)"                                        ,"contents": "setFarClip(${1:float f})"},
-        { "trigger": "ofCamera::setFov \t(float)"                                            ,"contents": "setFov(${1:float f})"},
-        { "trigger": "ofCamera::setNearClip \t(float)"                                       ,"contents": "setNearClip(${1:float f})"},
-        { "trigger": "ofCamera::setupPerspective"                                            ,"contents": "setupPerspective(${1:bool vFlip=true}, ${2:float fov=60}, ${3:float nearDist=0}, ${4:float farDist=0})"},
-        { "trigger": "ofCamera::worldToCamera \t(ofVec3f, ofRectangle)"                      ,"contents": "worldToCamera(${1:ofVec3f WorldXYZ}, ${2:ofRectangle viewport=ofGetCurrentViewport()})"},
-        { "trigger": "ofCamera::worldToScreen"                                               ,"contents": "worldToScreen(${1:ofVec3f WorldXYZ}, ${2:ofRectangle viewport=ofGetCurrentViewport()})"},
+        { "trigger": "ofCamera::begin \t(ofRectangle)"                               ,"contents": "begin(${1:ofRectangle viewport=ofGetCurrentViewport()})"},
+        { "trigger": "ofCamera::cacheMatrices \t(bool)"                              ,"contents": "cacheMatrices(${1:bool cache=true})"},
+        { "trigger": "ofCamera::cameraToWorld \t(ofVec3f, ofRectangle)"              ,"contents": "cameraToWorld(${1:ofVec3f CameraXYZ}, ${2:ofRectangle viewport=ofGetCurrentViewport()})"},
+        { "trigger": "ofCamera::disableOrtho"                                        ,"contents": "disableOrtho()"},
+        { "trigger": "ofCamera::enableOrtho"                                         ,"contents": "enableOrtho()"},
+        { "trigger": "ofCamera::end"                                                 ,"contents": "end()"},
+        { "trigger": "ofCamera::getFarClip"                                          ,"contents": "getFarClip()"},
+        { "trigger": "ofCamera::getImagePlaneDistance \t(ofRectangle)"               ,"contents": "getImagePlaneDistance(${1:ofRectangle viewport=ofGetCurrentViewport()})"},
+        { "trigger": "ofCamera::getModelViewMatrix"                                  ,"contents": "getModelViewMatrix()"},
+        { "trigger": "ofCamera::getModelViewProjectionMatrix \t(ofRectangle)"        ,"contents": "getModelViewProjectionMatrix(${1:ofRectangle viewport=ofGetCurrentViewport()})"},
+        { "trigger": "ofCamera::getNearClip"                                         ,"contents": "getNearClip()"},
+        { "trigger": "ofCamera::getOrtho"                                            ,"contents": "getOrtho()"},
+        { "trigger": "ofCamera::getProjectionMatrix"                                 ,"contents": "getProjectionMatrix(${1:ofRectangle viewport=ofGetCurrentViewport()})"},
+        { "trigger": "ofCamera::screenToWorld \t(ofVec3f, ofRectangle)"              ,"contents": "screenToWorld(${1:ofVec3f ScreenXYZ, ofRectangle viewport=ofGetCurrentViewport()})"},
+        { "trigger": "ofCamera::setFarClip \t(float)"                                ,"contents": "setFarClip(${1:float f})"},
+        { "trigger": "ofCamera::setFov \t(float)"                                    ,"contents": "setFov(${1:float f})"},
+        { "trigger": "ofCamera::setNearClip \t(float)"                               ,"contents": "setNearClip(${1:float f})"},
+        { "trigger": "ofCamera::setupPerspective"                                    ,"contents": "setupPerspective(${1:bool vFlip=true}, ${2:float fov=60}, ${3:float nearDist=0}, ${4:float farDist=0})"},
+        { "trigger": "ofCamera::worldToCamera \t(ofVec3f, ofRectangle)"              ,"contents": "worldToCamera(${1:ofVec3f WorldXYZ}, ${2:ofRectangle viewport=ofGetCurrentViewport()})"},
+        { "trigger": "ofCamera::worldToScreen"                                       ,"contents": "worldToScreen(${1:ofVec3f WorldXYZ}, ${2:ofRectangle viewport=ofGetCurrentViewport()})"},
 
         // =====================================================================
         // ofEasyCam
-        { "trigger": "ofEasyCam::begin \t(ofRectangle)"                                      ,"contents": "begin(${1:ofRectangle viewport=ofGetCurrentViewport()})"},
-        { "trigger": "ofEasyCam::disableMouseInput"                                          ,"contents": "disableMouseInput()"},
-        { "trigger": "ofEasyCam::disableMouseMiddleButton"                                   ,"contents": "disableMouseMiddleButton()"},
-        { "trigger": "ofEasyCam::enableMouseInput"                                           ,"contents": "enableMouseInput()"},
-        { "trigger": "ofEasyCam::enableMouseMiddleButton"                                    ,"contents": "enableMouseMiddleButton()"},
-        { "trigger": "ofEasyCam::getDistance"                                                ,"contents": "getDistance()"},
-        { "trigger": "ofEasyCam::getDrag"                                                    ,"contents": "getDrag()"},
-        { "trigger": "ofEasyCam::getMouseInputEnabled"                                       ,"contents": "getMouseInputEnabled()"},
-        { "trigger": "ofEasyCam::getMouseMiddleButtonEnabled"                                ,"contents": "getMouseMiddleButtonEnabled()"},
-        { "trigger": "ofEasyCam::getTarget"                                                  ,"contents": "getTarget()"},
-        { "trigger": "ofEasyCam::getTranslationKey"                                          ,"contents": "getTranslationKey()"},
-        { "trigger": "ofEasyCam::mouseDragged \t(ofMouseEventArgs)"                          ,"contents": "mouseDragged(${1:ofMouseEventArgs &mouse})"},
-        { "trigger": "ofEasyCam::mouseMoved \t(ofMouseEventArgs)"                            ,"contents": "mouseMoved(${1:ofMouseEventArgs &mouse})"},
-        { "trigger": "ofEasyCam::mousePressed \t(ofMouseEventArgs)"                          ,"contents": "mousePressed(${1:ofMouseEventArgs &mouse})"},
-        { "trigger": "ofEasyCam::mouseReleased \t(ofMouseEventArgs)"                         ,"contents": "mouseReleased(${1:ofMouseEventArgs &mouse})"},
-        { "trigger": "ofEasyCam::reset"                                                      ,"contents": "reset()"},
-        { "trigger": "ofEasyCam::setDistance \t(float)"                                      ,"contents": "setDistance(${1:float distance})"},
-        { "trigger": "ofEasyCam::setDrag \t(float)"                                          ,"contents": "setDrag(${1:float drag})"},
-        { "trigger": "ofEasyCam::setTarget \t(const ofVec3f)"                                ,"contents": "setTarget(${1:const ofVec3f &target})"},
-        { "trigger": "ofEasyCam::setTarget \t(ofNode)"                                       ,"contents": "setTarget(${1:ofNode &target})"},
-        { "trigger": "ofEasyCam::setTranslationKey \t(char)"                                 ,"contents": "setTranslationKey(${1:char key})"},
+        { "trigger": "ofEasyCam::begin \t(ofRectangle)"                              ,"contents": "begin(${1:ofRectangle viewport=ofGetCurrentViewport()})"},
+        { "trigger": "ofEasyCam::disableMouseInput"                                  ,"contents": "disableMouseInput()"},
+        { "trigger": "ofEasyCam::disableMouseMiddleButton"                           ,"contents": "disableMouseMiddleButton()"},
+        { "trigger": "ofEasyCam::enableMouseInput"                                   ,"contents": "enableMouseInput()"},
+        { "trigger": "ofEasyCam::enableMouseMiddleButton"                            ,"contents": "enableMouseMiddleButton()"},
+        { "trigger": "ofEasyCam::getDistance"                                        ,"contents": "getDistance()"},
+        { "trigger": "ofEasyCam::getDrag"                                            ,"contents": "getDrag()"},
+        { "trigger": "ofEasyCam::getMouseInputEnabled"                               ,"contents": "getMouseInputEnabled()"},
+        { "trigger": "ofEasyCam::getMouseMiddleButtonEnabled"                        ,"contents": "getMouseMiddleButtonEnabled()"},
+        { "trigger": "ofEasyCam::getTarget"                                          ,"contents": "getTarget()"},
+        { "trigger": "ofEasyCam::getTranslationKey"                                  ,"contents": "getTranslationKey()"},
+        { "trigger": "ofEasyCam::mouseDragged \t(ofMouseEventArgs)"                  ,"contents": "mouseDragged(${1:ofMouseEventArgs &mouse})"},
+        { "trigger": "ofEasyCam::mouseMoved \t(ofMouseEventArgs)"                    ,"contents": "mouseMoved(${1:ofMouseEventArgs &mouse})"},
+        { "trigger": "ofEasyCam::mousePressed \t(ofMouseEventArgs)"                  ,"contents": "mousePressed(${1:ofMouseEventArgs &mouse})"},
+        { "trigger": "ofEasyCam::mouseReleased \t(ofMouseEventArgs)"                 ,"contents": "mouseReleased(${1:ofMouseEventArgs &mouse})"},
+        { "trigger": "ofEasyCam::reset"                                              ,"contents": "reset()"},
+        { "trigger": "ofEasyCam::setDistance \t(float)"                              ,"contents": "setDistance(${1:float distance})"},
+        { "trigger": "ofEasyCam::setDrag \t(float)"                                  ,"contents": "setDrag(${1:float drag})"},
+        { "trigger": "ofEasyCam::setTarget \t(const ofVec3f)"                        ,"contents": "setTarget(${1:const ofVec3f &target})"},
+        { "trigger": "ofEasyCam::setTarget \t(ofNode)"                               ,"contents": "setTarget(${1:ofNode &target})"},
+        { "trigger": "ofEasyCam::setTranslationKey \t(char)"                         ,"contents": "setTranslationKey(${1:char key})"},
 
         // =====================================================================
         // ofMesh Primitives Modes
-        { "trigger": "OF_PRIMITIVE_TRIANGLES"                                                ,"contents": "OF_PRIMITIVE_TRIANGLES"},
-        { "trigger": "OF_PRIMITIVE_TRIANGLE_STRIP"                                           ,"contents": "OF_PRIMITIVE_TRIANGLE_STRIP"},
-        { "trigger": "OF_PRIMITIVE_TRIANGLE_FAN"                                             ,"contents": "OF_PRIMITIVE_TRIANGLE_FAN"},
-        { "trigger": "OF_PRIMITIVE_LINES"                                                    ,"contents": "OF_PRIMITIVE_LINES"},
-        { "trigger": "OF_PRIMITIVE_LINE_STRIP"                                               ,"contents": "OF_PRIMITIVE_LINE_STRIP"},
-        { "trigger": "OF_PRIMITIVE_LINE_LOOP"                                                ,"contents": "OF_PRIMITIVE_LINE_LOOP"},
-        { "trigger": "OF_PRIMITIVE_POINTS"                                                   ,"contents": "OF_PRIMITIVE_POINTS"},
+        { "trigger": "OF_PRIMITIVE_TRIANGLES"                                        ,"contents": "OF_PRIMITIVE_TRIANGLES"},
+        { "trigger": "OF_PRIMITIVE_TRIANGLE_STRIP"                                   ,"contents": "OF_PRIMITIVE_TRIANGLE_STRIP"},
+        { "trigger": "OF_PRIMITIVE_TRIANGLE_FAN"                                     ,"contents": "OF_PRIMITIVE_TRIANGLE_FAN"},
+        { "trigger": "OF_PRIMITIVE_LINES"                                            ,"contents": "OF_PRIMITIVE_LINES"},
+        { "trigger": "OF_PRIMITIVE_LINE_STRIP"                                       ,"contents": "OF_PRIMITIVE_LINE_STRIP"},
+        { "trigger": "OF_PRIMITIVE_LINE_LOOP"                                        ,"contents": "OF_PRIMITIVE_LINE_LOOP"},
+        { "trigger": "OF_PRIMITIVE_POINTS"                                           ,"contents": "OF_PRIMITIVE_POINTS"},
 
         // =====================================================================
         // ofMesh
-        { "trigger": "ofMesh::addColor \t(const ofFloatColor)"                               ,"contents": "addColor(${1:const ofFloatColor &c})"},
-        { "trigger": "ofMesh::addColors \t(const vector< ofFloatColor >)"                    ,"contents": "addColors(${1:const vector< ofFloatColor > &cols})"},
-        { "trigger": "ofMesh::addColors \t(const ofFloatColor, int)"                         ,"contents": "addColors(${1:const ofFloatColor *cols}, ${2:int amt})"},
-        { "trigger": "ofMesh::addIndex \t(ofIndexType)"                                      ,"contents": "addIndex(${1:ofIndexType i})"},
-        { "trigger": "ofMesh::addIndices \t(const vector< ofIndexType >)"                    ,"contents": "addIndices(${1:const vector< ofIndexType > &inds})"},
-        { "trigger": "ofMesh::addIndices \t(const ofIndexType, int)"                         ,"contents": "addIndices(${1:const ofIndexType *inds}, ${2:int amt})"},
-        { "trigger": "ofMesh::addNormal \t(const ofVec3f)"                                   ,"contents": "addNormal(${1:const ofVec3f &n})"},
-        { "trigger": "ofMesh::addNormals \t(const vector< ofVec3f >)"                        ,"contents": "addNormals(${1:const vector< ofVec3f > &norms})"},
-        { "trigger": "ofMesh::addNormals \t(const ofVec3f, int)"                             ,"contents": "addNormals(${1:const ofVec3f *norms}, ${1:int amt})"},
-        { "trigger": "ofMesh::addTexCoord \t(const ofVec2f)"                                 ,"contents": "addTexCoord(${1:const ofVec2f &t})"},
-        { "trigger": "ofMesh::addTexCoords \t(const vector< ofVec2f >)"                      ,"contents": "addTexCoords(${1:const vector< ofVec2f > &tCoords})"},
-        { "trigger": "ofMesh::addTexCoords \t(const ofVec2f, int)"                           ,"contents": "addTexCoords(${1:const ofVec2f *tCoords}, ${1:int amt})"},
-        { "trigger": "ofMesh::addTriangle \t(ofIndexType, ofIndexType, ofIndexType)"         ,"contents": "addTriangle(${1:ofIndexType index1}, ${2:ofIndexType index2}, ${3:ofIndexType index3})"},
-        { "trigger": "ofMesh::addVertex \t(const ofVec3f)"                                   ,"contents": "addVertex(${1:const ofVec3f &v})"},
-        { "trigger": "ofMesh::addVertices \t(const vector< ofVec3f >)"                       ,"contents": "addVertices(${1:const vector< ofVec3f > &verts})"},
-        { "trigger": "ofMesh::addVertices \t(const ofVec3f, int)"                            ,"contents": "addVertices(${1:const ofVec3f *verts}, ${2:int amt})"},
-        { "trigger": "ofMesh::clear"                                                         ,"contents": "clear()"},
-        { "trigger": "ofMesh::clearColors"                                                   ,"contents": "clearColors()"},
-        { "trigger": "ofMesh::clearIndices"                                                  ,"contents": "clearIndices()"},
-        { "trigger": "ofMesh::clearNormals"                                                  ,"contents": "clearNormals()"},
-        { "trigger": "ofMesh::clearTexCoords"                                                ,"contents": "clearTexCoords()"},
-        { "trigger": "ofMesh::clearVertices"                                                 ,"contents": "clearVertices()"},
-        { "trigger": "ofMesh::disableColors"                                                 ,"contents": "disableColors()"},
-        { "trigger": "ofMesh::disableIndices"                                                ,"contents": "disableIndices()"},
-        { "trigger": "ofMesh::disableNormals"                                                ,"contents": "disableNormals()"},
-        { "trigger": "ofMesh::disableTextures"                                               ,"contents": "disableTextures()"},
-        { "trigger": "ofMesh::draw"                                                          ,"contents": "draw()"},
-        { "trigger": "ofMesh::drawFaces"                                                     ,"contents": "drawFaces()"},
-        { "trigger": "ofMesh::drawVertices"                                                  ,"contents": "drawVertices()"},
-        { "trigger": "ofMesh::drawWireframe"                                                 ,"contents": "drawWireframe()"},
-        { "trigger": "ofMesh::enableColors"                                                  ,"contents": "enableColors()"},
-        { "trigger": "ofMesh::enableIndices"                                                 ,"contents": "enableIndices()"},
-        { "trigger": "ofMesh::enableNormals"                                                 ,"contents": "enableNormals()"},
-        { "trigger": "ofMesh::enableTextures"                                                ,"contents": "enableTextures()"},
-        { "trigger": "ofMesh::getCentroid"                                                   ,"contents": "getCentroid()"},
-        { "trigger": "ofMesh::getColor \t(int )"                                             ,"contents": "getColor(${1:int i})"},
-        { "trigger": "ofMesh::getColor \t(ofIndexType)"                                      ,"contents": "getColor(${1:ofIndexType i})"},
-        { "trigger": "ofMesh::getColors"                                                     ,"contents": "getColors()"},
-        { "trigger": "ofMesh::getColorsPointer"                                              ,"contents": "getColorsPointer()"},
-        { "trigger": "ofMesh::getFace (int)"                                                 ,"contents": "getFace(${1:int faceId})"},
-        { "trigger": "ofMesh::getIndex \t(int)"                                              ,"contents": "getIndex(${1:int i})"},
-        { "trigger": "ofMesh::getIndex \t(ofIndexType)"                                      ,"contents": "getIndex(${1:ofIndexType i})"},
-        { "trigger": "ofMesh::getIndexPointer"                                               ,"contents": "getIndexPointer()"},
-        { "trigger": "ofMesh::getIndices"                                                    ,"contents": "getIndices()"},
-        { "trigger": "ofMesh::getMode"                                                       ,"contents": "getMode()"},
-        { "trigger": "ofMesh::getNormal \t(int)"                                             ,"contents": "getNormal(${1:int i})"},
-        { "trigger": "ofMesh::getNormal \t(ofIndexType)"                                     ,"contents": "getNormal(${1:ofIndexType i})"},
-        { "trigger": "ofMesh::getNormals"                                                    ,"contents": "getNormals()"},
-        { "trigger": "ofMesh::getNormalsPointer"                                             ,"contents": "getNormalsPointer()"},
-        { "trigger": "ofMesh::getNumColors"                                                  ,"contents": "getNumColors()"},
-        { "trigger": "ofMesh::getNumIndices"                                                 ,"contents": "getNumIndices()"},
-        { "trigger": "ofMesh::getNumNormals"                                                 ,"contents": "getNumNormals()"},
-        { "trigger": "ofMesh::getNumTexCoords"                                               ,"contents": "getNumTexCoords()"},
-        { "trigger": "ofMesh::getNumVertices"                                                ,"contents": "getNumVertices()"},
-        { "trigger": "ofMesh::getTexCoord \t(int)"                                           ,"contents": "getTexCoord(${1:int i})"},
-        { "trigger": "ofMesh::getTexCoord \t(ofIndexType)"                                   ,"contents": "getTexCoord(${1:ofIndexType i})"},
-        { "trigger": "ofMesh::getTexCoords"                                                  ,"contents": "getTexCoords()"},
-        { "trigger": "ofMesh::getTexCoordsPointer"                                           ,"contents": "getTexCoordsPointer()"},
-        { "trigger": "ofMesh::getVertex \t(int)"                                             ,"contents": "getVertex(${1:int i})"},
-        { "trigger": "ofMesh::getVertex \t(ofIndexType)"                                     ,"contents": "getVertex(${1:ofIndexType i})"},
-        { "trigger": "ofMesh::getVertices"                                                   ,"contents": "getVertices()"},
-        { "trigger": "ofMesh::getVerticesPointer"                                            ,"contents": "getVerticesPointer()"},
-        { "trigger": "ofMesh::hasColors"                                                     ,"contents": "hasColors()"},
-        { "trigger": "ofMesh::hasIndices"                                                    ,"contents": "hasIndices()"},
-        { "trigger": "ofMesh::hasNormals"                                                    ,"contents": "hasNormals()"},
-        { "trigger": "ofMesh::hasTexCoords"                                                  ,"contents": "hasTexCoords()"},
-        { "trigger": "ofMesh::hasVertices"                                                   ,"contents": "hasVertices()"},
-        { "trigger": "ofMesh::haveColorsChanged"                                             ,"contents": "haveColorsChanged()"},
-        { "trigger": "ofMesh::haveIndicesChanged"                                            ,"contents": "haveIndicesChanged()"},
-        { "trigger": "ofMesh::haveNormalsChanged"                                            ,"contents": "haveNormalsChanged()"},
-        { "trigger": "ofMesh::haveTexCoordsChanged"                                          ,"contents": "haveTexCoordsChanged()"},
-        { "trigger": "ofMesh::haveVertsChanged"                                              ,"contents": "haveVertsChanged()"},
-        { "trigger": "ofMesh::load \t(string)"                                               ,"contents": "load(${1:string path})"},
-        { "trigger": "ofMesh::removeColor \t(int)"                                           ,"contents": "removeColor(${1:int index})"},
-        { "trigger": "ofMesh::removeColor \t(ofIndexType)"                                   ,"contents": "removeColor(${1:ofIndexType index})"},
-        { "trigger": "ofMesh::removeIndex \t(int)"                                           ,"contents": "removeIndex(${1:int i})"},
-        { "trigger": "ofMesh::removeIndex \t(ofIndexType)"                                   ,"contents": "removeIndex(${1:ofIndexType index})"},
-        { "trigger": "ofMesh::removeNormal \t(int)"                                          ,"contents": "removeNormal(${1:int index})"},
-        { "trigger": "ofMesh::removeNormal \t(ofIndexType)"                                  ,"contents": "removeNormal(${1:ofIndexType index})"},
-        { "trigger": "ofMesh::removeTexCoord \t(int)"                                        ,"contents": "removeTexCoord(${1:int index})"},
-        { "trigger": "ofMesh::removeTexCoord \t(ofIndexType)"                                ,"contents": "removeTexCoord(${1:ofIndexType index})"},
-        { "trigger": "ofMesh::removeVertex \t(int)"                                          ,"contents": "removeVertex(${1:int index})"},
-        { "trigger": "ofMesh::removeVertex \t(ofIndexType)"                                  ,"contents": "removeVertex(${1:ofIndexType index})"},
-        { "trigger": "ofMesh::save \t(string, bool)"                                         ,"contents": "save(${1:string path}, ${2:bool useBinary=false})"},
-        { "trigger": "ofMesh::setColor \t(int, const ofFloatColor)"                          ,"contents": "setColor(${1:int index}, ${:2const ofFloatColor &c})"},
-        { "trigger": "ofMesh::setColor \t(ofIndexType, const ofFloatColor)"                  ,"contents": "setColor(${1:ofIndexType index}, ${2:const ofFloatColor &c})"},
-        { "trigger": "ofMesh::setIndex \t(int, ofIndexType)"                                 ,"contents": "setIndex(${1:int i}, ${2:ofIndexType val})"},
-        { "trigger": "ofMesh::setIndex \t(ofIndexType, ofIndexType)"                         ,"contents": "setIndex(${1:ofIndexType index}, ${2:ofIndexType val})"},
-        { "trigger": "ofMesh::setMode \t(ofPrimitiveMode)"                                   ,"contents": "setMode(${1:ofPrimitiveMode mode})"},
-        { "trigger": "ofMesh::setName     \t(string)"                                        ,"contents": "setName(${1:string name_})"},
-        { "trigger": "ofMesh::setNormal \t(int, const ofVec3f)"                              ,"contents": "setNormal(${1:int index}, ${2:const ofVec3f &n})"},
-        { "trigger": "ofMesh::setTexCoord \t(int, const ofVec2f)"                            ,"contents": "setTexCoord(${1:int index}, ${2:const ofVec2f &t})"},
-        { "trigger": "ofMesh::setTexCoord \t(ofIndexType, const ofVec2f)"                    ,"contents": "setTexCoord(${1:ofIndexType index}, ${2:const ofVec2f &t})"},
-        { "trigger": "ofMesh::setVertex \t(int, const ofVec3f)"                              ,"contents": "setVertex(${1:int index}, ${2:const ofVec3f &v})"},
-        { "trigger": "ofMesh::setVertex \t(ofIndexType, const ofVec3f)"                      ,"contents": "setVertex(${1:ofIndexType index}, ${2:const ofVec3f &v})"},
-        { "trigger": "ofMesh::setupIndicesAuto"                                              ,"contents": "setupIndicesAuto()"},
-        { "trigger": "ofMesh::usingColors"                                                   ,"contents": "usingColors()"},
-        { "trigger": "ofMesh::usingIndices"                                                  ,"contents": "usingIndices()"},
-        { "trigger": "ofMesh::usingNormals"                                                  ,"contents": "usingNormals()"},
-        { "trigger": "ofMesh::usingTextures"                                                 ,"contents": "usingTextures()"},
+        { "trigger": "ofMesh::addColor \t(const ofFloatColor)"                       ,"contents": "addColor(${1:const ofFloatColor &c})"},
+        { "trigger": "ofMesh::addColors \t(const vector< ofFloatColor >)"            ,"contents": "addColors(${1:const vector< ofFloatColor > &cols})"},
+        { "trigger": "ofMesh::addColors \t(const ofFloatColor, int)"                 ,"contents": "addColors(${1:const ofFloatColor *cols}, ${2:int amt})"},
+        { "trigger": "ofMesh::addIndex \t(ofIndexType)"                              ,"contents": "addIndex(${1:ofIndexType i})"},
+        { "trigger": "ofMesh::addIndices \t(const vector< ofIndexType >)"            ,"contents": "addIndices(${1:const vector< ofIndexType > &inds})"},
+        { "trigger": "ofMesh::addIndices \t(const ofIndexType, int)"                 ,"contents": "addIndices(${1:const ofIndexType *inds}, ${2:int amt})"},
+        { "trigger": "ofMesh::addNormal \t(const ofVec3f)"                           ,"contents": "addNormal(${1:const ofVec3f &n})"},
+        { "trigger": "ofMesh::addNormals \t(const vector< ofVec3f >)"                ,"contents": "addNormals(${1:const vector< ofVec3f > &norms})"},
+        { "trigger": "ofMesh::addNormals \t(const ofVec3f, int)"                     ,"contents": "addNormals(${1:const ofVec3f *norms}, ${1:int amt})"},
+        { "trigger": "ofMesh::addTexCoord \t(const ofVec2f)"                         ,"contents": "addTexCoord(${1:const ofVec2f &t})"},
+        { "trigger": "ofMesh::addTexCoords \t(const vector< ofVec2f >)"              ,"contents": "addTexCoords(${1:const vector< ofVec2f > &tCoords})"},
+        { "trigger": "ofMesh::addTexCoords \t(const ofVec2f, int)"                   ,"contents": "addTexCoords(${1:const ofVec2f *tCoords}, ${1:int amt})"},
+        { "trigger": "ofMesh::addTriangle \t(ofIndexType, ofIndexType, ofIndexType)" ,"contents": "addTriangle(${1:ofIndexType index1}, ${2:ofIndexType index2}, ${3:ofIndexType index3})"},
+        { "trigger": "ofMesh::addVertex \t(const ofVec3f)"                           ,"contents": "addVertex(${1:const ofVec3f &v})"},
+        { "trigger": "ofMesh::addVertices \t(const vector< ofVec3f >)"               ,"contents": "addVertices(${1:const vector< ofVec3f > &verts})"},
+        { "trigger": "ofMesh::addVertices \t(const ofVec3f, int)"                    ,"contents": "addVertices(${1:const ofVec3f *verts}, ${2:int amt})"},
+        { "trigger": "ofMesh::clear"                                                 ,"contents": "clear()"},
+        { "trigger": "ofMesh::clearColors"                                           ,"contents": "clearColors()"},
+        { "trigger": "ofMesh::clearIndices"                                          ,"contents": "clearIndices()"},
+        { "trigger": "ofMesh::clearNormals"                                          ,"contents": "clearNormals()"},
+        { "trigger": "ofMesh::clearTexCoords"                                        ,"contents": "clearTexCoords()"},
+        { "trigger": "ofMesh::clearVertices"                                         ,"contents": "clearVertices()"},
+        { "trigger": "ofMesh::disableColors"                                         ,"contents": "disableColors()"},
+        { "trigger": "ofMesh::disableIndices"                                        ,"contents": "disableIndices()"},
+        { "trigger": "ofMesh::disableNormals"                                        ,"contents": "disableNormals()"},
+        { "trigger": "ofMesh::disableTextures"                                       ,"contents": "disableTextures()"},
+        { "trigger": "ofMesh::draw"                                                  ,"contents": "draw()"},
+        { "trigger": "ofMesh::drawFaces"                                             ,"contents": "drawFaces()"},
+        { "trigger": "ofMesh::drawVertices"                                          ,"contents": "drawVertices()"},
+        { "trigger": "ofMesh::drawWireframe"                                         ,"contents": "drawWireframe()"},
+        { "trigger": "ofMesh::enableColors"                                          ,"contents": "enableColors()"},
+        { "trigger": "ofMesh::enableIndices"                                         ,"contents": "enableIndices()"},
+        { "trigger": "ofMesh::enableNormals"                                         ,"contents": "enableNormals()"},
+        { "trigger": "ofMesh::enableTextures"                                        ,"contents": "enableTextures()"},
+        { "trigger": "ofMesh::getCentroid"                                           ,"contents": "getCentroid()"},
+        { "trigger": "ofMesh::getColor \t(int)"                                      ,"contents": "getColor(${1:int i})"},
+        { "trigger": "ofMesh::getColor \t(ofIndexType)"                              ,"contents": "getColor(${1:ofIndexType i})"},
+        { "trigger": "ofMesh::getColors"                                             ,"contents": "getColors()"},
+        { "trigger": "ofMesh::getColorsPointer"                                      ,"contents": "getColorsPointer()"},
+        { "trigger": "ofMesh::getFace (int)"                                         ,"contents": "getFace(${1:int faceId})"},
+        { "trigger": "ofMesh::getIndex \t(int)"                                      ,"contents": "getIndex(${1:int i})"},
+        { "trigger": "ofMesh::getIndex \t(ofIndexType)"                              ,"contents": "getIndex(${1:ofIndexType i})"},
+        { "trigger": "ofMesh::getIndexPointer"                                       ,"contents": "getIndexPointer()"},
+        { "trigger": "ofMesh::getIndices"                                            ,"contents": "getIndices()"},
+        { "trigger": "ofMesh::getMode"                                               ,"contents": "getMode()"},
+        { "trigger": "ofMesh::getNormal \t(int)"                                     ,"contents": "getNormal(${1:int i})"},
+        { "trigger": "ofMesh::getNormal \t(ofIndexType)"                             ,"contents": "getNormal(${1:ofIndexType i})"},
+        { "trigger": "ofMesh::getNormals"                                            ,"contents": "getNormals()"},
+        { "trigger": "ofMesh::getNormalsPointer"                                     ,"contents": "getNormalsPointer()"},
+        { "trigger": "ofMesh::getNumColors"                                          ,"contents": "getNumColors()"},
+        { "trigger": "ofMesh::getNumIndices"                                         ,"contents": "getNumIndices()"},
+        { "trigger": "ofMesh::getNumNormals"                                         ,"contents": "getNumNormals()"},
+        { "trigger": "ofMesh::getNumTexCoords"                                       ,"contents": "getNumTexCoords()"},
+        { "trigger": "ofMesh::getNumVertices"                                        ,"contents": "getNumVertices()"},
+        { "trigger": "ofMesh::getTexCoord \t(int)"                                   ,"contents": "getTexCoord(${1:int i})"},
+        { "trigger": "ofMesh::getTexCoord \t(ofIndexType)"                           ,"contents": "getTexCoord(${1:ofIndexType i})"},
+        { "trigger": "ofMesh::getTexCoords"                                          ,"contents": "getTexCoords()"},
+        { "trigger": "ofMesh::getTexCoordsPointer"                                   ,"contents": "getTexCoordsPointer()"},
+        { "trigger": "ofMesh::getVertex \t(int)"                                     ,"contents": "getVertex(${1:int i})"},
+        { "trigger": "ofMesh::getVertex \t(ofIndexType)"                             ,"contents": "getVertex(${1:ofIndexType i})"},
+        { "trigger": "ofMesh::getVertices"                                           ,"contents": "getVertices()"},
+        { "trigger": "ofMesh::getVerticesPointer"                                    ,"contents": "getVerticesPointer()"},
+        { "trigger": "ofMesh::hasColors"                                             ,"contents": "hasColors()"},
+        { "trigger": "ofMesh::hasIndices"                                            ,"contents": "hasIndices()"},
+        { "trigger": "ofMesh::hasNormals"                                            ,"contents": "hasNormals()"},
+        { "trigger": "ofMesh::hasTexCoords"                                          ,"contents": "hasTexCoords()"},
+        { "trigger": "ofMesh::hasVertices"                                           ,"contents": "hasVertices()"},
+        { "trigger": "ofMesh::haveColorsChanged"                                     ,"contents": "haveColorsChanged()"},
+        { "trigger": "ofMesh::haveIndicesChanged"                                    ,"contents": "haveIndicesChanged()"},
+        { "trigger": "ofMesh::haveNormalsChanged"                                    ,"contents": "haveNormalsChanged()"},
+        { "trigger": "ofMesh::haveTexCoordsChanged"                                  ,"contents": "haveTexCoordsChanged()"},
+        { "trigger": "ofMesh::haveVertsChanged"                                      ,"contents": "haveVertsChanged()"},
+        { "trigger": "ofMesh::load \t(string)"                                       ,"contents": "load(${1:string path})"},
+        { "trigger": "ofMesh::removeColor \t(int)"                                   ,"contents": "removeColor(${1:int index})"},
+        { "trigger": "ofMesh::removeColor \t(ofIndexType)"                           ,"contents": "removeColor(${1:ofIndexType index})"},
+        { "trigger": "ofMesh::removeIndex \t(int)"                                   ,"contents": "removeIndex(${1:int i})"},
+        { "trigger": "ofMesh::removeIndex \t(ofIndexType)"                           ,"contents": "removeIndex(${1:ofIndexType index})"},
+        { "trigger": "ofMesh::removeNormal \t(int)"                                  ,"contents": "removeNormal(${1:int index})"},
+        { "trigger": "ofMesh::removeNormal \t(ofIndexType)"                          ,"contents": "removeNormal(${1:ofIndexType index})"},
+        { "trigger": "ofMesh::removeTexCoord \t(int)"                                ,"contents": "removeTexCoord(${1:int index})"},
+        { "trigger": "ofMesh::removeTexCoord \t(ofIndexType)"                        ,"contents": "removeTexCoord(${1:ofIndexType index})"},
+        { "trigger": "ofMesh::removeVertex \t(int)"                                  ,"contents": "removeVertex(${1:int index})"},
+        { "trigger": "ofMesh::removeVertex \t(ofIndexType)"                          ,"contents": "removeVertex(${1:ofIndexType index})"},
+        { "trigger": "ofMesh::save \t(string, bool)"                                 ,"contents": "save(${1:string path}, ${2:bool useBinary=false})"},
+        { "trigger": "ofMesh::setColor \t(int, const ofFloatColor)"                  ,"contents": "setColor(${1:int index}, ${:2const ofFloatColor &c})"},
+        { "trigger": "ofMesh::setColor \t(ofIndexType, const ofFloatColor)"          ,"contents": "setColor(${1:ofIndexType index}, ${2:const ofFloatColor &c})"},
+        { "trigger": "ofMesh::setIndex \t(int, ofIndexType)"                         ,"contents": "setIndex(${1:int i}, ${2:ofIndexType val})"},
+        { "trigger": "ofMesh::setIndex \t(ofIndexType, ofIndexType)"                 ,"contents": "setIndex(${1:ofIndexType index}, ${2:ofIndexType val})"},
+        { "trigger": "ofMesh::setMode \t(ofPrimitiveMode)"                           ,"contents": "setMode(${1:ofPrimitiveMode mode})"},
+        { "trigger": "ofMesh::setName     \t(string)"                                ,"contents": "setName(${1:string name_})"},
+        { "trigger": "ofMesh::setNormal \t(int, const ofVec3f)"                      ,"contents": "setNormal(${1:int index}, ${2:const ofVec3f &n})"},
+        { "trigger": "ofMesh::setTexCoord \t(int, const ofVec2f)"                    ,"contents": "setTexCoord(${1:int index}, ${2:const ofVec2f &t})"},
+        { "trigger": "ofMesh::setTexCoord \t(ofIndexType, const ofVec2f)"            ,"contents": "setTexCoord(${1:ofIndexType index}, ${2:const ofVec2f &t})"},
+        { "trigger": "ofMesh::setVertex \t(int, const ofVec3f)"                      ,"contents": "setVertex(${1:int index}, ${2:const ofVec3f &v})"},
+        { "trigger": "ofMesh::setVertex \t(ofIndexType, const ofVec3f)"              ,"contents": "setVertex(${1:ofIndexType index}, ${2:const ofVec3f &v})"},
+        { "trigger": "ofMesh::setupIndicesAuto"                                      ,"contents": "setupIndicesAuto()"},
+        { "trigger": "ofMesh::usingColors"                                           ,"contents": "usingColors()"},
+        { "trigger": "ofMesh::usingIndices"                                          ,"contents": "usingIndices()"},
+        { "trigger": "ofMesh::usingNormals"                                          ,"contents": "usingNormals()"},
+        { "trigger": "ofMesh::usingTextures"                                         ,"contents": "usingTextures()"},
 
         // =====================================================================
         // ofNode
-        { "trigger": "ofNode::boom\t(float)"                                                 ,"contents": "boom(float amount)"},
-        { "trigger": "ofNode::clearParent"                                                   ,"contents": "clearParent()"},
-        { "trigger": "ofNode::customDraw"                                                    ,"contents": "customDraw()"},
-        { "trigger": "ofNode::dolly\t(float)"                                                ,"contents": "dolly(float amount)"},
-        { "trigger": "ofNode::draw"                                                          ,"contents": "draw()"},
-        { "trigger": "ofNode::getGlobalOrientation"                                          ,"contents": "getGlobalOrientation()"},
-        { "trigger": "ofNode::getGlobalPosition"                                             ,"contents": "getGlobalPosition()"},
-        { "trigger": "ofNode::getGlobalScale"                                                ,"contents": "getGlobalScale()"},
-        { "trigger": "ofNode::getGlobalTransformMatrix"                                      ,"contents": "getGlobalTransformMatrix()"},
-        { "trigger": "ofNode::getHeading"                                                    ,"contents": "getHeading()"},
-        { "trigger": "ofNode::getLocalTransformMatrix"                                       ,"contents": "getLocalTransformMatrix()"},
-        { "trigger": "ofNode::getLookAtDir"                                                  ,"contents": "getLookAtDir()"},
-        { "trigger": "ofNode::getOrientationEuler"                                           ,"contents": "getOrientationEuler()"},
-        { "trigger": "ofNode::getOrientationQuat"                                            ,"contents": "getOrientationQuat()"},
-        { "trigger": "ofNode::getParent"                                                     ,"contents": "getParent()"},
-        { "trigger": "ofNode::getPitch"                                                      ,"contents": "getPitch()"},
-        { "trigger": "ofNode::getPosition"                                                   ,"contents": "getPosition()"},
-        { "trigger": "ofNode::getRoll"                                                       ,"contents": "getRoll()"},
-        { "trigger": "ofNode::getScale"                                                      ,"contents": "getScale()"},
-        { "trigger": "ofNode::getSideDir"                                                    ,"contents": "getSideDir()"},
-        { "trigger": "ofNode::getUpDir"                                                      ,"contents": "getUpDir()"},
-        { "trigger": "ofNode::getX"                                                          ,"contents": "getX()"},
-        { "trigger": "ofNode::getXAxis"                                                      ,"contents": "getXAxis()"},
-        { "trigger": "ofNode::getY"                                                          ,"contents": "getY()"},
-        { "trigger": "ofNode::getYAxis"                                                      ,"contents": "getYAxis()"},
-        { "trigger": "ofNode::getZ"                                                          ,"contents": "getZ()"},
-        { "trigger": "ofNode::getZAxis"                                                      ,"contents": "getZAxis()"},
-        { "trigger": "ofNode::lookAt\t(const ofVec3f, ofVec3f)"                              ,"contents": "lookAt(${1:const ofVec3f &lookAtPosition}, ${2:ofVec3f upVector=ofVec3f(0, 1, 0)})"},
-        { "trigger": "ofNode::lookAt\t(const ofNode, const ofVec3f)"                         ,"contents": "lookAt(${1:const ofNode &lookAtNode}, ${2:const ofVec3f &upVector=ofVec3f(0, 1, 0)})"},
-        { "trigger": "ofNode::move\t(float, float, float)    "                               ,"contents": "move(${1:float x}, ${2:float y}, ${3:float z})"},
-        { "trigger": "ofNode::move\t(const ofVec3f)  "                                       ,"contents": "move(${1:const ofVec3f &offset})"},
-        { "trigger": "ofNode::orbit\t(float, float, float, const ofVec3f"                    ,"contents": "orbit(${1:float longitude}, ${2:float latitude}, ${3:float radius}, ${4:const ofVec3f &centerPoint=ofVec3f(0, 0, 0)})"},
-        { "trigger": "ofNode::orbit\t(float, float, float, ofNode)   "                       ,"contents": "orbit(${1:float longitude}, ${2:float latitude}, ${3:float radius}, ${4:ofNode &centerNode})"},
-        { "trigger": "ofNode::pan\t(float)   "                                               ,"contents": "pan(${1:float degrees})"},
-        { "trigger": "ofNode::resetTransform"                                                ,"contents": "resetTransform()"},
-        { "trigger": "ofNode::restoreTransformGL"                                            ,"contents": "restoreTransformGL()"},
-        { "trigger": "ofNode::roll\t(float)"                                                 ,"contents": "roll(float degrees)"},
-        { "trigger": "ofNode::rotate\t(const)"                                               ,"contents": "rotate(${1:const ofQuaternion &q})"},
+        { "trigger": "ofNode::boom\t(float)"                                         ,"contents": "boom(${1:float amount})"},
+        { "trigger": "ofNode::clearParent"                                           ,"contents": "clearParent()"},
+        { "trigger": "ofNode::customDraw"                                            ,"contents": "customDraw()"},
+        { "trigger": "ofNode::dolly\t(float)"                                        ,"contents": "dolly(${1:float amount})"},
+        { "trigger": "ofNode::draw"                                                  ,"contents": "draw()"},
+        { "trigger": "ofNode::getGlobalOrientation"                                  ,"contents": "getGlobalOrientation()"},
+        { "trigger": "ofNode::getGlobalPosition"                                     ,"contents": "getGlobalPosition()"},
+        { "trigger": "ofNode::getGlobalScale"                                        ,"contents": "getGlobalScale()"},
+        { "trigger": "ofNode::getGlobalTransformMatrix"                              ,"contents": "getGlobalTransformMatrix()"},
+        { "trigger": "ofNode::getHeading"                                            ,"contents": "getHeading()"},
+        { "trigger": "ofNode::getLocalTransformMatrix"                               ,"contents": "getLocalTransformMatrix()"},
+        { "trigger": "ofNode::getLookAtDir"                                          ,"contents": "getLookAtDir()"},
+        { "trigger": "ofNode::getOrientationEuler"                                   ,"contents": "getOrientationEuler()"},
+        { "trigger": "ofNode::getOrientationQuat"                                    ,"contents": "getOrientationQuat()"},
+        { "trigger": "ofNode::getParent"                                             ,"contents": "getParent()"},
+        { "trigger": "ofNode::getPitch"                                              ,"contents": "getPitch()"},
+        { "trigger": "ofNode::getPosition"                                           ,"contents": "getPosition()"},
+        { "trigger": "ofNode::getRoll"                                               ,"contents": "getRoll()"},
+        { "trigger": "ofNode::getScale"                                              ,"contents": "getScale()"},
+        { "trigger": "ofNode::getSideDir"                                            ,"contents": "getSideDir()"},
+        { "trigger": "ofNode::getUpDir"                                              ,"contents": "getUpDir()"},
+        { "trigger": "ofNode::getX"                                                  ,"contents": "getX()"},
+        { "trigger": "ofNode::getXAxis"                                              ,"contents": "getXAxis()"},
+        { "trigger": "ofNode::getY"                                                  ,"contents": "getY()"},
+        { "trigger": "ofNode::getYAxis"                                              ,"contents": "getYAxis()"},
+        { "trigger": "ofNode::getZ"                                                  ,"contents": "getZ()"},
+        { "trigger": "ofNode::getZAxis"                                              ,"contents": "getZAxis()"},
+        { "trigger": "ofNode::lookAt\t(const ofVec3f, ofVec3f)"                      ,"contents": "lookAt(${1:const ofVec3f &lookAtPosition}, ${2:ofVec3f upVector=ofVec3f(0, 1, 0)})"},
+        { "trigger": "ofNode::lookAt\t(const ofNode, const ofVec3f)"                 ,"contents": "lookAt(${1:const ofNode &lookAtNode}, ${2:const ofVec3f &upVector=ofVec3f(0, 1, 0)})"},
+        { "trigger": "ofNode::move\t(float, float, float)    "                       ,"contents": "move(${1:float x}, ${2:float y}, ${3:float z})"},
+        { "trigger": "ofNode::move\t(const ofVec3f)  "                               ,"contents": "move(${1:const ofVec3f &offset})"},
+        { "trigger": "ofNode::orbit\t(float, float, float, const ofVec3f"            ,"contents": "orbit(${1:float longitude}, ${2:float latitude}, ${3:float radius}, ${4:const ofVec3f &centerPoint=ofVec3f(0, 0, 0)})"},
+        { "trigger": "ofNode::orbit\t(float, float, float, ofNode)   "               ,"contents": "orbit(${1:float longitude}, ${2:float latitude}, ${3:float radius}, ${4:ofNode &centerNode})"},
+        { "trigger": "ofNode::pan\t(float)   "                                       ,"contents": "pan(${1:float degrees})"},
+        { "trigger": "ofNode::resetTransform"                                        ,"contents": "resetTransform()"},
+        { "trigger": "ofNode::restoreTransformGL"                                    ,"contents": "restoreTransformGL()"},
+        { "trigger": "ofNode::roll\t(float)"                                         ,"contents": "roll(${1:float degrees})"},
+        { "trigger": "ofNode::rotate\t(const)"                                       ,"contents": "rotate(${1:const ofQuaternion &q})"},
 
         // =====================================================================
         // ofNode
-        { "trigger": "ofFbo::allocate \t(int, int, int, int)"                                ,"contents": "allocate(${1:int width}, ${2:int height}, ${3:int internalformat=GL_RGBA}, ${4:int numSamples=0})"},
-        { "trigger": "ofFbo::allocate \t(Settings)"                                          ,"contents": "allocate(Settings settings=Settings())"},
-        { "trigger": "ofFbo::begin"                                                          ,"contents": "begin()"},
-        { "trigger": "ofFbo::begin \t(bool)"                                                 ,"contents": "begin(${1:bool setupScreen=true})"},
-        { "trigger": "ofFbo::bind"                                                           ,"contents": "bind()"},
-        { "trigger": "ofFbo::checkGLSupport"                                                 ,"contents": "checkGLSupport()"},
-        { "trigger": "ofFbo::draw \t(float, float)"                                          ,"contents": "draw(${1:float x}, ${4:float y})"},
-        { "trigger": "ofFbo::draw \t(float, float, float, float)"                            ,"contents": "draw(${1:float x}, ${2:float y}, ${3:float width}, ${4:float height})"},
-        { "trigger": "ofFbo::end"                                                            ,"contents": "end()"},
-        { "trigger": "ofFbo::getDefaultTextureIndex"                                         ,"contents": "getDefaultTextureIndex()"},
-        { "trigger": "ofFbo::getDepthBuffer"                                                 ,"contents": "getDepthBuffer()"},
-        { "trigger": "ofFbo::getDepthTexture"                                                ,"contents": "getDepthTexture()"},
-        { "trigger": "ofFbo::getFbo"                                                         ,"contents": "getFbo()"},
-        { "trigger": "ofFbo::getHeight"                                                      ,"contents": "getHeight()"},
-        { "trigger": "ofFbo::getNumTextures"                                                 ,"contents": "getNumTextures()"},
-        { "trigger": "ofFbo::getStencilBuffer"                                               ,"contents": "getStencilBuffer()"},
-        { "trigger": "ofFbo::getTextureReference"                                            ,"contents": "getTextureReference()"},
-        { "trigger": "ofFbo::getTextureReference \t(int)"                                    ,"contents": "getTextureReference(${1:int attachmentPoint})"},
-        { "trigger": "ofFbo::getWidth"                                                       ,"contents": "getWidth()"},
-        { "trigger": "ofFbo::isAllocated"                                                    ,"contents": "isAllocated()"},
-        { "trigger": "ofFbo::maxColorAttachments"                                            ,"contents": "maxColorAttachments()"},
-        { "trigger": "ofFbo::maxDrawBuffers"                                                 ,"contents": "maxDrawBuffers()"},
-        { "trigger": "ofFbo::maxSamples"                                                     ,"contents": "maxSamples()"},
-        { "trigger": "ofFbo::operator= \t(const ofFbo)"                                      ,"contents": "operator=(${1:const ofFbo &fbo})"},
-        { "trigger": "ofFbo::readToPixels \t(ofPixels, int)"                                 ,"contents": "readToPixels(${1:ofPixels &pixels}, ${2:int attachmentPoint=0})"},
-        { "trigger": "ofFbo::readToPixels \t(ofShortPixels, int)"                            ,"contents": "readToPixels(${1:ofShortPixels &pixels}, ${2:int attachmentPoint=0})"},
-        { "trigger": "ofFbo::readToPixels \t(ofFloatPixels, int)"                            ,"contents": "readToPixels(${1:ofFloatPixels &pixels}, ${2:int attachmentPoint=0})"},
-        { "trigger": "ofFbo::resetAnchor"                                                    ,"contents": "resetAnchor()"},
-        { "trigger": "ofFbo::setActiveDrawBuffer \t(int)"                                    ,"contents": "setActiveDrawBuffer(${1:int i})"},
-        { "trigger": "ofFbo::setActiveDrawBuffers \t(const vector< int >)"                   ,"contents": "setActiveDrawBuffers(${1:const vector< int > &i})"},
-        { "trigger": "ofFbo::setAnchorPercent \t(float xPct, float yPct)  "                  ,"contents": "setAnchorPercent(${1:float xPct}, ${2:float yPct})"},
-        { "trigger": "ofFbo::setAnchorPoint \t(float, float)"                                ,"contents": "setAnchorPoint(${1:float x}, ${2:float y})"},
-        { "trigger": "ofFbo::setDefaultTextureIndex \t(int)"                                 ,"contents": "setDefaultTextureIndex(${1:int defaultTexture})"},
-        { "trigger": "ofFbo::setUseTexture \t(bool)"                                         ,"contents": "setUseTexture(${1:bool bUseTex})"},
-        { "trigger": "ofFbo::unbind"                                                         ,"contents": "unbind()"},
+        { "trigger": "ofFbo::allocate \t(int, int, int, int)"                        ,"contents": "allocate(${1:int width}, ${2:int height}, ${3:int internalformat=GL_RGBA}, ${4:int numSamples=0})"},
+        { "trigger": "ofFbo::allocate \t(Settings)"                                  ,"contents": "allocate(${1:Settings settings=Settings()})"},
+        { "trigger": "ofFbo::begin"                                                  ,"contents": "begin()"},
+        { "trigger": "ofFbo::begin \t(bool)"                                         ,"contents": "begin(${1:bool setupScreen=true})"},
+        { "trigger": "ofFbo::bind"                                                   ,"contents": "bind()"},
+        { "trigger": "ofFbo::checkGLSupport"                                         ,"contents": "checkGLSupport()"},
+        { "trigger": "ofFbo::draw \t(float, float)"                                  ,"contents": "draw(${1:float x}, ${4:float y})"},
+        { "trigger": "ofFbo::draw \t(float, float, float, float)"                    ,"contents": "draw(${1:float x}, ${2:float y}, ${3:float width}, ${4:float height})"},
+        { "trigger": "ofFbo::end"                                                    ,"contents": "end()"},
+        { "trigger": "ofFbo::getDefaultTextureIndex"                                 ,"contents": "getDefaultTextureIndex()"},
+        { "trigger": "ofFbo::getDepthBuffer"                                         ,"contents": "getDepthBuffer()"},
+        { "trigger": "ofFbo::getDepthTexture"                                        ,"contents": "getDepthTexture()"},
+        { "trigger": "ofFbo::getFbo"                                                 ,"contents": "getFbo()"},
+        { "trigger": "ofFbo::getHeight"                                              ,"contents": "getHeight()"},
+        { "trigger": "ofFbo::getNumTextures"                                         ,"contents": "getNumTextures()"},
+        { "trigger": "ofFbo::getStencilBuffer"                                       ,"contents": "getStencilBuffer()"},
+        { "trigger": "ofFbo::getTextureReference"                                    ,"contents": "getTextureReference()"},
+        { "trigger": "ofFbo::getTextureReference \t(int)"                            ,"contents": "getTextureReference(${1:int attachmentPoint})"},
+        { "trigger": "ofFbo::getWidth"                                               ,"contents": "getWidth()"},
+        { "trigger": "ofFbo::isAllocated"                                            ,"contents": "isAllocated()"},
+        { "trigger": "ofFbo::maxColorAttachments"                                    ,"contents": "maxColorAttachments()"},
+        { "trigger": "ofFbo::maxDrawBuffers"                                         ,"contents": "maxDrawBuffers()"},
+        { "trigger": "ofFbo::maxSamples"                                             ,"contents": "maxSamples()"},
+        { "trigger": "ofFbo::operator= \t(const ofFbo)"                              ,"contents": "operator=(${1:const ofFbo &fbo})"},
+        { "trigger": "ofFbo::readToPixels \t(ofPixels, int)"                         ,"contents": "readToPixels(${1:ofPixels &pixels}, ${2:int attachmentPoint=0})"},
+        { "trigger": "ofFbo::readToPixels \t(ofShortPixels, int)"                    ,"contents": "readToPixels(${1:ofShortPixels &pixels}, ${2:int attachmentPoint=0})"},
+        { "trigger": "ofFbo::readToPixels \t(ofFloatPixels, int)"                    ,"contents": "readToPixels(${1:ofFloatPixels &pixels}, ${2:int attachmentPoint=0})"},
+        { "trigger": "ofFbo::resetAnchor"                                            ,"contents": "resetAnchor()"},
+        { "trigger": "ofFbo::setActiveDrawBuffer \t(int)"                            ,"contents": "setActiveDrawBuffer(${1:int i})"},
+        { "trigger": "ofFbo::setActiveDrawBuffers \t(const vector< int >)"           ,"contents": "setActiveDrawBuffers(${1:const vector< int > &i})"},
+        { "trigger": "ofFbo::setAnchorPercent \t(float xPct, float yPct)  "          ,"contents": "setAnchorPercent(${1:float xPct}, ${2:float yPct})"},
+        { "trigger": "ofFbo::setAnchorPoint \t(float, float)"                        ,"contents": "setAnchorPoint(${1:float x}, ${2:float y})"},
+        { "trigger": "ofFbo::setDefaultTextureIndex \t(int)"                         ,"contents": "setDefaultTextureIndex(${1:int defaultTexture})"},
+        { "trigger": "ofFbo::setUseTexture \t(bool)"                                 ,"contents": "setUseTexture(${1:bool bUseTex})"},
+        { "trigger": "ofFbo::unbind"                                                 ,"contents": "unbind()"},
 
 
         // =====================================================================
