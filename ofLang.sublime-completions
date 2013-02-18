@@ -3,12 +3,12 @@
 // syntax:
 // 
 // {
-//  "trigger": "namespace::method (variation)",
+//  "trigger": "namespace::method \t(variation)",
 //  "contents": "namespace::method()"
 // }
 // 
 // example:
-// { "trigger": "ofBackground (ofColor)", "contents": "ofBackground(${1:const ofColor &c})" },
+// { "trigger": "ofBackground \t(ofColor)", "contents": "ofBackground(${1:const ofColor &c})" },
 // 
 {
     "scope": "source.c++",
@@ -49,15 +49,15 @@
         { "trigger": "ofBgColorPtr", "contents": "ofBgColorPtr()" },
         
         // ofBox
-        { "trigger": "ofBox \t(size)", "contents": "ofBox(${1:float size})" },
-        { "trigger": "ofBox \t(xy, size)", "contents": "ofBox(${1:float x}, ${2:float y}, ${3:float size})" },
-        { "trigger": "ofBox \t(xyz, size)", "contents": "ofBox(${1:float x}, ${2:float y}, ${3:float z}, ${4:float size})" },
-        { "trigger": "ofBox \t(ofPoint, size)", "contents": "ofBox(${1:const ofPoint &position}, ${2:float size})" },
+        { "trigger": "ofBox", "contents": "ofBox(${1:float size})" },
+        { "trigger": "ofBox \t(xy)", "contents": "ofBox(${1:float x}, ${2:float y}, ${3:float size})" },
+        { "trigger": "ofBox \t(xyz)", "contents": "ofBox(${1:float x}, ${2:float y}, ${3:float z}, ${4:float size})" },
+        { "trigger": "ofBox \t(ofPoint)", "contents": "ofBox(${1:const ofPoint &position}, ${2:float size})" },
 
         // ofCircle
-        { "trigger": "ofCircle \t(xy, radius)", "contents": "ofCircle(${1:float x}, ${2:float y}, ${3:float radius})" },
-        { "trigger": "ofCircle \t(xyz, radius)", "contents": "ofCircle(${1:float x}, ${2:float y}, ${3:float z}, ${4:float radius})" },
-        { "trigger": "ofCircle \t(ofPoint, radius)", "contents": "ofCircle(${1:const ofPoint &p}, ${2:float radius})" },
+        { "trigger": "ofCircle \t(xy)", "contents": "ofCircle(${1:float x}, ${2:float y}, ${3:float radius})" },
+        { "trigger": "ofCircle \t(xyz)", "contents": "ofCircle(${1:float x}, ${2:float y}, ${3:float z}, ${4:float radius})" },
+        { "trigger": "ofCircle \t(ofPoint)", "contents": "ofCircle(${1:const ofPoint &p}, ${2:float radius})" },
 
         // ofClear
         { "trigger": "ofClear \t(rgba)", "contents": "ofClear(${1:float r}, ${2:float g}, ${3:float b}, ${4:float a=0})" },
@@ -70,9 +70,9 @@
         // ofCone
         { "trigger": "ofCone \t(size)", "contents": "ofCone(${1:float size})" },
         { "trigger": "ofCone \t(radius size)", "contents": "ofCone(${1:float radius}, ${2:float height})" },
-        { "trigger": "ofCone \t(xy, radius, height)", "contents": "ofCone(${1:float x}, ${2:float y}, ${3:float radius}, ${4:float height})" },
-        { "trigger": "ofCone \t(xyz, radius, height)", "contents": "ofCone(${1:float x}, ${2:float y}, ${3:float z}, ${4:float radius}, ${5:float height})" },
-        { "trigger": "ofCone \t(ofPoint, radius, height)", "contents": "ofCone(${1:const ofPoint &position}, ${2:float radius}, ${3:float height})" },
+        { "trigger": "ofCone \t(xy)", "contents": "ofCone(${1:float x}, ${2:float y}, ${3:float radius}, ${4:float height})" },
+        { "trigger": "ofCone \t(xyz)", "contents": "ofCone(${1:float x}, ${2:float y}, ${3:float z}, ${4:float radius}, ${5:float height})" },
+        { "trigger": "ofCone \t(ofPoint)", "contents": "ofCone(${1:const ofPoint &position}, ${2:float radius}, ${3:float height})" },
         
         // ofCurve
         { "trigger": "ofCurve \t(xy)", "contents": "ofCurve(${1:float x0}, ${2:float y0}, ${3:float x1}, ${4:float y1}, ${5:float x2}, ${6:float y2}, ${7:float x3}, ${8:float y3})" },
@@ -198,9 +198,129 @@
 
         // ofPushStyle
         { "trigger": "ofPushStyle", "contents": "ofPushStyle()" },
-        
+
         // ofPushView
         { "trigger": "ofPushView", "contents": "ofPushView()" },
+
+        // ofRect
+        { "trigger": "ofRect \t(xywh)", "contents": "ofRect(${1:float x}, ${2:float y}, ${3:float w}, ${4:float h})" },
+        { "trigger": "ofRect \t(xyzwh)", "contents": "ofRect(${1:float x}, ${2:float y}, ${3:float z}, ${4:float w}, ${5:float h})" },
+        { "trigger": "ofRect \t(ofPoint)", "contents": "ofRect(${1:const ofPoint &p}, ${2:float w}, ${3:float h})" },
+        { "trigger": "ofRect \t(ofRectangle)", "contents": "ofRect(${1:const ofRectangle &r})" },
+
+        // ofRectRounded
+        { "trigger": "ofRectRounded \t(xy)", "contents": "ofRectRounded(${1:float x}, ${2:float y}, ${3:float w}, ${4:float h}, ${5:float r})" },
+        { "trigger": "ofRectRounded \t(xyz)", "contents": "ofRectRounded(${1:float x}, ${2:float y}, ${3:float z}, ${4:float w}, ${5:float h}, ${6:float r})" },
+        { "trigger": "ofRectRounded \t(ofPoint)", "contents": "ofRectRounded(${1:const ofPoint &p}, ${2:float w}, ${3:float h}, ${4:float r})" },
+        { "trigger": "ofRectRounded \t(ofRectangle)", "contents": "ofRectRounded(${1:const ofRectangle &b}, ${2:float r})" },
+        
+        // ofRotate
+        { "trigger": "ofRotate", "contents": "ofRotate(${1:float degrees})" },
+        { "trigger": "ofRotate \t(xyz)", "contents": "ofRotate(${1:float degrees}, ${2:float vecX}, ${3:float vecY}, ${4:float vecZ})" },
+        
+        // ofRotateX
+        { "trigger": "ofRotateX", "contents": "ofRotateX(${1:float degrees})" },
+
+        // ofRotateY
+        { "trigger": "ofRotateY", "contents": "ofRotateY(${1:float degrees})" },
+
+        // ofRotateZ
+        { "trigger": "ofRotateZ", "contents": "ofRotateZ(${1:float degrees})" },
+
+        // ofScale
+        { "trigger": "ofScale", "contents": "ofScale(${1:float xAmnt}, ${2:float yAmnt}, ${3:float zAmnt=1})" },
+
+        // ofSetBackgroundAuto
+        { "trigger": "ofSetBackgroundAuto", "contents": "ofSetBackgroundAuto(${1:bool bManual})" },
+
+        // ofSetBackgroundColor
+        { "trigger": "ofSetBackgroundColor \t(rgba)", "contents": "ofSetBackgroundColor(${1:int r}, ${2:int g}, ${3:int b)}, ${4:int a=255})" },
+        { "trigger": "ofSetBackgroundColor \t(brightness, alpha)", "contents": "ofSetBackgroundColor(${1:int brightness}, ${2:int alpha=255})" },
+        { "trigger": "ofSetBackgroundColor \t(ofColor)", "contents": "ofSetBackgroundColor(${1:const ofColor &c})" },
+
+        // ofSetBackgroundColorHex
+        { "trigger": "ofSetBackgroundColorHex", "contents": "ofSetBackgroundColorHex(${1:int hexColor}, ${2:int alpha=255})" },
+
+        // ofSetCircleResolution
+        { "trigger": "ofSetCircleResolution", "contents": "ofSetCircleResolution(${1:int res})" },
+
+        // ofSetColor
+        { "trigger": "ofSetColor \t(rgb)", "contents": "ofSetColor(${1:int r}, ${2:int g}, ${3:int b})" },
+        { "trigger": "ofSetColor \t(rgba)", "contents": "ofSetColor(${1:int r}, ${2:int g}, ${3:int b}, ${4:int a})" },
+        { "trigger": "ofSetColor \t(gray)", "contents": "ofSetColor(${1:int gray})" },
+        { "trigger": "ofSetColor \t(ofColor)", "contents": "ofSetColor(${1:const ofColor &color})" },
+        { "trigger": "ofSetColor \t(ofColor, alpha)", "contents": "ofSetColor(${1:const ofColor &color}, ${2:int _a})" },
+
+        // ofSetCoordHandedness
+        { "trigger": "ofSetCoordHandedness", "contents": "ofSetCoordHandedness(${1:ofHandednessType handedness})" },
+
+        // ofSetCurrentRenderer
+        { "trigger": "ofSetCurrentRenderer", "contents": "ofSetCurrentRenderer(${1:ofPtr< ofBaseRenderer > renderer})" },
+
+        // ofSetCurveResolution
+        { "trigger": "ofSetCurveResolution", "contents": "ofSetCurveResolution(${1:int res})" },
+
+        // ofSetDrawBitmapMode
+        { "trigger": "ofSetDrawBitmapMode", "contents": "ofSetDrawBitmapMode(${1:ofDrawBitmapMode mode})" },
+
+        // ofSetHexColor
+        { "trigger": "ofSetHexColor", "contents": "ofSetHexColor(${1:int hexColor})" },
+
+        // ofSetLineWidth
+        { "trigger": "ofSetLineWidth", "contents": "ofSetLineWidth(${1:float lineWidth})" },
+
+        // ofSetPolyMode
+        { "trigger": "ofSetPolyMode", "contents": "ofSetPolyMode(${1:int mode})" },
+        { "trigger": "ofSetPolyMode \t(ofPolyWindingMode)", "contents": "ofSetPolyMode(${1:ofPolyWindingMode mode})" },
+
+        // ofSetRectMode
+        { "trigger": "ofSetRectMode", "contents": "ofSetRectMode(${1:int mode})" },
+        { "trigger": "ofSetRectMode \t(ofRectMode)", "contents": "ofSetRectMode(${1:ofRectMode mode})" },
+
+        // ofSetSphereResolution
+        { "trigger": "ofSetSphereResolution", "contents": "ofSetSphereResolution(${1:int res})" },
+
+        // ofSetStyle
+        { "trigger": "ofSetStyle", "contents": "ofSetStyle(${1:ofStyle style})" },
+
+        // ofSetupScreen
+        { "trigger": "ofSetupScreen", "contents": "ofSetupScreen()" },
+
+        // ofSetupScreenOrtho
+        { "trigger": "ofSetupScreenOrtho", "contents": "ofSetupScreenOrtho(${1:float width=0}, ${2:float height=0}, ${3:ofOrientation orientation=OF_ORIENTATION_UNKNOWN}, ${4:bool vFlip=true}, ${5:float nearDist=-1}, ${6:float farDist=-1})" },
+        
+        // ofSetupScreenPerspective
+        { "trigger": "ofSetupScreenPerspective", "contents": "ofSetupScreenPerspective(${1:float width=0}, ${2:float height=0}, ${3:ofOrientation orientation=OF_ORIENTATION_UNKNOWN}, ${4:bool vFlip=true}, ${5:float fov=60}, ${6:float nearDist=0}, ${7:float farDist=0})" },
+
+        // ofSphere
+        { "trigger": "ofSphere", "contents": "ofSphere(${1:float radius})" },
+        { "trigger": "ofSphere \t(xy)", "contents": "ofSphere(${1:float x}, ${2:float y}, ${3:float radius})" },
+        { "trigger": "ofSphere \t(xyz)", "contents": "ofSphere(${1:float x}, ${2:float y}, ${3:float z}, ${4:float radius})" },
+        { "trigger": "ofSphere \t(ofPoint)", "contents": "ofSphere(${1:const ofPoint &position}, ${2:float radius})" },
+
+        // ofTranslate
+        { "trigger": "ofTranslate \t(xyz)", "contents": "ofTranslate(${1:float x}, ${2:float y}, ${3:float z=0})" },
+        { "trigger": "ofTranslate \t(ofPoint)", "contents": "ofTranslate(${1:const ofPoint &p})" },
+
+        // ofTriangle
+        { "trigger": "ofTriangle \t(xy)", "contents": "ofTriangle(${1:float x1}, ${2:float y1}, ${3:float x2}, ${4:float y2}, ${5:float x3}, ${6:float y3})" },
+        { "trigger": "ofTriangle \t(xyz)", "contents": "ofTriangle(${1:float x1}, ${2:float y1}, ${3:float z1}, ${4:float x2}, ${5:float y2}, ${6:float z2}, ${7:float x3}, ${8:float y3}, ${9:float z3})" },
+        { "trigger": "ofTriangle \t(ofPoint)", "contents": "ofTriangle(${1:const ofPoint &p1}, ${2:const ofPoint &p2}, ${3:const ofPoint &p3})" },
+        
+        // ofVertex
+        { "trigger": "ofVertex \t(xy)", "contents": "ofVertex(${1:float x}, ${2:float y})" },
+        { "trigger": "ofVertex \t(xyz)", "contents": "ofVertex(${1:float x}, ${2:float y}, ${3:float z})" },
+        { "trigger": "ofVertex \t(ofPoint)", "contents": "ofVertex(${1:ofPoint &p})" },
+        
+        // ofVertices
+        { "trigger": "ofVertices", "contents": "ofVertices(${1:const vector< ofPoint > &polyPoints})" },
+
+        // ofViewport
+        { "trigger": "ofViewport", "contents": "ofViewport(${1:float x=0}, ${2:float y=0}, ${3:float width=0}, ${4:float height=0}, ${5:bool invertY=true})" },
+        { "trigger": "ofViewport \t(ofRectangle)", "contents": "ofViewport(${1:ofRectangle viewport})" },
+
+        // ofbClearBg
+        { "trigger": "ofbClearBg", "contents": "ofbClearBg()" },
 
         // =====================================================================
         // ofCamera
