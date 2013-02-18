@@ -15,7 +15,7 @@
 
     "completions":
     [
-        // =====================================================================
+        ////////////////////////////////////
         // ofGraphics
 
         // ofBackground
@@ -322,7 +322,7 @@
         // ofbClearBg
         { "trigger": "ofbClearBg"                                                    ,"contents": "ofbClearBg()" },
 
-        // =====================================================================
+        ///////////////////////////////////////////
         // ofCamera
         { "trigger": "ofCamera::begin \t(ofRectangle)"                               ,"contents": "begin(${1:ofRectangle viewport=ofGetCurrentViewport()})"},
         { "trigger": "ofCamera::cacheMatrices \t(bool)"                              ,"contents": "cacheMatrices(${1:bool cache=true})"},
@@ -344,8 +344,7 @@
         { "trigger": "ofCamera::setupPerspective"                                    ,"contents": "setupPerspective(${1:bool vFlip=true}, ${2:float fov=60}, ${3:float nearDist=0}, ${4:float farDist=0})"},
         { "trigger": "ofCamera::worldToCamera \t(ofVec3f, ofRectangle)"              ,"contents": "worldToCamera(${1:ofVec3f WorldXYZ}, ${2:ofRectangle viewport=ofGetCurrentViewport()})"},
         { "trigger": "ofCamera::worldToScreen"                                       ,"contents": "worldToScreen(${1:ofVec3f WorldXYZ}, ${2:ofRectangle viewport=ofGetCurrentViewport()})"},
-
-        // =====================================================================
+        ////////////////////////////////////
         // ofEasyCam
         { "trigger": "ofEasyCam::begin \t(ofRectangle)"                              ,"contents": "begin(${1:ofRectangle viewport=ofGetCurrentViewport()})"},
         { "trigger": "ofEasyCam::disableMouseInput"                                  ,"contents": "disableMouseInput()"},
@@ -368,8 +367,7 @@
         { "trigger": "ofEasyCam::setTarget \t(const ofVec3f)"                        ,"contents": "setTarget(${1:const ofVec3f &target})"},
         { "trigger": "ofEasyCam::setTarget \t(ofNode)"                               ,"contents": "setTarget(${1:ofNode &target})"},
         { "trigger": "ofEasyCam::setTranslationKey \t(char)"                         ,"contents": "setTranslationKey(${1:char key})"},
-
-        // =====================================================================
+        /////////////////////////////////
         // ofMesh Primitives Modes
         { "trigger": "OF_PRIMITIVE_TRIANGLES"                                        ,"contents": "OF_PRIMITIVE_TRIANGLES"},
         { "trigger": "OF_PRIMITIVE_TRIANGLE_STRIP"                                   ,"contents": "OF_PRIMITIVE_TRIANGLE_STRIP"},
@@ -378,8 +376,7 @@
         { "trigger": "OF_PRIMITIVE_LINE_STRIP"                                       ,"contents": "OF_PRIMITIVE_LINE_STRIP"},
         { "trigger": "OF_PRIMITIVE_LINE_LOOP"                                        ,"contents": "OF_PRIMITIVE_LINE_LOOP"},
         { "trigger": "OF_PRIMITIVE_POINTS"                                           ,"contents": "OF_PRIMITIVE_POINTS"},
-
-        // =====================================================================
+        /////////////////////////////////
         // ofMesh
         { "trigger": "ofMesh::addColor \t(const ofFloatColor)"                       ,"contents": "addColor(${1:const ofFloatColor &c})"},
         { "trigger": "ofMesh::addColors \t(const vector< ofFloatColor >)"            ,"contents": "addColors(${1:const vector< ofFloatColor > &cols})"},
@@ -481,8 +478,7 @@
         { "trigger": "ofMesh::usingIndices"                                          ,"contents": "usingIndices()"},
         { "trigger": "ofMesh::usingNormals"                                          ,"contents": "usingNormals()"},
         { "trigger": "ofMesh::usingTextures"                                         ,"contents": "usingTextures()"},
-
-        // =====================================================================
+        /////////////////////////////////
         // ofNode
         { "trigger": "ofNode::boom\t(float)"                                         ,"contents": "boom(${1:float amount})"},
         { "trigger": "ofNode::clearParent"                                           ,"contents": "clearParent()"},
@@ -522,9 +518,7 @@
         { "trigger": "ofNode::restoreTransformGL"                                    ,"contents": "restoreTransformGL()"},
         { "trigger": "ofNode::roll\t(float)"                                         ,"contents": "roll(${1:float degrees})"},
         { "trigger": "ofNode::rotate\t(const)"                                       ,"contents": "rotate(${1:const ofQuaternion &q})"},
-
-        // =====================================================================
-<<<<<<< HEAD
+        ///////////////////////////////
         // ofFbo
         { "trigger": "ofFbo::allocate \t(int, int, int, int)"                                ,"contents": "allocate(${1:int width}, ${2:int height}, ${3:int internalformat=GL_RGBA}, ${4:int numSamples=0})"},
         { "trigger": "ofFbo::allocate \t(Settings)"                                          ,"contents": "allocate(Settings settings=Settings())"},
@@ -561,7 +555,7 @@
         { "trigger": "ofFbo::setDefaultTextureIndex \t(int)"                                 ,"contents": "setDefaultTextureIndex(${1:int defaultTexture})"},
         { "trigger": "ofFbo::setUseTexture \t(bool)"                                         ,"contents": "setUseTexture(${1:bool bUseTex})"},
         { "trigger": "ofFbo::unbind"                                                         ,"contents": "unbind()"},
-=======
+        /////////////////////////////////
         // ofNode
         { "trigger": "ofFbo::allocate \t(int, int, int, int)"                        ,"contents": "allocate(${1:int width}, ${2:int height}, ${3:int internalformat=GL_RGBA}, ${4:int numSamples=0})"},
         { "trigger": "ofFbo::allocate \t(Settings)"                                  ,"contents": "allocate(${1:Settings settings=Settings()})"},
@@ -598,9 +592,7 @@
         { "trigger": "ofFbo::setDefaultTextureIndex \t(int)"                         ,"contents": "setDefaultTextureIndex(${1:int defaultTexture})"},
         { "trigger": "ofFbo::setUseTexture \t(bool)"                                 ,"contents": "setUseTexture(${1:bool bUseTex})"},
         { "trigger": "ofFbo::unbind"                                                 ,"contents": "unbind()"},
->>>>>>> 1bfc09d67b68b41a7e7b2095fc958a390252add6
-
-        // =====================================================================
+        /////////////////////////////////
         // ofGLRenderer 
         { "trigger": "ofGLRenderer::bClearBg"                                                                                   ,"contents": "bClearBg()"},
         { "trigger": "ofGLRenderer::background \t(const ofColor)"                                                               ,"contents": "background(${1:const ofColor &c})"},
@@ -685,10 +677,7 @@
         { "trigger": "OF_ORIENTATION_UNKNOWN"                                                                                   ,"contents": "OF_ORIENTATION_UNKNOWN"},
 
 
-
-
-
-        // =====================================================================
+        ///////////////////////////////////////
         // EMPTY - Kept so that all JSON objects above can keep the trailing ","
         {}
     ]
