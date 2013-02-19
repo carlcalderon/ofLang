@@ -1135,25 +1135,30 @@
 
         /////////////////////////////////////
         // ofFileDialogResult
+        { "trigger": "ofFileDialogResult::getName"                     ,"contents": "${1:ofFileDialogResult}.getName()"},
+        { "trigger": "ofFileDialogResult::getPath"                     ,"contents": "${1:ofFileDialogResult}.getPath()"},
+        { "trigger": "ofFileDialogResult::bSuccess"                    ,"contents": "${1:ofFileDialogResult}.bSuccess"},
+        { "trigger": "ofFileDialogResult::fileName"                    ,"contents": "${1:ofFileDialogResult}.fileName"},
+        { "trigger": "ofFileDialogResult::filePath"                    ,"contents": "${1:ofFileDialogResult}.filePath"},
 
         /////////////////////////////////////
         // ofFilePath
-        { "trigger": "ofFilePath::addLeadingSlash(string)"                                  ,"contents": "ofFilePath::addLeadingSlash(${1:string path})"},
-        { "trigger": "ofFilePath::addTrailingSlash(string)"                                 ,"contents": "ofFilePath::addTrailingSlash(${1:string path})"},
-        { "trigger": "ofFilePath::getAbsolutePath(string, bool)"                            ,"contents": "ofFilePath::getAbsolutePath(${1:string path}, ${2:bool bRelativeToData=true})"},
-        { "trigger": "ofFilePath::getBaseName(string)"                                      ,"contents": "ofFilePath::getBaseName(${1:string filePath})"},
-        { "trigger": "ofFilePath::getCurrentExeDir"                                         ,"contents": "ofFilePath::getCurrentExeDir()"},
-        { "trigger": "ofFilePath::getCurrentExePath"                                        ,"contents": "ofFilePath::getCurrentExePath()"},
-        { "trigger": "ofFilePath::getCurrentWorkingDirectory"                               ,"contents": "ofFilePath::getCurrentWorkingDirectory()"},
-        { "trigger": "ofFilePath::getEnclosingDirectory(string, bool)"                      ,"contents": "ofFilePath::getEnclosingDirectory(${1:string filePath}, ${2:bool bRelativeToData=true})"},
-        { "trigger": "ofFilePath::getFileExt(string)"                                       ,"contents": "ofFilePath::getFileExt(${1:string filename})"},
-        { "trigger": "ofFilePath::getFileName(string, bool)"                                ,"contents": "ofFilePath::getFileName(${1:string filePath}, ${2:bool bRelativeToData=true})"},
-        { "trigger": "ofFilePath::getPathForDirectory(string)"                              ,"contents": "ofFilePath::getPathForDirectory(${1:string path})"},
-        { "trigger": "ofFilePath::getUserHomeDir"                                           ,"contents": "ofFilePath::getUserHomeDir()"},
-        { "trigger": "ofFilePath::isAbsolute(string)"                                       ,"contents": "ofFilePath::isAbsolute(${1:string path})"},
-        { "trigger": "ofFilePath::join(string, string)"                                     ,"contents": "ofFilePath::join(${1:string path1}, ${2:string path2})"},
-        { "trigger": "ofFilePath::removeExt(string)"                                        ,"contents": "ofFilePath::removeExt(${1:string filename})"},
-        { "trigger": "ofFilePath::removeTrailingSlash(string)"                              ,"contents": "ofFilePath::removeTrailingSlash(${1:string path})"},
+        { "trigger": "ofFilePath::addLeadingSlash(string)"                                  ,"contents": "${1:ofFilePath}.addLeadingSlash(${2:string path})"},
+        { "trigger": "ofFilePath::addTrailingSlash(string)"                                 ,"contents": "${1:ofFilePath}.addTrailingSlash(${2:string path})"},
+        { "trigger": "ofFilePath::getAbsolutePath(string, bool)"                            ,"contents": "${1:ofFilePath}.getAbsolutePath(${2:string path}, ${3:bool bRelativeToData=true})"},
+        { "trigger": "ofFilePath::getBaseName(string)"                                      ,"contents": "${1:ofFilePath}.getBaseName(${2:string filePath})"},
+        { "trigger": "ofFilePath::getCurrentExeDir"                                         ,"contents": "${1:ofFilePath}.getCurrentExeDir()"},
+        { "trigger": "ofFilePath::getCurrentExePath"                                        ,"contents": "${1:ofFilePath}.getCurrentExePath()"},
+        { "trigger": "ofFilePath::getCurrentWorkingDirectory"                               ,"contents": "${1:ofFilePath}.getCurrentWorkingDirectory()"},
+        { "trigger": "ofFilePath::getEnclosingDirectory(string, bool)"                      ,"contents": "${1:ofFilePath}.getEnclosingDirectory(${2:string filePath}, ${3:bool bRelativeToData=true})"},
+        { "trigger": "ofFilePath::getFileExt(string)"                                       ,"contents": "${1:ofFilePath}.getFileExt(${2:string filename})"},
+        { "trigger": "ofFilePath::getFileName(string, bool)"                                ,"contents": "${1:ofFilePath}.getFileName(${2:string filePath}, ${3:bool bRelativeToData=true})"},
+        { "trigger": "ofFilePath::getPathForDirectory(string)"                              ,"contents": "${1:ofFilePath}.getPathForDirectory(${2:string path})"},
+        { "trigger": "ofFilePath::getUserHomeDir"                                           ,"contents": "${1:ofFilePath}.getUserHomeDir()"},
+        { "trigger": "ofFilePath::isAbsolute(string)"                                       ,"contents": "${1:ofFilePath}.isAbsolute(${2:string path})"},
+        { "trigger": "ofFilePath::join(string, string)"                                     ,"contents": "${1:ofFilePath}.join(${2:string path1}, ${3:string path2})"},
+        { "trigger": "ofFilePath::removeExt(string)"                                        ,"contents": "${1:ofFilePath}.removeExt(${2:string filename})"},
+        { "trigger": "ofFilePath::removeTrailingSlash(string)"                              ,"contents": "${1:ofFilePath}.removeTrailingSlash(${2:string path})"},
 
 
 
