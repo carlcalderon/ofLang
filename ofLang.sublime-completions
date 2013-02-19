@@ -1068,9 +1068,49 @@
         { "trigger": "ofxXmlSettings::bDocLoaded"                                                           ,"contents": "${1:ofxXmlSettings}.bDocLoaded"},
         { "trigger": "ofxXmlSettings::doc"                                                                  ,"contents": "${1:ofxXmlSettings}.doc"},
 
+        /////////////////////////////////////
+        // ofVideoGrabber
+        { "trigger": "ofVideoGrabber::close"                                       ,"contents": "${1:ofVideoGrabber}.close()"},
+        { "trigger": "ofVideoGrabber::draw(float, float, float, float)"            ,"contents": "${1:ofVideoGrabber}.draw(${2:float x}, ${3:float y}, ${4:float w}, ${5:float h})"},
+        { "trigger": "ofVideoGrabber::draw(float, float)"                          ,"contents": "${1:ofVideoGrabber}.draw(${2:float x}, ${3:float y})"},
+        { "trigger": "ofVideoGrabber::draw(const ofPoint)"                         ,"contents": "${1:ofVideoGrabber}.draw(${2:const ofPoint &p})"},
+        { "trigger": "ofVideoGrabber::draw(const ofRectangle)"                     ,"contents": "${1:ofVideoGrabber}.draw(${2:const ofRectangle &r})"},
+        { "trigger": "ofVideoGrabber::getGrabber"                                  ,"contents": "${1:ofVideoGrabber}.getGrabber()"},
+        { "trigger": "ofVideoGrabber::getHeight"                                   ,"contents": "${1:ofVideoGrabber}.getHeight()"},
+        { "trigger": "ofVideoGrabber::getPixelFormat"                              ,"contents": "${1:ofVideoGrabber}.getPixelFormat()"},
+        { "trigger": "ofVideoGrabber::getPixels"                                   ,"contents": "${1:ofVideoGrabber}.getPixels()"},
+        { "trigger": "ofVideoGrabber::getPixelsRef"                                ,"contents": "${1:ofVideoGrabber}.getPixelsRef()"},
+        { "trigger": "ofVideoGrabber::getTextureReference"                         ,"contents": "${1:ofVideoGrabber}.getTextureReference()"},
+        { "trigger": "ofVideoGrabber::getWidth"                                    ,"contents": "${1:ofVideoGrabber}.getWidth()"},
+        { "trigger": "ofVideoGrabber::grabFrame"                                   ,"contents": "${1:ofVideoGrabber}.grabFrame()"},
+        { "trigger": "ofVideoGrabber::initGrabber(int, int, bool)"                 ,"contents": "${1:ofVideoGrabber}.initGrabber(${2:int w}, ${3:int h}, ${4:bool bTexture})"},
+        { "trigger": "ofVideoGrabber::initGrabber(int, int)"                       ,"contents": "${1:ofVideoGrabber}.initGrabber(${2:int w}, ${3:int h})"},
+        { "trigger": "ofVideoGrabber::isFrameNew"                                  ,"contents": "${1:ofVideoGrabber}.isFrameNew()"},
+        { "trigger": "ofVideoGrabber::isInitialized"                               ,"contents": "${1:ofVideoGrabber}.isInitialized()"},
+        { "trigger": "ofVideoGrabber::listDevices"                                 ,"contents": "${1:ofVideoGrabber}.listDevices()"},
+        { "trigger": "ofVideoGrabber::setAnchorPoint(float, float)"                ,"contents": "${1:ofVideoGrabber}.setAnchorPoint(${2:float x}, ${3:float y})"},
+        { "trigger": "ofVideoGrabber::setDesiredFrameRate(int)"                    ,"contents": "${1:ofVideoGrabber}.setDesiredFrameRate(${2:int framerate})"},
+        { "trigger": "ofVideoGrabber::setDeviceID(int)"                            ,"contents": "${1:ofVideoGrabber}.setDeviceID(${2:int _deviceID})"},
+        { "trigger": "ofVideoGrabber::setGrabber(ofPtr< ofBaseVideoGrabber >)"     ,"contents": "${1:ofVideoGrabber}.setGrabber(${2:ofPtr< ofBaseVideoGrabber > newGrabber})"},
+        { "trigger": "ofVideoGrabber::setPixelFormat(ofPixelFormat)"               ,"contents": "${1:ofVideoGrabber}.setPixelFormat(${2:ofPixelFormat pixelFormat})"},
+        { "trigger": "ofVideoGrabber::setUseTexture(bool)"                         ,"contents": "${1:ofVideoGrabber}.setUseTexture(${2:bool bUse})"},
+        { "trigger": "ofVideoGrabber::setVerbose(bool)"                            ,"contents": "${1:ofVideoGrabber}.setVerbose(${2:bool bTalkToMe})"},
+        { "trigger": "ofVideoGrabber::update"                                      ,"contents": "${1:ofVideoGrabber}.update()"},
+        { "trigger": "ofVideoGrabber::videoSettings"                               ,"contents": "${1:ofVideoGrabber}.videoSettings()"},
+        { "trigger": "ofVideoGrabber::height"                                      ,"contents": "${1:ofVideoGrabber}.height"},
+        { "trigger": "ofVideoGrabber::width"                                       ,"contents": "${1:ofVideoGrabber}.width"},
+
+        /////////////////////////////////////
+        // ofVideoPlayer
 
 
 
+        /////////////////////////////////////
+        // ofSoundPlayer
+
+
+        /////////////////////////////////////
+        // ofSoundStream
 
 
 
@@ -1120,7 +1160,23 @@
         { "trigger": "ofWrapDegrees \t(float, float, float)"                                          ,"contents": "ofWrapDegrees(${1:float angle}, ${2:float from=-180}, ${3:float to=+180})"},
         { "trigger": "ofWrapRadians \t(float, float, float)"                                          ,"contents": "ofWrapRadians(${1:float angle}, ${2:float from=-PI}, ${3:float to=+PI})"},
 
+        /////////////////////////////////////
+        // ofMatrix3x3
 
+        /////////////////////////////////////
+        // ofMatrix4x4
+
+        /////////////////////////////////////
+        // ofQuaternion
+
+        /////////////////////////////////////
+        // ofVec2f
+
+        /////////////////////////////////////
+        // ofVec3f
+
+        /////////////////////////////////////
+        // ofVec4f
 
         //////////////////// utils ///////////////////
         
