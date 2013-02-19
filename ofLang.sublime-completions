@@ -1138,9 +1138,30 @@
 
         /////////////////////////////////////
         // ofFilePath
+        { "trigger": "ofFilePath::addLeadingSlash(string)"                                  ,"contents": "ofFilePath::addLeadingSlash(${1:string path})"},
+        { "trigger": "ofFilePath::addTrailingSlash(string)"                                 ,"contents": "ofFilePath::addTrailingSlash(${1:string path})"},
+        { "trigger": "ofFilePath::getAbsolutePath(string, bool)"                            ,"contents": "ofFilePath::getAbsolutePath(${1:string path}, ${2:bool bRelativeToData=true})"},
+        { "trigger": "ofFilePath::getBaseName(string)"                                      ,"contents": "ofFilePath::getBaseName(${1:string filePath})"},
+        { "trigger": "ofFilePath::getCurrentExeDir"                                         ,"contents": "ofFilePath::getCurrentExeDir()"},
+        { "trigger": "ofFilePath::getCurrentExePath"                                        ,"contents": "ofFilePath::getCurrentExePath()"},
+        { "trigger": "ofFilePath::getCurrentWorkingDirectory"                               ,"contents": "ofFilePath::getCurrentWorkingDirectory()"},
+        { "trigger": "ofFilePath::getEnclosingDirectory(string, bool)"                      ,"contents": "ofFilePath::getEnclosingDirectory(${1:string filePath}, ${2:bool bRelativeToData=true})"},
+        { "trigger": "ofFilePath::getFileExt(string)"                                       ,"contents": "ofFilePath::getFileExt(${1:string filename})"},
+        { "trigger": "ofFilePath::getFileName(string, bool)"                                ,"contents": "ofFilePath::getFileName(${1:string filePath}, ${2:bool bRelativeToData=true})"},
+        { "trigger": "ofFilePath::getPathForDirectory(string)"                              ,"contents": "ofFilePath::getPathForDirectory(${1:string path})"},
+        { "trigger": "ofFilePath::getUserHomeDir"                                           ,"contents": "ofFilePath::getUserHomeDir()"},
+        { "trigger": "ofFilePath::isAbsolute(string)"                                       ,"contents": "ofFilePath::isAbsolute(${1:string path})"},
+        { "trigger": "ofFilePath::join(string, string)"                                     ,"contents": "ofFilePath::join(${1:string path1}, ${2:string path2})"},
+        { "trigger": "ofFilePath::removeExt(string)"                                        ,"contents": "ofFilePath::removeExt(${1:string filename})"},
+        { "trigger": "ofFilePath::removeTrailingSlash(string)"                              ,"contents": "ofFilePath::removeTrailingSlash(${1:string path})"},
+
+
+
 
         /////////////////////////////////////
         // ofFileUtils
+        { "trigger": "ofBufferFromFile \t(const string, bool)"             ,"contents": "ofBufferFromFile(${1:const string &path}, ${2:bool binary=false})"},
+        { "trigger": "ofBufferToFile \t(const string, ofBuffer, bool)"     ,"contents": "ofBufferToFile(${1:const string &path}, ${2:ofBuffer &buffer}, ${3:bool binary=false})"},
 
         /////////////////////////////////////
         // ofHttpRequest
