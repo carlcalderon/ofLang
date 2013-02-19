@@ -965,7 +965,8 @@
         { "trigger" : "ofSleepMillis \t(int)"                                           ,"contents": "ofSleepMillis(${1:int millis})"},
         { "trigger" : "ofToggleFullscreen"                                              ,"contents": "ofToggleFullscreen()"},
 
-
+        ////////////////////////////
+        // screenMode
         { "trigger": "OF_WINDOW \tscreenMode"                ,"contents": "OF_WINDOW"},
         { "trigger": "OF_FULLSCREEN \tscreenMode"            ,"contents": "OF_FULLSCREEN"},
         { "trigger": "OF_GAME_MODE \tscreenMode"             ,"contents": "OF_GAME_MODE"},
@@ -1121,8 +1122,120 @@
 
 
 
+        //////////////////// utils ///////////////////
+        
+        /////////////////////////////////////
+        // ofBuffer
 
-        ///////////////////////////////////////
+        /////////////////////////////////////
+        // ofDirectory
+
+        /////////////////////////////////////
+        // ofFile
+
+        /////////////////////////////////////
+        // ofFileDialogResult
+
+        /////////////////////////////////////
+        // ofFilePath
+
+        /////////////////////////////////////
+        // ofFileUtils
+
+        /////////////////////////////////////
+        // ofHttpRequest
+
+        /////////////////////////////////////
+        // ofHttpResponse
+
+        /////////////////////////////////////
+        // ofLog
+
+        /////////////////////////////////////
+        // ofSystemUtils
+
+        /////////////////////////////////////
+        // ofThread
+
+        /////////////////////////////////////
+        // ofURLFileLoader
+
+        /////////////////////////////////////
+        // ofUtils
+        { "trigger": "ofBinaryToChar \t(const string)"                                    ,"contents": "ofBinaryToChar(${1:const string &value})"},
+        { "trigger": "ofBinaryToFloat \t(const string)"                                   ,"contents": "ofBinaryToFloat(${1:const string &value})"},
+        { "trigger": "ofBinaryToInt \t(const string)"                                     ,"contents": "ofBinaryToInt(${1:const string &value})"},
+        { "trigger": "ofBinaryToString \t(const string)"                                  ,"contents": "ofBinaryToString(${1:const string &value})"},
+        { "trigger": "ofContains \t(const vector< T >, const T)"                          ,"contents": "ofContains(${1:const vector< T > &values}, ${2:const T &target})"},
+        { "trigger": "ofFind \t(const vector< T >, const T)"                              ,"contents": "ofFind(${1:const vector< T > &values}, ${2:const T &target})"},
+        { "trigger": "ofGetDay"                                                           ,"contents": "ofGetDay()"},
+        { "trigger": "ofGetElapsedTimeMicros"                                             ,"contents": "ofGetElapsedTimeMicros()"},
+        { "trigger": "ofGetElapsedTimeMillis"                                             ,"contents": "ofGetElapsedTimeMillis()"},
+        { "trigger": "ofGetElapsedTimef"                                                  ,"contents": "ofGetElapsedTimef()"},
+        { "trigger": "ofGetFrameNum"                                                      ,"contents": "ofGetFrameNum()"},
+        { "trigger": "ofGetHours"                                                         ,"contents": "ofGetHours()"},
+        { "trigger": "ofGetMinutes"                                                       ,"contents": "ofGetMinutes()"},
+        { "trigger": "ofGetMonth"                                                         ,"contents": "ofGetMonth()"},
+        { "trigger": "ofGetSeconds"                                                       ,"contents": "ofGetSeconds()"},
+        { "trigger": "ofGetSystemTimeMicros"                                              ,"contents": "ofGetSystemTimeMicros()"},
+        { "trigger": "ofGetTargetPlatform"                                                ,"contents": "ofGetTargetPlatform()"},
+        { "trigger": "ofGetTimestampString"                                               ,"contents": "ofGetTimestampString()"},
+        { "trigger": "ofGetTimestampString \t(string)"                                    ,"contents": "ofGetTimestampString(${1:string timestampFormat})"},
+        { "trigger": "ofGetUnixTime"                                                      ,"contents": "ofGetUnixTime()"},
+        { "trigger": "ofGetVersionInfo"                                                   ,"contents": "ofGetVersionInfo()"},
+        { "trigger": "ofGetWeekday"                                                       ,"contents": "ofGetWeekday()"},
+        { "trigger": "ofGetYear"                                                          ,"contents": "ofGetYear()"},
+        { "trigger": "ofHexToChar \t(const string)"                                       ,"contents": "ofHexToChar(${1:const string &charHexString})"},
+        { "trigger": "ofHexToFloat \t(const string)"                                      ,"contents": "ofHexToFloat(${1:const string &floatHexString})"},
+        { "trigger": "ofHexToInt \t(const string)"                                        ,"contents": "ofHexToInt(${1:const string &intHexString})"},
+        { "trigger": "ofHexToString \t(const string)"                                     ,"contents": "ofHexToString(${1:const string &stringHexString})"},
+        { "trigger": "ofIsStringInString \t(string, string)"                              ,"contents": "ofIsStringInString(${1:string haystack}, ${2:string needle})"},
+        { "trigger": "ofJoinString \t(vector< string >, const string)"                    ,"contents": "ofJoinString(${1:vector< string > stringElements}, ${2:const string &delimiter})"},
+        { "trigger": "ofLaunchBrowser \t(string)"                                         ,"contents": "ofLaunchBrowser(${1:string url})"},
+        { "trigger": "ofNextPow2 \t(int)"                                                 ,"contents": "ofNextPow2(${1:int input})"},
+        { "trigger": "ofRandomize \t(vector< T >)"                                        ,"contents": "ofRandomize(${1:vector< T > &values})"},
+        { "trigger": "ofRemove \t(vector< T >, BoolFunction)"                             ,"contents": "ofRemove(${1:vector< T > &values}, ${2:BoolFunction shouldErase})"},
+        { "trigger": "ofResetElapsedTimeCounter"                                          ,"contents": "ofResetElapsedTimeCounter()"},
+        { "trigger": "ofSaveFrame"                                                        ,"contents": "ofSaveFrame()"},
+        { "trigger": "ofSaveFrame \t(bool)"                                               ,"contents": "ofSaveFrame(${1:bool bUseViewport=false})"},
+        { "trigger": "ofSaveScreen \t(string)"                                            ,"contents": "ofSaveScreen(${1:string filename})"},
+        { "trigger": "ofSaveViewport \t(string)"                                          ,"contents": "ofSaveViewport(${1:string filename})"},
+        { "trigger": "ofSetDataPathRoot \t(string)"                                       ,"contents": "ofSetDataPathRoot(${1:string root})"},
+        { "trigger": "ofSort \t(vector< T >)"                                             ,"contents": "ofSort(${1:vector< T > &values})"},
+        { "trigger": "ofSort \t(vector< T >, BoolFunction)"                               ,"contents": "ofSort(${1:vector< T > &values}, ${2:BoolFunction compare})"},
+        { "trigger": "ofSplitString \t(const string&, const string&)"                     ,"contents": "ofSplitString(${1:const string& str}, ${2:const string& delimiter = " "})"},
+        { "trigger": "ofSplitString \t(const string, const string, bool, bool)"           ,"contents": "ofSplitString(${1:const string &source}, ${2:const string &delimiter}, ${3:bool ignoreEmpty=false}, ${4:bool trim=false})"},
+        { "trigger": "ofStringReplace \t(string, string, string)"                         ,"contents": "ofStringReplace(${1:string &input}, ${2:string searchStr}, ${3:string replaceStr})"},
+        { "trigger": "ofSystem \t(string)"                                                ,"contents": "ofSystem(${1:string command})"},
+        { "trigger": "ofToBinary \t(const T)"                                             ,"contents": "ofToBinary(${1:const T &value})"},
+        { "trigger": "ofToBinary \t(const string)"                                        ,"contents": "ofToBinary(${1:const string &value})"},
+        { "trigger": "ofToBinary \t(const char)"                                          ,"contents": "ofToBinary(${1:const char *value})"},
+        { "trigger": "ofToBool \t(const string)"                                          ,"contents": "ofToBool(${1:const string &boolString})"},
+        { "trigger": "ofToChar \t(const string)"                                          ,"contents": "ofToChar(${1:const string &charString})"},
+        { "trigger": "ofToDataPath \t(string, bool)"                                      ,"contents": "ofToDataPath(${1:string path}, ${2:bool absolute=false})"},
+        { "trigger": "ofToFloat \t(const string&)"                                        ,"contents": "ofToFloat(${1:const string& floatString})"},
+        { "trigger": "ofToFloat \t(const string)"                                         ,"contents": "ofToFloat(${1:const string &floatString})"},
+        { "trigger": "ofToHex \t(const T)"                                                ,"contents": "ofToHex(${1:const T &value})"},
+        { "trigger": "ofToHex \t(const string)"                                           ,"contents": "ofToHex(${1:const string &value})"},
+        { "trigger": "ofToHex \t(const char)"                                             ,"contents": "ofToHex(${1:const char *value})"},
+        { "trigger": "ofToInt \t(const string&)"                                          ,"contents": "ofToInt(${1:const string& intString})"},
+        { "trigger": "ofToInt \t(const string)"                                           ,"contents": "ofToInt(${1:const string &intString})"},
+        { "trigger": "ofToLower \t(const string)"                                         ,"contents": "ofToLower(${1:const string &src})"},
+        { "trigger": "ofToString \t(int)"                                                 ,"contents": "ofToString({int value})"},
+        { "trigger": "ofToString \t(const T)"                                             ,"contents": "ofToString(${1:const T &value})"},
+        { "trigger": "ofToString \t(const T, int)"                                        ,"contents": "ofToString(${1:const T &value, int precision})"},
+        { "trigger": "ofToString \t(const vector< T >)"                                   ,"contents": "ofToString(${1:const vector< T > &values})"},
+        { "trigger": "ofToString \t(const T, int, char)"                                  ,"contents": "ofToString(${1:const T &value}, ${2:int width}, ${3:char fill})"},
+        { "trigger": "ofToString \t(const T, int, int, char)"                             ,"contents": "ofToString(${1:const T &value}, ${2:int precision}, ${3:int width}, ${4:char fill})"},
+        { "trigger": "ofToUpper \t(const string)"                                         ,"contents": "ofToUpper(${1:const string &src})"},
+        { "trigger": "ofVAArgsToString \t(const char, ...)"                               ,"contents": "ofVAArgsToString(${1:const char *format},${2:...})"},
+        { "trigger": "ofVAArgsToString \t(const char, va_list)"                           ,"contents": "ofVAArgsToString(${1:const char *format}, ${2:va_list args})"},
+
+
+
+
+
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////////
         // EMPTY - Kept so that all JSON objects above can keep the trailing ","
         {}
     ]
