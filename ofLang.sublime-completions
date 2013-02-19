@@ -1132,6 +1132,49 @@
 
         /////////////////////////////////////
         // ofFile
+        { "trigger": "ofFile::canExecute"                                               ,"contents": "${1:ofFile}.canExecute()"},
+        { "trigger": "ofFile::canRead"                                                  ,"contents": "${1:ofFile}.canRead()"},
+        { "trigger": "ofFile::canWrite"                                                 ,"contents": "${1:ofFile}.canWrite()"},
+        { "trigger": "ofFile::changeMode \t(Mode, bool)"                                ,"contents": "${1:ofFile}.changeMode(${2:Mode mode}, ${3:bool binary=false})"},
+        { "trigger": "ofFile::close"                                                    ,"contents": "${1:ofFile}.close()"},
+        { "trigger": "ofFile::copyFromTo \t(string, string, bool, bool)"                ,"contents": "${1:ofFile}.copyFromTo({$2:string pathSrc}, ${3:string pathDst}, ${4:bool bRelativeToData=true},${5: bool overwrite=false})"},
+        { "trigger": "ofFile::copyTo \t(string, bool, bool)"                            ,"contents": "${1:ofFile}.copyTo(${2:string path}, ${3:bool bRelativeToData=true}, ${4:bool overwrite=false})"},
+        { "trigger": "ofFile::create"                                                   ,"contents": "${1:ofFile}.create()"},
+        { "trigger": "ofFile::doesFileExist \t(string, bool)"                           ,"contents": "${1:ofFile}.doesFileExist(${2:string fPath}, ${3:bool bRelativeToData=true})"},
+        { "trigger": "ofFile::exists"                                                   ,"contents": "${1:ofFile}.exists()"},
+        { "trigger": "ofFile::getAbsolutePath"                                          ,"contents": "${1:ofFile}.getAbsolutePath()"},
+        { "trigger": "ofFile::getBaseName"                                              ,"contents": "${1:ofFile}.getBaseName()"},
+        { "trigger": "ofFile::getEnclosingDirectory"                                    ,"contents": "${1:ofFile}.getEnclosingDirectory()"},
+        { "trigger": "ofFile::getExtension"                                             ,"contents": "${1:ofFile}.getExtension()"},
+        { "trigger": "ofFile::getFileBuffer"                                            ,"contents": "${1:ofFile}.getFileBuffer()"},
+        { "trigger": "ofFile::getFileName"                                              ,"contents": "${1:ofFile}.getFileName()"},
+        { "trigger": "ofFile::getPocoFile"                                              ,"contents": "${1:ofFile}.getPocoFile()"},
+        { "trigger": "ofFile::getSize"                                                  ,"contents": "${1:ofFile}.getSize()"},
+        { "trigger": "ofFile::isDevice"                                                 ,"contents": "${1:ofFile}.isDevice()"},
+        { "trigger": "ofFile::isDirectory"                                              ,"contents": "${1:ofFile}.isDirectory()"},
+        { "trigger": "ofFile::isFile"                                                   ,"contents": "${1:ofFile}.isFile()"},
+        { "trigger": "ofFile::isHidden"                                                 ,"contents": "${1:ofFile}.isHidden()"},
+        { "trigger": "ofFile::isLink"                                                   ,"contents": "${1:ofFile}.isLink()"},
+        { "trigger": "ofFile::moveFromTo \t(string, string, bool, bool)"                ,"contents": "${1:ofFile}.moveFromTo(${2:string pathSrc}, ${3:string pathDst}, ${4:bool bRelativeToData=true}, ${5:bool overwrite=false})"},
+        { "trigger": "ofFile::moveTo \t(string, bool, bool)"                            ,"contents": "${1:ofFile}.moveTo(${2:string path}, ${3:bool bRelativeToData=true}, ${4:bool overwrite=false})"},
+        { "trigger": "ofFile::open \t(string, Mode, bool)"                              ,"contents": "${1:ofFile}.open(${2:string path}, ${3:Mode mode=ReadOnly}, ${4:bool binary=false})"},
+        { "trigger": "ofFile::path"                                                     ,"contents": "${1:ofFile}.path()"},
+        { "trigger": "ofFile::readToBuffer"                                             ,"contents": "${1:ofFile}.readToBuffer()"},
+        { "trigger": "ofFile::remove \t(bool)"                                          ,"contents": "${1:ofFile}.remove(${2:bool recursive=false})"},
+        { "trigger": "ofFile::removeFile \t(string, bool)"                              ,"contents": "${1:ofFile}.removeFile(${2:string path}, ${3:bool bRelativeToData=true})"},
+        { "trigger": "ofFile::renameTo \t(string, bool, bool)"                          ,"contents": "${1:ofFile}.renameTo(${2:string path}, ${3:bool bRelativeToData=true}, ${4:bool overwrite=false})"},
+        { "trigger": "ofFile::setExecutable \t(bool)"                                   ,"contents": "${1:ofFile}.setExecutable(${2:bool executable})"},
+        { "trigger": "ofFile::setReadOnly \t(bool)"                                     ,"contents": "${1:ofFile}.setReadOnly(${2:bool readable})"},
+        { "trigger": "ofFile::setWriteable \t(bool)"                                    ,"contents": "${1:ofFile}.setWriteable(${2:bool writeable})"},
+        { "trigger": "ofFile::writeFromBuffer \t(ofBuffer)"                             ,"contents": "${1:ofFile}.writeFromBuffer(${2:ofBuffer &buffer})"},
+
+        // ofFile::operator!=(const ofFile &file)                      ofFile::operator!=(const ofFile &file)
+        // ofFile::operator<(const ofFile &file)                       ofFile::operator<(const ofFile &file)
+        // ofFile::operator<=(const ofFile &file)                      ofFile::operator<=(const ofFile &file)
+        // ofFile::operator=(const ofFile &mom)                        ofFile::operator=(const ofFile &mom)
+        // ofFile::operator==(const ofFile &file)                      ofFile::operator==(const ofFile &file)
+        // ofFile::operator>(const ofFile &file)                       ofFile::operator>(const ofFile &file)
+        // ofFile::operator>=(const ofFile &file)                      ofFile::operator>=(const ofFile &file)
 
         /////////////////////////////////////
         // ofFileDialogResult
