@@ -562,6 +562,13 @@
         { "trigger": "ofPixels::size"                                                ,"contents": "${1:ofPixels}.size()" },
         { "trigger": "ofPixels::swap"                                                ,"contents": "${1:ofPixels}.swap(${2:ofPixels_< PixelType > &pix})" },
         { "trigger": "ofPixels::swapRgb"                                             ,"contents": "${1:ofPixels}.swapRgb(})" },
+        /////////////////////////////////////////////
+        // ofPolyUtils
+        { "trigger": "ofGetBoundingBox \t(const ofPolyline)"                                                ,"contents": "ofGetBoundingBox(${1:const ofPolyline &polyline})"},
+        { "trigger": "ofGetClosestPoint \t(const ofPoint, const ofPoint, const ofPoint, float)"             ,"contents": "ofGetClosestPoint(${1:const ofPoint &p1}, ${2:const ofPoint &p2}, ${3:const ofPoint &p3}, ${4:float *normalizedPosition=NULL})"},
+        { "trigger": "ofGetResampledCount \t(const ofPolyline, int)"                                        ,"contents": "ofGetResampledCount(${1:const ofPolyline &polyline}, ${2:int count})"},
+        { "trigger": "ofGetResampledSpacing \t(const ofPolyline, float)"                                    ,"contents": "ofGetResampledSpacing(${1:const ofPolyline &polyline}, ${2:float spacing})"},
+        { "trigger": "ofGetSmoothed \t(const ofPolyline, int, float)"                                       ,"contents": "ofGetSmoothed(${1:const ofPolyline &polyline}, ${2:int smoothingSize}, ${3:float smoothingShape=0})"},
         ///////////////////////////////////////////
         // ofCamera
         { "trigger": "ofCamera::begin \t(ofRectangle)"                               ,"contents": "${1:ofCamera}.begin(${2:ofRectangle viewport=ofGetCurrentViewport()})"},
