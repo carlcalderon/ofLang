@@ -55,6 +55,11 @@
         // TODO docs down [martin]
 
 
+
+        ////////////////////////////////////
+        // ofGradientModes
+        { "trigger": "OF_GRADIENT_CIRCULAR \tofGradientMode"                         ,"contents": "OF_GRADIENT_CIRCULAR"},
+
         ////////////////////////////////////
         // ofGraphics
 
@@ -65,7 +70,7 @@
         { "trigger": "ofBackground \t(ofColor)"                                      ,"contents": "ofBackground(${1:const ofColor &c})" },
 
         // ofBackgroundGradient
-        { "trigger": "ofBackgroundGradient"                                          ,"contents": "ofBackgroundGradient(${1:const ofColor &start}, ${2:const ofColor &end}, ${2:ofGradientMode mode=OF_GRADIENT_CIRCULAR})" },
+        { "trigger": "ofBackgroundGradient"                                          ,"contents": "ofBackgroundGradient(${1:const ofColor &start}, ${2:const ofColor &end}, ${3:ofGradientMode mode=OF_GRADIENT_CIRCULAR})" },
 
         // ofBackgroundHex
         { "trigger": "ofBackgroundHex"                                               ,"contents": "ofBackgroundHex(${1:int hexColor}, ${2:int alpha=255})" },
@@ -956,8 +961,7 @@
 
 
         //////////////// ofxXmlSettings /////////////
-
-
+        // ofXmlSettings is a exceptions, it's so widly usedin ofApps. [martin]
         ////////////////////////////////////////////
         // ofxXmlSettings methods
         { "trigger": "ofxXmlSettings::addAttribute \t(const string, const string, int, int)"                ,"contents": "${1:ofxXmlSettings}.addAttribute(${2:const string &tag}, ${3:const string &attribute}, ${4:int value}, ${5:int which=0})"},
