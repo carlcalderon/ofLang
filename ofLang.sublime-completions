@@ -8,17 +8,103 @@
 // }
 //
 // example:
-// { "trigger": "ofBackground \t(ofColor)"                                           ,"contents": "ofBackground(${1:const ofColor &c})" },
+// { "trigger": "ofBackground \t(ofColor)"                                           ,"contents": "ofBackground(${1:const ofColor &c})"},
 //
 {
     "scope": "source.c++",
 
     "completions":
     [
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////////        
 
-        /////////////// Types  //(/////////////
+        /////////// Application ///////////////
+        ///////////////////////////////////////
+        // ofAppBaseWindow
+        { "trigger": "ofAppBaseWindow::disableSetupScreen"                              ,"contents": "${1:ofAppBaseWindow}.disableSetupScreen()"},
+        { "trigger": "ofAppBaseWindow::doesHWOrientation"                               ,"contents": "${1:ofAppBaseWindow}.doesHWOrientation()"},
+        { "trigger": "ofAppBaseWindow::enableSetupScreen"                               ,"contents": "${1:ofAppBaseWindow}.enableSetupScreen()"},
+        { "trigger": "ofAppBaseWindow::getFrameNum"                                     ,"contents": "${1:ofAppBaseWindow}.getFrameNum()"},
+        { "trigger": "ofAppBaseWindow::getFrameRate"                                    ,"contents": "${1:ofAppBaseWindow}.getFrameRate()"},
+        { "trigger": "ofAppBaseWindow::getHeight"                                       ,"contents": "${1:ofAppBaseWindow}.getHeight()"},
+        { "trigger": "ofAppBaseWindow::getLastFrameTime"                                ,"contents": "${1:ofAppBaseWindow}.getLastFrameTime()"},
+        { "trigger": "ofAppBaseWindow::getOrientation"                                  ,"contents": "${1:ofAppBaseWindow}.getOrientation()"},
+        { "trigger": "ofAppBaseWindow::getScreenSize"                                   ,"contents": "${1:ofAppBaseWindow}.getScreenSize()"},
+        { "trigger": "ofAppBaseWindow::getWidth"                                        ,"contents": "${1:ofAppBaseWindow}.getWidth()"},
+        { "trigger": "ofAppBaseWindow::getWindowMode"                                   ,"contents": "${1:ofAppBaseWindow}.getWindowMode()"},
+        { "trigger": "ofAppBaseWindow::getWindowPosition"                               ,"contents": "${1:ofAppBaseWindow}.getWindowPosition()"},
+        { "trigger": "ofAppBaseWindow::getWindowSize"                                   ,"contents": "${1:ofAppBaseWindow}.getWindowSize()"},
+        { "trigger": "ofAppBaseWindow::hideCursor"                                      ,"contents": "${1:ofAppBaseWindow}.hideCursor()"},
+        { "trigger": "ofAppBaseWindow::initializeWindow"                                ,"contents": "${1:ofAppBaseWindow}.initializeWindow()"},
+        { "trigger": "ofAppBaseWindow::runAppViaInfiniteLoop \t(ofBaseApp)"             ,"contents": "${1:ofAppBaseWindow}.runAppViaInfiniteLoop(${2:ofBaseApp *appPtr})"},
+        { "trigger": "ofAppBaseWindow::setFrameRate \t(float)"                          ,"contents": "${1:ofAppBaseWindow}.setFrameRate(${2:float targetRate})"},
+        { "trigger": "ofAppBaseWindow::setFullscreen \t(bool)"                          ,"contents": "${1:ofAppBaseWindow}.setFullscreen(${2:bool fullscreen})"},
+        { "trigger": "ofAppBaseWindow::setOrientation \t(ofOrientation)"                ,"contents": "${1:ofAppBaseWindow}.setOrientation(${2:ofOrientation orientation})"},
+        { "trigger": "ofAppBaseWindow::setWindowPosition \t(int, int)"                  ,"contents": "${1:ofAppBaseWindow}.setWindowPosition(${2:int x}, ${3:int y})"},
+        { "trigger": "ofAppBaseWindow::setWindowShape \t(int, int)"                     ,"contents": "${1:ofAppBaseWindow}.setWindowShape(${2:int w}, ${3:int h})"},
+        { "trigger": "ofAppBaseWindow::setWindowTitle \t(string)"                       ,"contents": "${1:ofAppBaseWindow}.setWindowTitle(${2:string title})"},
+        { "trigger": "ofAppBaseWindow::setupOpenGL \t(int, int, int)"                   ,"contents": "${1:ofAppBaseWindow}.setupOpenGL(${2:int w}, ${3:int h}, ${4:int screenMode})"},
+        { "trigger": "ofAppBaseWindow::showCursor"                                      ,"contents": "${1:ofAppBaseWindow}.showCursor()"},
+        { "trigger": "ofAppBaseWindow::toggleFullscreen"                                ,"contents": "${1:ofAppBaseWindow}.toggleFullscreen()"},
+        ////////////////////////////////////
+        // ofAppRunner
+        { "trigger": "ofDoesHWOrientation"                                             ,"contents": "ofDoesHWOrientation()"},
+        { "trigger": "ofExit(int)"                                                     ,"contents": "ofExit(${1:int status=0})"},
+        { "trigger": "ofGetAppPtr"                                                     ,"contents": "ofGetAppPtr()"},
+        { "trigger": "ofGetFrameNum"                                                   ,"contents": "ofGetFrameNum()"},
+        { "trigger": "ofGetFrameRate"                                                  ,"contents": "ofGetFrameRate()"},
+        { "trigger": "ofGetHeight"                                                     ,"contents": "ofGetHeight()"},
+        { "trigger": "ofGetLastFrameTime"                                              ,"contents": "ofGetLastFrameTime()"},
+        { "trigger": "ofGetOrientation"                                                ,"contents": "ofGetOrientation()"},
+        { "trigger": "ofGetScreenHeight"                                               ,"contents": "ofGetScreenHeight()"},
+        { "trigger": "ofGetScreenWidth"                                                ,"contents": "ofGetScreenWidth()"},
+        { "trigger": "ofGetWidth"                                                      ,"contents": "ofGetWidth()"},
+        { "trigger": "ofGetWindowHeight"                                               ,"contents": "ofGetWindowHeight()"},
+        { "trigger": "ofGetWindowMode"                                                 ,"contents": "ofGetWindowMode()"},
+        { "trigger": "ofGetWindowPositionX"                                            ,"contents": "ofGetWindowPositionX()"},
+        { "trigger": "ofGetWindowPositionY"                                            ,"contents": "ofGetWindowPositionY()"},
+        { "trigger": "ofGetWindowRect"                                                 ,"contents": "ofGetWindowRect()"},
+        { "trigger": "ofGetWindowSize"                                                 ,"contents": "ofGetWindowSize()"},
+        { "trigger": "ofGetWindowWidth"                                                ,"contents": "ofGetWindowWidth()"},
+        { "trigger": "ofHideCursor"                                                    ,"contents": "ofHideCursor()"},
+        { "trigger": "ofRunApp \t(ofBaseApp)"                                          ,"contents": "ofRunApp(${1:ofBaseApp * app})"},
+        { "trigger": "ofRunApp \t(ofPtr< ofBaseApp >)"                                 ,"contents": "ofRunApp(${1:ofPtr< ofBaseApp > OFSA})"},
+        { "trigger": "ofRunApp \t(ofBaseApp)"                                          ,"contents": "ofRunApp(${1:ofBaseApp *OFSA=NULL})"},
+        { "trigger": "ofSetAppPtr \t(ofPtr< ofBaseApp >)"                              ,"contents": "ofSetAppPtr(${1:ofPtr< ofBaseApp > appPtr})"},
+        { "trigger": "ofSetFrameRate \t(int)"                                          ,"contents": "ofSetFrameRate(${1:int targetRate})"},
+        { "trigger": "ofSetFrameRate \t(int)"                                          ,"contents": "ofSetFrameRate(${1:int targetRate})"},
+        { "trigger": "ofSetFullscreen \t(bool fullscreen)"                             ,"contents": "ofSetFullscreen(${1:bool fullscreen})"},
+        { "trigger": "ofSetOrientation \t(ofOrientation)"                              ,"contents": "ofSetOrientation(${1:ofOrientation orientation})"},
+        { "trigger": "ofSetVerticalSync \t(bool)"                                      ,"contents": "ofSetVerticalSync(${1:bool bSync})"},
+        { "trigger": "ofSetWindowPosition \t(int)"                                     ,"contents": "ofSetWindowPosition(${1:int x})"},
+        { "trigger": "ofSetWindowPosition \t(int, int)"                                ,"contents": "ofSetWindowPosition(${1:int x}, ${2:int y})"},
+        { "trigger": "ofSetWindowShape \t(int)"                                        ,"contents": "ofSetWindowShape(${1:int width})"},
+        { "trigger": "ofSetWindowShape \t(int, int)"                                   ,"contents": "ofSetWindowShape(${1:int width}, ${2:int height})"},
+        { "trigger": "ofSetWindowTitle"                                                ,"contents": "ofSetWindowTitle()"},
+        { "trigger": "ofSetWindowTitle \t(string)"                                     ,"contents": "ofSetWindowTitle(${1:string title})"},
+        { "trigger": "ofSetupOpenGL \t(ofAppBaseWindow, int, int, int)"                ,"contents": "ofSetupOpenGL(${1:ofAppBaseWindow * windowPtr}, ${2:int w}, ${3:int h}, ${4:int screenMode})"},
+        { "trigger": "ofSetupOpenGL \t(int w, int h, int screenMode)"                  ,"contents": "ofSetupOpenGL(${1:int w}, ${2:int h}, ${3:int screenMode})"},
+        { "trigger": "ofSetupOpenGL \t(ofAppBaseWindow, int, int, int)"                ,"contents": "ofSetupOpenGL(${1:ofAppBaseWindow *windowPtr}, ${2:int w}, ${3:int h}, ${4:int screenMode})"},
+        { "trigger": "ofShowCursor"                                                    ,"contents": "ofShowCursor()"},
+        { "trigger": "ofSleepMillis \t(int)"                                           ,"contents": "ofSleepMillis(${1:int millis})"},
+        { "trigger": "ofToggleFullscreen"                                              ,"contents": "ofToggleFullscreen()"},
+        ////////////////////////////
+        // screenMode
+        { "trigger": "OF_WINDOW \tscreenMode"                ,"contents": "OF_WINDOW"},
+        { "trigger": "OF_FULLSCREEN \tscreenMode"            ,"contents": "OF_FULLSCREEN"},
+        { "trigger": "OF_GAME_MODE \tscreenMode"             ,"contents": "OF_GAME_MODE"},
 
-        //////////////////////////////////////
+        ////////////////////////////////////
+        // ofBaseApp
+        //
+        // TODO docs site down, when I was doing the rest of apps [martin]
+
+        ////////////////////////////////////
+        // ofDragInfo
+        //
+        // TODO docs site down [martin]
+
+        ///////////////// TYPES  ///////////////
+        ////////////////////////////////////////
         // ofColor
         { "trigger": "ofColor"                                                      ,"contents": "ofColor ${1:color}"},
         // TODO
@@ -55,520 +141,379 @@
         // TODO docs down [martin]
 
 
+        ///////////// Events //////////////
+        //////////////////////////////////
+        // ofAudioEventArgs
+        { "trigger": "ofAudioEventArgs::buffer"                         ,"contents": "${1:ofAudioEventArgs}.buffer()"},
+        { "trigger": "ofAudioEventArgs::bufferSize"                     ,"contents": "${1:ofAudioEventArgs}.bufferSize()"},
+        //////////////////////////////////
+        // ofCoreEvents
+        //
+        // I don't thin they should be in auto-complete, it's oF internals [martin]
+        //////////////////////////////////
+        // ofEvent
+        { "trigger": "ofEvent"                                                      ,"contents": "ofEvent<${2:float}> ${1:onVolumeChange}"},
+        { "trigger": "ofNotifyEvent"                                                ,"contents": "ofNotifyEvent(${1:onVolumeChange}, ${2:10.0})"},
+        { "trigger": "ofAddListener \t(ofEvent,this, &testApp:onVolumeChange)"      ,"contents": "ofAddListener(${1:mySoundObject.onVolumeChange},${2:this}, ${3:&testApp:onVolumeChange})"},
+        //////////////////////////////////
+        // ofEvents functions
+        { "trigger": "ofGetKeyPressed \t(int)"                              ,"contents": "ofGetKeyPressed(${1:int key=-1})"},
+        { "trigger": "ofGetMousePressed \t(int)"                            ,"contents": "ofGetMousePressed(${1:int button=-1})"},
+        { "trigger": "ofGetMouseX"                                          ,"contents": "ofGetMouseX()"},
+        { "trigger": "ofGetMouseY"                                          ,"contents": "ofGetMouseY()"},
+        { "trigger": "ofGetPreviousMouseX"                                  ,"contents": "ofGetPreviousMouseX()"},
+        { "trigger": "ofGetPreviousMouseY"                                  ,"contents": "ofGetPreviousMouseY()"},
+        { "trigger": "ofSetEscapeQuitsApp \t(bool)"                         ,"contents": "ofSetEscapeQuitsApp(${1:bool bQuitOnEsc})"},
 
-        ////////////////////////////////////
-        // ofGradientModes
-        { "trigger": "OF_GRADIENT_CIRCULAR \tofGradientMode"                         ,"contents": "OF_GRADIENT_CIRCULAR"},
-
-        ////////////////////////////////////
+        /////////////////// GRAPHICS /////////////////
+        //////////////////////////////////////////////
         // ofGraphics
-
-        // ofBackground
         { "trigger": "ofBackground \t(rgb)"                                          ,"contents": "ofBackground(${1:int r}, ${2:int g}, ${3:int b})"},
         { "trigger": "ofBackground \t(rgba)"                                         ,"contents": "ofBackground(${1:int r}, ${2:int g}, ${3:int b}, ${4:int a})" },
         { "trigger": "ofBackground \t(brightness, alpha)"                            ,"contents": "ofBackground(${1:int brightness}, ${2:int alpha=255})" },
         { "trigger": "ofBackground \t(ofColor)"                                      ,"contents": "ofBackground(${1:const ofColor &c})" },
-
-        // ofBackgroundGradient
         { "trigger": "ofBackgroundGradient"                                          ,"contents": "ofBackgroundGradient(${1:const ofColor &start}, ${2:const ofColor &end}, ${3:ofGradientMode mode=OF_GRADIENT_CIRCULAR})" },
-
-        // ofBackgroundHex
         { "trigger": "ofBackgroundHex"                                               ,"contents": "ofBackgroundHex(${1:int hexColor}, ${2:int alpha=255})" },
-
-        // ofBeginSaveScreenAsPDF
         { "trigger": "ofBeginSaveScreenAsPDF"                                        ,"contents": "ofBeginSaveScreenAsPDF(${1:string filename}, ${2:bool bMultipage=false}, ${3:bool b3D=false}, ${4:ofRectangle viewport=ofRectangle(0, 0, 0, 0)})" },
-
-        // ofBeginShape
         { "trigger": "ofBeginShape"                                                  ,"contents": "ofBeginShape()" },
-
-        // ofBezier
         { "trigger": "ofBezier \t(xy)"                                               ,"contents": "ofBezier(${1:float x0}, ${2:float y0}, ${3:float x1}, ${4:float y1}, ${5:float x2}, ${6:float y2}, ${7:float x3}, ${8:float y3})" },
         { "trigger": "ofBezier \t(xyz)"                                              ,"contents": "ofBezier(${1:float x0}, ${2:float y0}, ${3:float z0}, ${4:float x1}, ${5:float y1}, ${6:float z1}, ${7:float x2}, ${8:float y2}, ${9:float z2}, ${10:float x3}, ${11:float y3}, ${12:float z3})" },
-
-        // ofBezierVertex
         { "trigger": "ofBezierVertex \t(xy)"                                         ,"contents": "ofBezierVertex(${1:float x1}, ${2:float y1}, ${3:float x2}, ${4:float y2}, ${5:float x3}, ${6:float y3})" },
         { "trigger": "ofBezierVertex \t(xyz)"                                        ,"contents": "ofBezierVertex(${1:float x1}, ${2:float y1}, ${3:float z1}, ${4:float x2}, ${5:float y2}, ${6:float z2}, ${7:float x3}, ${8:float y3}, ${9:float z3})" },
         { "trigger": "ofBezierVertex \t(ofPoint)"                                    ,"contents": "ofBezierVertex(${1:const ofPoint &p1}, ${2:const ofPoint &p2}, ${3:const ofPoint &p3})" },
-
-        // ofBgColorPtr
         { "trigger": "ofBgColorPtr"                                                  ,"contents": "ofBgColorPtr()" },
-
-        // ofBox
         { "trigger": "ofBox"                                                         ,"contents": "ofBox(${1:float size})" },
         { "trigger": "ofBox \t(xy)"                                                  ,"contents": "ofBox(${1:float x}, ${2:float y}, ${3:float size})" },
         { "trigger": "ofBox \t(xyz)"                                                 ,"contents": "ofBox(${1:float x}, ${2:float y}, ${3:float z}, ${4:float size})" },
         { "trigger": "ofBox \t(ofPoint)"                                             ,"contents": "ofBox(${1:const ofPoint &position}, ${2:float size})" },
-
-        // ofCircle
         { "trigger": "ofCircle \t(xy)"                                               ,"contents": "ofCircle(${1:float x}, ${2:float y}, ${3:float radius})" },
         { "trigger": "ofCircle \t(xyz)"                                              ,"contents": "ofCircle(${1:float x}, ${2:float y}, ${3:float z}, ${4:float radius})" },
         { "trigger": "ofCircle \t(ofPoint)"                                          ,"contents": "ofCircle(${1:const ofPoint &p}, ${2:float radius})" },
-
-        // ofClear
         { "trigger": "ofClear \t(rgba)"                                              ,"contents": "ofClear(${1:float r}, ${2:float g}, ${3:float b}, ${4:float a=0})" },
         { "trigger": "ofClear \t(brightness, alpha)"                                 ,"contents": "ofClear(${1:float brightness}, ${2:float a=0})" },
         { "trigger": "ofClear \t(ofColor)"                                           ,"contents": "ofClear(${1:const ofColor &c})" },
-
-        // ofClearAlpha
         { "trigger": "ofClearAlpha"                                                  ,"contents": "ofClearAlpha()" },
-
-        // ofCone
         { "trigger": "ofCone \t(size)"                                               ,"contents": "ofCone(${1:float size})" },
         { "trigger": "ofCone \t(radius size)"                                        ,"contents": "ofCone(${1:float radius}, ${2:float height})" },
         { "trigger": "ofCone \t(xy)"                                                 ,"contents": "ofCone(${1:float x}, ${2:float y}, ${3:float radius}, ${4:float height})" },
         { "trigger": "ofCone \t(xyz)"                                                ,"contents": "ofCone(${1:float x}, ${2:float y}, ${3:float z}, ${4:float radius}, ${5:float height})" },
         { "trigger": "ofCone \t(ofPoint)"                                            ,"contents": "ofCone(${1:const ofPoint &position}, ${2:float radius}, ${3:float height})" },
-
-        // ofCurve
         { "trigger": "ofCurve \t(xy)"                                                ,"contents": "ofCurve(${1:float x0}, ${2:float y0}, ${3:float x1}, ${4:float y1}, ${5:float x2}, ${6:float y2}, ${7:float x3}, ${8:float y3})" },
         { "trigger": "ofCurve \t(xyz)"                                               ,"contents": "ofCurve(${1:float x0}, ${2:float y0}, ${3:float z0}, ${4:float x1}, ${5:float y1}, ${6:float z1}, ${7:float x2}, ${8:float y2}, ${9:float z2}, ${10:float x3}, ${11:float y3}, ${12:float z3})" },
-
-        // ofCurveVertex
         { "trigger": "ofCurveVertex \t(xy)"                                          ,"contents": "ofCurveVertex(${1:float x}, ${2:float y})" },
         { "trigger": "ofCurveVertex \t(ofPoint)"                                     ,"contents": "ofCurveVertex(${1:ofPoint &p})" },
-
-        // ofCurveVertices
         { "trigger": "ofCurveVertices"                                               ,"contents": "ofCurveVertices(${1:const vector< ofPoint > &curvePoints})" },
-
-        // ofDisableAlphaBlending
         { "trigger": "ofDisableAlphaBlending"                                        ,"contents": "ofDisableAlphaBlending()" },
-
-        // ofDisableBlendMode
         { "trigger": "ofDisableBlendMode"                                            ,"contents": "ofDisableBlendMode()" },
-
-        // ofDisablePointSprites
         { "trigger": "ofDisablePointSprites"                                         ,"contents": "ofDisablePointSprites()" },
-
-        // ofDisableSmoothing
         { "trigger": "ofDisableSmoothing"                                            ,"contents": "ofDisableSmoothing()" },
-
-        // ofDrawBitmapString
         { "trigger": "ofDrawBitmapString \t(xy)"                                     ,"contents": "ofDrawBitmapString(${1:string textString}, ${2:float x}, ${3:float y}})" },
         { "trigger": "ofDrawBitmapString \t(xyz)"                                    ,"contents": "ofDrawBitmapString(${1:string textString}, ${2:float x}, ${3:float y}, ${4:float z})" },
         { "trigger": "ofDrawBitmapString \t(ofPoint)"                                ,"contents": "ofDrawBitmapString(${1:string textString}, ${2:const ofPoint &p})" },
-
-        // ofDrawBitmapStringHighlight
         { "trigger": "ofDrawBitmapStringHighlight \t(xy)"                            ,"contents": "ofDrawBitmapStringHighlight(${1:string text}, ${2:int x}, ${3:int x}, ${4:const ofColor &background=ofColor::black}, ${5:const ofColor &foreground=ofColor::white})" },
         { "trigger": "ofDrawBitmapStringHighlight \t(ofPoint)"                       ,"contents": "ofDrawBitmapStringHighlight(${1:string text}, ${2:const ofPoint &position}, ${3:const ofColor &background=ofColor::black}, ${4:const ofColor &foreground=ofColor::white})" },
-
-        // ofEllipse
         { "trigger": "ofEllipse \t(xy)"                                              ,"contents": "ofEllipse(${1:float x}, ${2:float y}, ${3:float width}, ${4:float height})" },
         { "trigger": "ofEllipse \t(xyz)"                                             ,"contents": "ofEllipse(${1:float x}, ${2:float y}, ${3:float z}, ${4:float width}, ${5:float height})" },
         { "trigger": "ofEllipse \t(ofPoint)"                                         ,"contents": "ofEllipse(${1:const ofPoint &p}, ${2:float width}, ${3:float height})" },
-
-        // ofEnableAlphaBlending
         { "trigger": "ofEnableAlphaBlending"                                         ,"contents": "ofEnableAlphaBlending()" },
-
-        // ofEnableBlendMode
         { "trigger": "ofEnableBlendMode"                                             ,"contents": "ofEnableBlendMode(${1:ofBlendMode blendMode})" },
-
-        // ofEnablePointSprites
         { "trigger": "ofEnablePointSprites"                                          ,"contents": "ofEnablePointSprites()" },
-
-        // ofEnableSmoothing
         { "trigger": "ofEnableSmoothing"                                             ,"contents": "ofEnableSmoothing()" },
-
-        // ofEndSaveScreenAsPDF
         { "trigger": "ofEndSaveScreenAsPDF"                                          ,"contents": "ofEndSaveScreenAsPDF()" },
-
-        // ofEndShape
         { "trigger": "ofEndShape"                                                    ,"contents": "ofEndShape(${1:bool bClose=false)}" },
-
-        // ofFill
         { "trigger": "ofFill"                                                        ,"contents": "ofFill()" },
-
-        // ofGetCoordHandedness
         { "trigger": "ofGetCoordHandedness"                                          ,"contents": "ofGetCoordHandedness()" },
-
-        // ofGetCurrentRenderer
         { "trigger": "ofGetCurrentRenderer"                                          ,"contents": "ofGetCurrentRenderer()" },
-
-        // ofGetCurrentViewport
         { "trigger": "ofGetCurrentViewport"                                          ,"contents": "ofGetCurrentViewport()" },
-
-        // ofGetFill
         { "trigger": "ofGetFill"                                                     ,"contents": "ofGetFill()" },
-
-        // ofGetGLRenderer
         { "trigger": "ofGetGLRenderer"                                               ,"contents": "ofGetGLRenderer()" },
-
-        // ofGetRectMode
         { "trigger": "ofGetRectMode"                                                 ,"contents": "ofGetRectMode()" },
-
-        // ofGetStyle
         { "trigger": "ofGetStyle"                                                    ,"contents": "ofGetStyle()" },
-
-        // ofGetViewportHeight
         { "trigger": "ofGetViewportHeight"                                           ,"contents": "ofGetViewportHeight()" },
-
-        // ofGetViewportWidth
         { "trigger": "ofGetViewportWidth"                                            ,"contents": "ofGetViewportWidth()" },
-
-        // ofLine
         { "trigger": "ofLine \t(xy)"                                                 ,"contents": "ofLine(${1:float x1}, ${2:float y1}, ${3:float x2}, ${4:float y2})" },
         { "trigger": "ofLine \t(xyz)"                                                ,"contents": "ofLine(${1:float x1}, ${2:float y1}, ${3:float z1}, ${4:float x2}, ${5:float y2}, ${6:float z2})" },
         { "trigger": "ofLine \t(ofPoint)"                                            ,"contents": "ofLine(${1:const ofPoint &p1}, ${2:const ofPoint &p2})" },
-
-        // ofLoadIdentityMatrix
         { "trigger": "ofLoadIdentityMatrix"                                          ,"contents": "ofLoadIdentityMatrix()" },
-
-        // ofLoadMatrix
         { "trigger": "ofLoadMatrix \t(ofMatrix4x4)"                                  ,"contents": "ofLoadMatrix(${1:const ofMatrix4x4 &m})" },
         { "trigger": "ofLoadMatrix \t(float)"                                        ,"contents": "ofLoadMatrix(${1:const float *m})" },
-
-        // ofMultMatrix
         { "trigger": "ofMultMatrix \t(ofMatrix4x4)"                                  ,"contents": "ofMultMatrix(${1:const ofMatrix4x4 &m})" },
         { "trigger": "ofMultMatrix \t(float)"                                        ,"contents": "ofMultMatrix(${1:const float *m})" },
-
-        // ofNextContour
         { "trigger": "ofNextContour"                                                 ,"contents": "ofNextContour(${1:bool bClose=false})" },
-
-        // ofNoFill
         { "trigger": "ofNoFill"                                                      ,"contents": "ofNoFill()" },
-
-        // ofOrientationToDegrees
         { "trigger": "ofOrientationToDegrees"                                        ,"contents": "ofOrientationToDegrees(${1:ofOrientation orientation})" },
-
-        // ofPopMatrix
         { "trigger": "ofPopMatrix"                                                   ,"contents": "ofPopMatrix()" },
-
-        // ofPopStyle
         { "trigger": "ofPopStyle"                                                    ,"contents": "ofPopStyle()" },
-
-        // ofPopView
         { "trigger": "ofPopView"                                                     ,"contents": "ofPopView()" },
-
-        // ofPushMatrix
         { "trigger": "ofPushMatrix"                                                  ,"contents": "ofPushMatrix()" },
-
-        // ofPushStyle
         { "trigger": "ofPushStyle"                                                   ,"contents": "ofPushStyle()" },
-
-        // ofPushView
         { "trigger": "ofPushView"                                                    ,"contents": "ofPushView()" },
-
-        // ofRect
         { "trigger": "ofRect \t(xywh)"                                               ,"contents": "ofRect(${1:float x}, ${2:float y}, ${3:float w}, ${4:float h})" },
         { "trigger": "ofRect \t(xyzwh)"                                              ,"contents": "ofRect(${1:float x}, ${2:float y}, ${3:float z}, ${4:float w}, ${5:float h})" },
         { "trigger": "ofRect \t(ofPoint)"                                            ,"contents": "ofRect(${1:const ofPoint &p}, ${2:float w}, ${3:float h})" },
         { "trigger": "ofRect \t(ofRectangle)"                                        ,"contents": "ofRect(${1:const ofRectangle &r})" },
-
-        // ofRectRounded
         { "trigger": "ofRectRounded \t(xy)"                                          ,"contents": "ofRectRounded(${1:float x}, ${2:float y}, ${3:float w}, ${4:float h}, ${5:float r})" },
         { "trigger": "ofRectRounded \t(xyz)"                                         ,"contents": "ofRectRounded(${1:float x}, ${2:float y}, ${3:float z}, ${4:float w}, ${5:float h}, ${6:float r})" },
         { "trigger": "ofRectRounded \t(ofPoint)"                                     ,"contents": "ofRectRounded(${1:const ofPoint &p}, ${2:float w}, ${3:float h}, ${4:float r})" },
         { "trigger": "ofRectRounded \t(ofRectangle)"                                 ,"contents": "ofRectRounded(${1:const ofRectangle &b}, ${2:float r})" },
-
-        // ofRotate
         { "trigger": "ofRotate"                                                      ,"contents": "ofRotate(${1:float degrees})" },
         { "trigger": "ofRotate \t(xyz)"                                              ,"contents": "ofRotate(${1:float degrees}, ${2:float vecX}, ${3:float vecY}, ${4:float vecZ})" },
-
-        // ofRotateX
         { "trigger": "ofRotateX"                                                     ,"contents": "ofRotateX(${1:float degrees})" },
-
-        // ofRotateY
         { "trigger": "ofRotateY"                                                     ,"contents": "ofRotateY(${1:float degrees})" },
-
-        // ofRotateZ
         { "trigger": "ofRotateZ"                                                     ,"contents": "ofRotateZ(${1:float degrees})" },
-
-        // ofScale
         { "trigger": "ofScale"                                                       ,"contents": "ofScale(${1:float xAmnt}, ${2:float yAmnt}, ${3:float zAmnt=1})" },
-
-        // ofSetBackgroundAuto
         { "trigger": "ofSetBackgroundAuto"                                           ,"contents": "ofSetBackgroundAuto(${1:bool bManual})" },
-
-        // ofSetBackgroundColor
         { "trigger": "ofSetBackgroundColor \t(rgba)"                                 ,"contents": "ofSetBackgroundColor(${1:int r}, ${2:int g}, ${3:int b)}, ${4:int a=255})" },
         { "trigger": "ofSetBackgroundColor \t(brightness, alpha)"                    ,"contents": "ofSetBackgroundColor(${1:int brightness}, ${2:int alpha=255})" },
         { "trigger": "ofSetBackgroundColor \t(ofColor)"                              ,"contents": "ofSetBackgroundColor(${1:const ofColor &c})" },
-
-        // ofSetBackgroundColorHex
         { "trigger": "ofSetBackgroundColorHex"                                       ,"contents": "ofSetBackgroundColorHex(${1:int hexColor}, ${2:int alpha=255})" },
-
-        // ofSetCircleResolution
         { "trigger": "ofSetCircleResolution"                                         ,"contents": "ofSetCircleResolution(${1:int res})" },
-
-        // ofSetColor
         { "trigger": "ofSetColor \t(rgb)"                                            ,"contents": "ofSetColor(${1:int r}, ${2:int g}, ${3:int b})" },
         { "trigger": "ofSetColor \t(rgba)"                                           ,"contents": "ofSetColor(${1:int r}, ${2:int g}, ${3:int b}, ${4:int a})" },
         { "trigger": "ofSetColor \t(gray)"                                           ,"contents": "ofSetColor(${1:int gray})" },
         { "trigger": "ofSetColor \t(ofColor)"                                        ,"contents": "ofSetColor(${1:const ofColor &color})" },
         { "trigger": "ofSetColor \t(ofColor, alpha)"                                 ,"contents": "ofSetColor(${1:const ofColor &color}, ${2:int _a})" },
-
-        // ofSetCoordHandedness
         { "trigger": "ofSetCoordHandedness"                                          ,"contents": "ofSetCoordHandedness(${1:ofHandednessType handedness})" },
-
-        // ofSetCurrentRenderer
         { "trigger": "ofSetCurrentRenderer"                                          ,"contents": "ofSetCurrentRenderer(${1:ofPtr< ofBaseRenderer > renderer})" },
-
-        // ofSetCurveResolution
         { "trigger": "ofSetCurveResolution"                                          ,"contents": "ofSetCurveResolution(${1:int res})" },
-
-        // ofSetDrawBitmapMode
         { "trigger": "ofSetDrawBitmapMode"                                           ,"contents": "ofSetDrawBitmapMode(${1:ofDrawBitmapMode mode})" },
-
-        // ofSetHexColor
         { "trigger": "ofSetHexColor"                                                 ,"contents": "ofSetHexColor(${1:int hexColor})" },
-
-        // ofSetLineWidth
         { "trigger": "ofSetLineWidth"                                                ,"contents": "ofSetLineWidth(${1:float lineWidth})" },
-
-        // ofSetPolyMode
         { "trigger": "ofSetPolyMode"                                                 ,"contents": "ofSetPolyMode(${1:int mode})" },
         { "trigger": "ofSetPolyMode \t(ofPolyWindingMode)"                           ,"contents": "ofSetPolyMode(${1:ofPolyWindingMode mode})" },
-
-        // ofSetRectMode
         { "trigger": "ofSetRectMode"                                                 ,"contents": "ofSetRectMode(${1:int mode})" },
         { "trigger": "ofSetRectMode \t(ofRectMode)"                                  ,"contents": "ofSetRectMode(${1:ofRectMode mode})" },
-
-        // ofSetSphereResolution
         { "trigger": "ofSetSphereResolution"                                         ,"contents": "ofSetSphereResolution(${1:int res})" },
-
-        // ofSetStyle
         { "trigger": "ofSetStyle"                                                    ,"contents": "ofSetStyle(${1:ofStyle style})" },
-
-        // ofSetupScreen
         { "trigger": "ofSetupScreen"                                                 ,"contents": "ofSetupScreen()" },
-
-        // ofSetupScreenOrtho
         { "trigger": "ofSetupScreenOrtho"                                            ,"contents": "ofSetupScreenOrtho(${1:float width=0}, ${2:float height=0}, ${3:ofOrientation orientation=OF_ORIENTATION_UNKNOWN}, ${4:bool vFlip=true}, ${5:float nearDist=-1}, ${6:float farDist=-1})" },
-
-        // ofSetupScreenPerspective
         { "trigger": "ofSetupScreenPerspective"                                      ,"contents": "ofSetupScreenPerspective(${1:float width=0}, ${2:float height=0}, ${3:ofOrientation orientation=OF_ORIENTATION_UNKNOWN}, ${4:bool vFlip=true}, ${5:float fov=60}, ${6:float nearDist=0}, ${7:float farDist=0})" },
-
-        // ofSphere
         { "trigger": "ofSphere"                                                      ,"contents": "ofSphere(${1:float radius})" },
         { "trigger": "ofSphere \t(xy)"                                               ,"contents": "ofSphere(${1:float x}, ${2:float y}, ${3:float radius})" },
         { "trigger": "ofSphere \t(xyz)"                                              ,"contents": "ofSphere(${1:float x}, ${2:float y}, ${3:float z}, ${4:float radius})" },
         { "trigger": "ofSphere \t(ofPoint)"                                          ,"contents": "ofSphere(${1:const ofPoint &position}, ${2:float radius})" },
-
-        // ofTranslate
         { "trigger": "ofTranslate \t(xyz)"                                           ,"contents": "ofTranslate(${1:float x}, ${2:float y}, ${3:float z=0})" },
         { "trigger": "ofTranslate \t(ofPoint)"                                       ,"contents": "ofTranslate(${1:const ofPoint &p})" },
-
-        // ofTriangle
         { "trigger": "ofTriangle \t(xy)"                                             ,"contents": "ofTriangle(${1:float x1}, ${2:float y1}, ${3:float x2}, ${4:float y2}, ${5:float x3}, ${6:float y3})" },
         { "trigger": "ofTriangle \t(xyz)"                                            ,"contents": "ofTriangle(${1:float x1}, ${2:float y1}, ${3:float z1}, ${4:float x2}, ${5:float y2}, ${6:float z2}, ${7:float x3}, ${8:float y3}, ${9:float z3})" },
         { "trigger": "ofTriangle \t(ofPoint, ofPoint, ofPoint)"                      ,"contents": "ofTriangle(${1:const ofPoint &p1}, ${2:const ofPoint &p2}, ${3:const ofPoint &p3})" },
-
-        // ofVertex
         { "trigger": "ofVertex \t(xy)"                                               ,"contents": "ofVertex(${1:float x}, ${2:float y})" },
         { "trigger": "ofVertex \t(xyz)"                                              ,"contents": "ofVertex(${1:float x}, ${2:float y}, ${3:float z})" },
         { "trigger": "ofVertex \t(ofPoint)"                                          ,"contents": "ofVertex(${1:ofPoint &p})" },
-
-        // ofVertices
         { "trigger": "ofVertices"                                                    ,"contents": "ofVertices(${1:const vector< ofPoint > &polyPoints})" },
-
-        // ofViewport
         { "trigger": "ofViewport"                                                    ,"contents": "ofViewport(${1:float x=0}, ${2:float y=0}, ${3:float width=0}, ${4:float height=0}, ${5:bool invertY=true})" },
         { "trigger": "ofViewport \t(ofRectangle)"                                    ,"contents": "ofViewport(${1:ofRectangle viewport})" },
-
-        // ofbClearBg
         { "trigger": "ofbClearBg"                                                    ,"contents": "ofbClearBg()" },
-
+        ////////////////////////////////////
+        // ofGradientModes
+        { "trigger": "OF_GRADIENT_CIRCULAR \tofGradientMode"                         ,"contents": "OF_GRADIENT_CIRCULAR"},
         /////////////////////////////////////////////
         // ofImage
-        { "trigger": "ofImage::allocate"                                             ,"contents": "${1:ofImage}.allocate(${2:int w}, ${3:int h}, ${4:ofImageType type})" },
-        { "trigger": "ofImage::bAllocated"                                           ,"contents": "${1:ofImage}.bAllocated()" },
-        { "trigger": "ofImage::bind"                                                 ,"contents": "${1:ofImage}.bind()" },
-        { "trigger": "ofImage::clear"                                                ,"contents": "${1:ofImage}.clear()" },
-        { "trigger": "ofImage::clone"                                                ,"contents": "${1:ofImage}.clone(${2:const ofImage_< SrcType > &mom})" },
-        { "trigger": "ofImage::crop"                                                 ,"contents": "${1:ofImage}.crop(${2:int x}, ${3:int y}, ${4:int w}, ${5:int h})" },
-        { "trigger": "ofImage::cropFrom"                                             ,"contents": "${1:ofImage}.cropFrom(${2:ofImage_< PixelType > &otherImage}, ${3:int x}, ${4:int y}, ${5:int w}, ${6:int h})" },
-        { "trigger": "ofImage::draw \t(ofRectangle)"                                 ,"contents": "${1:ofImage}.draw(${2:const ofRectangle &r})" },
-        { "trigger": "ofImage::draw \t(ofPoint)"                                     ,"contents": "${1:ofImage}.draw(${2:const ofPoint &p}, ${3:float w}, ${4:float h})" },
-        { "trigger": "ofImage::draw \t(xy)"                                          ,"contents": "${1:ofImage}.draw(${2:float x}, ${3:float y})" },
-        { "trigger": "ofImage::draw \t(xyz)"                                         ,"contents": "${1:ofImage}.draw(${2:float x}, ${3:float y}, ${4:float z})" },
-        { "trigger": "ofImage::draw \t(xywh)"                                        ,"contents": "${1:ofImage}.draw(${2:float x}, ${3:float y}, ${4:float w}, ${5:float h})" },
-        { "trigger": "ofImage::draw \t(xyzwh)"                                       ,"contents": "${1:ofImage}.draw(${2:float x}, ${3:float y}, ${4:float z}, ${5:float w}, ${6:float h})" },
-        { "trigger": "ofImage::draw \t(ofPoint)"                                     ,"contents": "${1:ofImage}.draw(${2:const ofPoint &p})" },
-        { "trigger": "ofImage::drawSubsection \t(xywhsxsy)"                          ,"contents": "${1:ofImage}.drawSubsection(${2:float x}, ${3:float y}, ${4:float w}, ${5:float h}, ${6:float sx}, ${7:float sy})" },
-        { "trigger": "ofImage::drawSubsection \t(xyzwhsxsy)"                         ,"contents": "${1:ofImage}.drawSubsection(${2:float x}, ${3:float y}, ${4:float z}, ${5:float w}, ${6:float h}, ${7:float sx}, ${8:float sy})" },
-        { "trigger": "ofImage::drawSubsection \t(xywhsxsyswsh)"                      ,"contents": "${1:ofImage}.drawSubsection(${2:float x}, ${3:float y}, ${4:float w}, ${5:float h}, ${6:float sx}, ${7:float sy}, ${8:float sw}, ${9:float sh})" },
-        { "trigger": "ofImage::drawSubsection \t(xyzwhsxsyswsh)"                     ,"contents": "${1:ofImage}.drawSubsection(${2:float x}, ${3:float y}, ${4:float z}, ${5:float w}, ${6:float h}, ${7:float sx}, ${8:float sy}, ${9:float sw}, ${10:float sh})" },
-        { "trigger": "ofImage::getColor"                                             ,"contents": "${1:ofImage}.getColor(${2:int x}, ${3:int y})" },
-        { "trigger": "ofImage::getHeight"                                            ,"contents": "${1:ofImage}.getHeight()" },
-        { "trigger": "ofImage::getPixels"                                            ,"contents": "${1:ofImage}.getPixels()" },
-        { "trigger": "ofImage::getPixelsRef"                                         ,"contents": "${1:ofImage}.getPixelsRef()" },
-        { "trigger": "ofImage::getTextureReference"                                  ,"contents": "${1:ofImage}.getTextureReference()" },
-        { "trigger": "ofImage::getWidth"                                             ,"contents": "${1:ofImage}.getWidth()" },
-        { "trigger": "ofImage::grabScreen"                                           ,"contents": "${1:ofImage}.grabScreen(${2:int x}, ${3:int y}, ${4:int w}, ${5:int h})" },
-        { "trigger": "ofImage::isAllocated"                                          ,"contents": "${1:ofImage}.isAllocated()" },
-        { "trigger": "ofImage::isUsingTexture"                                       ,"contents": "${1:ofImage}.isUsingTexture()" },
-        { "trigger": "ofImage::loadImage \t(string)"                                 ,"contents": "${1:ofImage}.loadImage(${2:string fileName})" },
-        { "trigger": "ofImage::loadImage \t(ofBuffer)"                               ,"contents": "${1:ofImage}.loadImage(${2:const ofBuffer &buffer})" },
-        { "trigger": "ofImage::loadImage \t(ofFile)"                                 ,"contents": "${1:ofImage}.loadImage(${2:const ofFile &file})" },
-        { "trigger": "ofImage::mirror"                                               ,"contents": "${1:ofImage}.mirror(${2:bool vertical}, ${3:bool horizontal})" },
-        { "trigger": "ofImage::reloadTexture"                                        ,"contents": "${1:ofImage}.reloadTexture()" },
-        { "trigger": "ofImage::resetAnchor"                                          ,"contents": "${1:ofImage}.resetAnchor()" },
-        { "trigger": "ofImage::resize"                                               ,"contents": "${1:ofImage}.resize(${2:int newWidth}, ${3:int newHeight})" },
-        { "trigger": "ofImage::rotate90"                                             ,"contents": "${1:ofImage}.rotate90(${2:int rotation})" },
-        { "trigger": "ofImage::saveImage \t(string)"                                 ,"contents": "${1:ofImage}.saveImage(${2:string fileName}, ${3:ofImageQualityType compressionLevel=OF_IMAGE_QUALITY_BEST})" },
-        { "trigger": "ofImage::saveImage \t(ofBuffer)"                               ,"contents": "${1:ofImage}.saveImage(${2:ofBuffer &buffer}, ${3:ofImageQualityType compressionLevel=OF_IMAGE_QUALITY_BEST})" },
-        { "trigger": "ofImage::saveImage \t(ofFile)"                                 ,"contents": "${1:ofImage}.saveImage(${2:const ofFile &file}, ${3:ofImageQualityType compressionLevel=OF_IMAGE_QUALITY_BEST})" },
-        { "trigger": "ofImage::setAnchorPercent"                                     ,"contents": "${1:ofImage}.setAnchorPercent(${2:float xPct}, ${3:float yPct})" },
-        { "trigger": "ofImage::setAnchorPoint"                                       ,"contents": "${1:ofImage}.setAnchorPoint(${2:float x}, ${3:float y})" },
-        { "trigger": "ofImage::setColor"                                             ,"contents": "${1:ofImage}.setColor(${2:int x}, ${3:int y}, ${4:ofColor_< PixelType > color})" },
-        { "trigger": "ofImage::setCompression"                                       ,"contents": "${1:ofImage}.setCompression(${2:ofTexCompression compression})" },
-        { "trigger": "ofImage::setFromPixels \t(pixels, wh)"                         ,"contents": "${1:ofImage}.setFromPixels(${2:const PixelType *pixels}, ${3:int w}, ${4:int h}, ${5:ofImageType type}, ${6:bool bOrderIsRGB=true})" },
-        { "trigger": "ofImage::setFromPixels \t(PixelsType)"                         ,"contents": "${1:ofImage}.setFromPixels(${2:const ofPixels_< PixelType > &pixels})" },
-        { "trigger": "ofImage::setImageType"                                         ,"contents": "${1:ofImage}.setImageType(${2:ofImageType type})" },
-        { "trigger": "ofImage::setUseTexture"                                        ,"contents": "${1:ofImage}.setUseTexture(${2:bool bUse})" },
-        { "trigger": "ofImage::unbind"                                               ,"contents": "${1:ofImage}.unbind()" },
-        { "trigger": "ofImage::update"                                               ,"contents": "${1:ofImage}.update()" },
-        { "trigger": "ofImage::bpp"                                                  ,"contents": "${1:ofImage}.bpp" },
-        { "trigger": "ofImage::height"                                               ,"contents": "${1:ofImage}.height" },
-        { "trigger": "ofImage::type"                                                 ,"contents": "${1:ofImage}.type" },
-        { "trigger": "ofImage::width"                                                ,"contents": "${1:ofImage}.width" },
-        { "trigger": "ofImage::width"                                                ,"contents": "${1:ofImage}.width" },
-        { "trigger": "ofLoadImage \t(ofPixels, string)"                              ,"contents": "ofLoadImage(${1:ofPixels &pix}, ${2:string path})" },
-        { "trigger": "ofLoadImage \t(ofPixels, ofBuffer)"                            ,"contents": "ofLoadImage(${1:ofPixels &pix}, ${2:const ofBuffer &buffer})" },
-        { "trigger": "ofLoadImage \t(ofTexture, string)"                             ,"contents": "ofLoadImage(${1:ofTexture &tex}, ${2:string path})" },
-        { "trigger": "ofLoadImage \t(ofTexture, ofBuffer)"                           ,"contents": "ofLoadImage(${1:ofTexture &tex}, ${2:const ofBuffer &buffer})" },
-        { "trigger": "ofSaveImage \t(ofPixels, string)"                              ,"contents": "ofSaveImage(${1:ofPixels &pix}, ${2:string path}, ${3:ofImageQualityType qualityLevel=OF_IMAGE_QUALITY_BEST})" },
-        { "trigger": "ofSaveImage \t(ofPixels, ofBuffer)"                            ,"contents": "ofSaveImage(${1:ofPixels &pix}, ${2:ofBuffer &buffer}, ${3:ofImageFormat format=OF_IMAGE_FORMAT_PNG}, ${4:ofImageQualityType qualityLevel=OF_IMAGE_QUALITY_BEST})" },
+        { "trigger": "ofImage::allocate"                                             ,"contents": "${1:ofImage}.allocate(${2:int w}, ${3:int h}, ${4:ofImageType type})"},
+        { "trigger": "ofImage::bAllocated"                                           ,"contents": "${1:ofImage}.bAllocated()"},
+        { "trigger": "ofImage::bind"                                                 ,"contents": "${1:ofImage}.bind()"},
+        { "trigger": "ofImage::clear"                                                ,"contents": "${1:ofImage}.clear()"},
+        { "trigger": "ofImage::clone"                                                ,"contents": "${1:ofImage}.clone(${2:const ofImage_< SrcType > &mom})"},
+        { "trigger": "ofImage::crop"                                                 ,"contents": "${1:ofImage}.crop(${2:int x}, ${3:int y}, ${4:int w}, ${5:int h})"},
+        { "trigger": "ofImage::cropFrom"                                             ,"contents": "${1:ofImage}.cropFrom(${2:ofImage_< PixelType > &otherImage}, ${3:int x}, ${4:int y}, ${5:int w}, ${6:int h})"},
+        { "trigger": "ofImage::draw \t(ofRectangle)"                                 ,"contents": "${1:ofImage}.draw(${2:const ofRectangle &r})"},
+        { "trigger": "ofImage::draw \t(ofPoint)"                                     ,"contents": "${1:ofImage}.draw(${2:const ofPoint &p}, ${3:float w}, ${4:float h})"},
+        { "trigger": "ofImage::draw \t(xy)"                                          ,"contents": "${1:ofImage}.draw(${2:float x}, ${3:float y})"},
+        { "trigger": "ofImage::draw \t(xyz)"                                         ,"contents": "${1:ofImage}.draw(${2:float x}, ${3:float y}, ${4:float z})"},
+        { "trigger": "ofImage::draw \t(xywh)"                                        ,"contents": "${1:ofImage}.draw(${2:float x}, ${3:float y}, ${4:float w}, ${5:float h})"},
+        { "trigger": "ofImage::draw \t(xyzwh)"                                       ,"contents": "${1:ofImage}.draw(${2:float x}, ${3:float y}, ${4:float z}, ${5:float w}, ${6:float h})"},
+        { "trigger": "ofImage::draw \t(ofPoint)"                                     ,"contents": "${1:ofImage}.draw(${2:const ofPoint &p})"},
+        { "trigger": "ofImage::drawSubsection \t(xywhsxsy)"                          ,"contents": "${1:ofImage}.drawSubsection(${2:float x}, ${3:float y}, ${4:float w}, ${5:float h}, ${6:float sx}, ${7:float sy})"},
+        { "trigger": "ofImage::drawSubsection \t(xyzwhsxsy)"                         ,"contents": "${1:ofImage}.drawSubsection(${2:float x}, ${3:float y}, ${4:float z}, ${5:float w}, ${6:float h}, ${7:float sx}, ${8:float sy})"},
+        { "trigger": "ofImage::drawSubsection \t(xywhsxsyswsh)"                      ,"contents": "${1:ofImage}.drawSubsection(${2:float x}, ${3:float y}, ${4:float w}, ${5:float h}, ${6:float sx}, ${7:float sy}, ${8:float sw}, ${9:float sh})"},
+        { "trigger": "ofImage::drawSubsection \t(xyzwhsxsyswsh)"                     ,"contents": "${1:ofImage}.drawSubsection(${2:float x}, ${3:float y}, ${4:float z}, ${5:float w}, ${6:float h}, ${7:float sx}, ${8:float sy}, ${9:float sw}, ${10:float sh})"},
+        { "trigger": "ofImage::getColor"                                             ,"contents": "${1:ofImage}.getColor(${2:int x}, ${3:int y})"},
+        { "trigger": "ofImage::getHeight"                                            ,"contents": "${1:ofImage}.getHeight()"},
+        { "trigger": "ofImage::getPixels"                                            ,"contents": "${1:ofImage}.getPixels()"},
+        { "trigger": "ofImage::getPixelsRef"                                         ,"contents": "${1:ofImage}.getPixelsRef()"},
+        { "trigger": "ofImage::getTextureReference"                                  ,"contents": "${1:ofImage}.getTextureReference()"},
+        { "trigger": "ofImage::getWidth"                                             ,"contents": "${1:ofImage}.getWidth()"},
+        { "trigger": "ofImage::grabScreen"                                           ,"contents": "${1:ofImage}.grabScreen(${2:int x}, ${3:int y}, ${4:int w}, ${5:int h})"},
+        { "trigger": "ofImage::isAllocated"                                          ,"contents": "${1:ofImage}.isAllocated()"},
+        { "trigger": "ofImage::isUsingTexture"                                       ,"contents": "${1:ofImage}.isUsingTexture()"},
+        { "trigger": "ofImage::loadImage \t(string)"                                 ,"contents": "${1:ofImage}.loadImage(${2:string fileName})"},
+        { "trigger": "ofImage::loadImage \t(ofBuffer)"                               ,"contents": "${1:ofImage}.loadImage(${2:const ofBuffer &buffer})"},
+        { "trigger": "ofImage::loadImage \t(ofFile)"                                 ,"contents": "${1:ofImage}.loadImage(${2:const ofFile &file})"},
+        { "trigger": "ofImage::mirror"                                               ,"contents": "${1:ofImage}.mirror(${2:bool vertical}, ${3:bool horizontal})"},
+        { "trigger": "ofImage::reloadTexture"                                        ,"contents": "${1:ofImage}.reloadTexture()"},
+        { "trigger": "ofImage::resetAnchor"                                          ,"contents": "${1:ofImage}.resetAnchor()"},
+        { "trigger": "ofImage::resize"                                               ,"contents": "${1:ofImage}.resize(${2:int newWidth}, ${3:int newHeight})"},
+        { "trigger": "ofImage::rotate90"                                             ,"contents": "${1:ofImage}.rotate90(${2:int rotation})"},
+        { "trigger": "ofImage::saveImage \t(string)"                                 ,"contents": "${1:ofImage}.saveImage(${2:string fileName}, ${3:ofImageQualityType compressionLevel=OF_IMAGE_QUALITY_BEST})"},
+        { "trigger": "ofImage::saveImage \t(ofBuffer)"                               ,"contents": "${1:ofImage}.saveImage(${2:ofBuffer &buffer}, ${3:ofImageQualityType compressionLevel=OF_IMAGE_QUALITY_BEST})"},
+        { "trigger": "ofImage::saveImage \t(ofFile)"                                 ,"contents": "${1:ofImage}.saveImage(${2:const ofFile &file}, ${3:ofImageQualityType compressionLevel=OF_IMAGE_QUALITY_BEST})"},
+        { "trigger": "ofImage::setAnchorPercent"                                     ,"contents": "${1:ofImage}.setAnchorPercent(${2:float xPct}, ${3:float yPct})"},
+        { "trigger": "ofImage::setAnchorPoint"                                       ,"contents": "${1:ofImage}.setAnchorPoint(${2:float x}, ${3:float y})"},
+        { "trigger": "ofImage::setColor"                                             ,"contents": "${1:ofImage}.setColor(${2:int x}, ${3:int y}, ${4:ofColor_< PixelType > color})"},
+        { "trigger": "ofImage::setCompression"                                       ,"contents": "${1:ofImage}.setCompression(${2:ofTexCompression compression})"},
+        { "trigger": "ofImage::setFromPixels \t(pixels, wh)"                         ,"contents": "${1:ofImage}.setFromPixels(${2:const PixelType *pixels}, ${3:int w}, ${4:int h}, ${5:ofImageType type}, ${6:bool bOrderIsRGB=true})"},
+        { "trigger": "ofImage::setFromPixels \t(PixelsType)"                         ,"contents": "${1:ofImage}.setFromPixels(${2:const ofPixels_< PixelType > &pixels})"},
+        { "trigger": "ofImage::setImageType"                                         ,"contents": "${1:ofImage}.setImageType(${2:ofImageType type})"},
+        { "trigger": "ofImage::setUseTexture"                                        ,"contents": "${1:ofImage}.setUseTexture(${2:bool bUse})"},
+        { "trigger": "ofImage::unbind"                                               ,"contents": "${1:ofImage}.unbind()"},
+        { "trigger": "ofImage::update"                                               ,"contents": "${1:ofImage}.update()"},
+        { "trigger": "ofImage::bpp"                                                  ,"contents": "${1:ofImage}.bpp"},
+        { "trigger": "ofImage::height"                                               ,"contents": "${1:ofImage}.height"},
+        { "trigger": "ofImage::type"                                                 ,"contents": "${1:ofImage}.type"},
+        { "trigger": "ofImage::width"                                                ,"contents": "${1:ofImage}.width"},
+        { "trigger": "ofImage::width"                                                ,"contents": "${1:ofImage}.width"},
+        { "trigger": "ofLoadImage \t(ofPixels, string)"                              ,"contents": "ofLoadImage(${1:ofPixels &pix}, ${2:string path})"},
+        { "trigger": "ofLoadImage \t(ofPixels, ofBuffer)"                            ,"contents": "ofLoadImage(${1:ofPixels &pix}, ${2:const ofBuffer &buffer})"},
+        { "trigger": "ofLoadImage \t(ofTexture, string)"                             ,"contents": "ofLoadImage(${1:ofTexture &tex}, ${2:string path})"},
+        { "trigger": "ofLoadImage \t(ofTexture, ofBuffer)"                           ,"contents": "ofLoadImage(${1:ofTexture &tex}, ${2:const ofBuffer &buffer})"},
+        { "trigger": "ofSaveImage \t(ofPixels, string)"                              ,"contents": "ofSaveImage(${1:ofPixels &pix}, ${2:string path}, ${3:ofImageQualityType qualityLevel=OF_IMAGE_QUALITY_BEST})"},
+        { "trigger": "ofSaveImage \t(ofPixels, ofBuffer)"                            ,"contents": "ofSaveImage(${1:ofPixels &pix}, ${2:ofBuffer &buffer}, ${3:ofImageFormat format=OF_IMAGE_FORMAT_PNG}, ${4:ofImageQualityType qualityLevel=OF_IMAGE_QUALITY_BEST})"},
 
-        { "trigger": "OF_IMAGE_COLOR"                                                ,"contents": "OF_IMAGE_COLOR" },
-        { "trigger": "OF_IMAGE_COLOR_ALPHA"                                          ,"contents": "OF_IMAGE_COLOR_ALPHA" },
-        { "trigger": "OF_IMAGE_GRAYSCALE"                                            ,"contents": "OF_IMAGE_GRAYSCALE" },
-        { "trigger": "OF_COLOR_IMAGE"                                                ,"contents": "OF_COLOR_IMAGE" },
-        { "trigger": "OF_COMPRESS_NONE"                                              ,"contents": "OF_COMPRESS_NONE" },
-        { "trigger": "OF_COMPRESS_SRGB"                                              ,"contents": "OF_COMPRESS_SRGB" },
-        { "trigger": "OF_COMPRESS_ARB"                                               ,"contents": "OF_COMPRESS_ARB" },
-        { "trigger": "OF_IMAGE_QUALITY_BEST"                                         ,"contents": "OF_IMAGE_QUALITY_BEST" },
-        { "trigger": "OF_IMAGE_QUALITY_HIGH"                                         ,"contents": "OF_IMAGE_QUALITY_HIGH" },
-        { "trigger": "OF_IMAGE_QUALITY_MEDIUM"                                       ,"contents": "OF_IMAGE_QUALITY_MEDIUM" },
-        { "trigger": "OF_IMAGE_QUALITY_LOW"                                          ,"contents": "OF_IMAGE_QUALITY_LOW" },
-        { "trigger": "OF_IMAGE_QUALITY_WORST"                                        ,"contents": "OF_IMAGE_QUALITY_WORST" },
+        { "trigger": "OF_IMAGE_COLOR"                                                ,"contents": "OF_IMAGE_COLOR"},
+        { "trigger": "OF_IMAGE_COLOR_ALPHA"                                          ,"contents": "OF_IMAGE_COLOR_ALPHA"},
+        { "trigger": "OF_IMAGE_GRAYSCALE"                                            ,"contents": "OF_IMAGE_GRAYSCALE"},
+        { "trigger": "OF_COLOR_IMAGE"                                                ,"contents": "OF_COLOR_IMAGE"},
+        { "trigger": "OF_COMPRESS_NONE"                                              ,"contents": "OF_COMPRESS_NONE"},
+        { "trigger": "OF_COMPRESS_SRGB"                                              ,"contents": "OF_COMPRESS_SRGB"},
+        { "trigger": "OF_COMPRESS_ARB"                                               ,"contents": "OF_COMPRESS_ARB"},
+        { "trigger": "OF_IMAGE_QUALITY_BEST"                                         ,"contents": "OF_IMAGE_QUALITY_BEST"},
+        { "trigger": "OF_IMAGE_QUALITY_HIGH"                                         ,"contents": "OF_IMAGE_QUALITY_HIGH"},
+        { "trigger": "OF_IMAGE_QUALITY_MEDIUM"                                       ,"contents": "OF_IMAGE_QUALITY_MEDIUM"},
+        { "trigger": "OF_IMAGE_QUALITY_LOW"                                          ,"contents": "OF_IMAGE_QUALITY_LOW"},
+        { "trigger": "OF_IMAGE_QUALITY_WORST"                                        ,"contents": "OF_IMAGE_QUALITY_WORST"},
 
         /////////////////////////////////////////////
         // ofPath
-        { "trigger": "ofPath::arc \t(ofPoint)"                                       ,"contents": "${1:ofPath}.arc(${2:const ofPoint &centre}, float radiusX}, float radiusY}, float angleBegin}, float angleEnd})" },
-        { "trigger": "ofPath::arc \t(xy)"                                            ,"contents": "${1:ofPath}.arc(${2:float x}, float y}, ${3:float radiusX}, ${4:float radiusY}, ${5:float angleBegin}, ${6:float angleEnd})" },
-        { "trigger": "ofPath::arc \t(xyz)"                                           ,"contents": "${1:ofPath}.arc(${2:float x}, float y}, ${3:float z}, ${4:float radiusX}, ${5:float radiusY}, ${6:float angleBegin}, ${7:float angleEnd})" },
-        { "trigger": "ofPath::arc \t(ofPoint clockwise)"                             ,"contents": "${1:ofPath}.arc(${2:const ofPoint &centre}, ${3:float radiusX}, ${4:float radiusY}, ${5:float angleBegin}, ${6:float angleEnd}, ${7:bool clockwise})" },
-        { "trigger": "ofPath::arcNegative \t(ofPoint)"                               ,"contents": "${1:ofPath}.arcNegative(${2:const ofPoint &centre}, ${3:float radiusX}, ${4:float radiusY}, ${5:float angleBegin}, ${6:float angleEnd})" },
-        { "trigger": "ofPath::arcNegative \t(xy)"                                    ,"contents": "${1:ofPath}.arcNegative(${2:float x}, ${3:float y}, ${4:float radiusX}, ${5:float radiusY}, ${6:float angleBegin}, ${7:float angleEnd})" },
-        { "trigger": "ofPath::arcNegative \t(xyz)"                                   ,"contents": "${1:ofPath}.arcNegative(${2:float x}, ${3:float y}, ${4:float z}, ${5:float radiusX}, ${6:float radiusY}, ${7:float angleBegin}, ${8:float angleEnd})" },
-        { "trigger": "ofPath::bezierTo \t(ofPoint)"                                  ,"contents": "${1:ofPath}.bezierTo(${2:const ofPoint &cp1}, ${3:const ofPoint &cp2}, ${4:const ofPoint &p})" },
-        { "trigger": "ofPath::bezierTo \t(xy)"                                       ,"contents": "${1:ofPath}.bezierTo(${2:float cx1}, ${3:float cy1}, ${4:float cx2}, ${5:float cy2}, ${6:float x}, ${7:float y})" },
-        { "trigger": "ofPath::bezierTo \t(xyz)"                                      ,"contents": "${1:ofPath}.bezierTo(${2:float cx1}, ${3:float cy1}, ${4:float cz1}, ${5:float cx2}, ${6:float cy2}, ${7:float cz2}, ${8:float x}, ${9:float y}, ${10:float z})" },
-        { "trigger": "ofPath::clear"                                                 ,"contents": "${1:ofPath}.clear()" },
-        { "trigger": "ofPath::close"                                                 ,"contents": "${1:ofPath}.close()" },
-        { "trigger": "ofPath::curveTo \t(ofPoint)"                                   ,"contents": "${1:ofPath}.curveTo(${2:const ofPoint &p})" },
-        { "trigger": "ofPath::curveTo \t(xy)"                                        ,"contents": "${1:ofPath}.curveTo(${2:float x}, ${3:float y})" },
-        { "trigger": "ofPath::curveTo \t(xyz)"                                       ,"contents": "${1:ofPath}.curveTo(${2:float x}, ${3:float y}, ${4:float z})" },
-        { "trigger": "ofPath::draw \t(xy)"                                           ,"contents": "${1:ofPath}.draw(${2:float x}, ${3:float y})" },
-        { "trigger": "ofPath::draw"                                                  ,"contents": "${1:ofPath}.draw()" },
-        { "trigger": "ofPath::flagShapeChanged"                                      ,"contents": "${1:ofPath}.flagShapeChanged()" },
-        { "trigger": "ofPath::generatePolylinesFromPaths"                            ,"contents": "${1:ofPath}.generatePolylinesFromPaths()" },
-        { "trigger": "ofPath::getArcResolution"                                      ,"contents": "${1:ofPath}.getArcResolution()" },
-        { "trigger": "ofPath::getCurveResolution"                                    ,"contents": "${1:ofPath}.getCurveResolution()" },
-        { "trigger": "ofPath::getFillColor"                                          ,"contents": "${1:ofPath}.getFillColor()" },
-        { "trigger": "ofPath::getOutline"                                            ,"contents": "${1:ofPath}.getOutline()" },
-        { "trigger": "ofPath::getStrokeColor"                                        ,"contents": "${1:ofPath}.getStrokeColor()" },
-        { "trigger": "ofPath::getStrokeWidth"                                        ,"contents": "${1:ofPath}.getStrokeWidth()" },
-        { "trigger": "ofPath::getSubPaths"                                           ,"contents": "${1:ofPath}.getSubPaths()" },
-        { "trigger": "ofPath::getTessellation"                                       ,"contents": "${1:ofPath}.getTessellation()" },
-        { "trigger": "ofPath::getUseShapeColor"                                      ,"contents": "${1:ofPath}.getUseShapeColor()" },
-        { "trigger": "ofPath::getWindingMode"                                        ,"contents": "${1:ofPath}.getWindingMode()" },
-        { "trigger": "ofPath::hasOutline"                                            ,"contents": "${1:ofPath}.hasOutline()" },
-        { "trigger": "ofPath::isFilled"                                              ,"contents": "${1:ofPath}.isFilled()" },
-        { "trigger": "ofPath::lastPath"                                              ,"contents": "${1:ofPath}.lastPath()" },
-        { "trigger": "ofPath::lastPolyline"                                          ,"contents": "${1:ofPath}.lastPolyline()" },
-        { "trigger": "ofPath::lineTo \t(ofPoint)"                                    ,"contents": "${1:ofPath}.lineTo(${2:const ofPoint &p})" },
-        { "trigger": "ofPath::lineTo \t(xy)"                                         ,"contents": "${1:ofPath}.lineTo(${2:float x, ${3:float y})" },
-        { "trigger": "ofPath::lineTo \t(xyz)"                                        ,"contents": "${1:ofPath}.lineTo(${2:float x, ${3:float y}, ${4:float z})" },
-        { "trigger": "ofPath::moveTo \t(ofPoint)"                                    ,"contents": "${1:ofPath}.moveTo(${2:const ofPoint &p})" },
-        { "trigger": "ofPath::moveTo \t(xy[z])"                                      ,"contents": "${1:ofPath}.moveTo(${2:float x, ${3:float y}, ${4:float z=0})" },
-        { "trigger": "ofPath::newSubPath"                                            ,"contents": "${1:ofPath}.newSubPath()" },
-        { "trigger": "ofPath::ofPath"                                                ,"contents": "${1:ofPath}.ofPath()" },
-        { "trigger": "ofPath::quadBezierTo \t(ofPoint)"                              ,"contents": "${1:ofPath}.quadBezierTo(${2:const ofPoint &cp1}, ${3:const ofPoint &cp2}, ${4:const ofPoint &p})" },
-        { "trigger": "ofPath::quadBezierTo \t(xy)"                                   ,"contents": "${1:ofPath}.quadBezierTo(${2:float cx1}, ${3:float cy1}, ${4:float cx2}, ${5:float cy2}, ${6:float x}, ${7:float y})" },
-        { "trigger": "ofPath::quadBezierTo \t(xyz)"                                  ,"contents": "${1:ofPath}.quadBezierTo(${2:float cx1}, ${3:float cy1}, ${4:float cz1}, ${5:float cx2}, ${6:float cy2}, ${7:float cz2}, ${8:float x}, ${9:float y}, ${10:float z})" },
-        { "trigger": "ofPath::rotate"                                                ,"contents": "${1:ofPath}.rotate(${2:float az}, ${3:const ofVec3f &axis})" },
-        { "trigger": "ofPath::scale"                                                 ,"contents": "${1:ofPath}.scale(${2:float x}, ${3:float y})" },
-        { "trigger": "ofPath::setArcResolution"                                      ,"contents": "${1:ofPath}.setArcResolution(${2:int res})" },
-        { "trigger": "ofPath::setColor"                                              ,"contents": "${1:ofPath}.setColor(${2:const ofColor &color})" },
-        { "trigger": "ofPath::setCurveResolution"                                    ,"contents": "${1:ofPath}.setCurveResolution(${2:int curveResolution})" },
-        { "trigger": "ofPath::setFillColor"                                          ,"contents": "${1:ofPath}.setFillColor(${2:const ofColor &color})" },
-        { "trigger": "ofPath::setFillHexColor"                                       ,"contents": "${1:ofPath}.setFillHexColor(${2:int hex})" },
-        { "trigger": "ofPath::setFilled"                                             ,"contents": "${1:ofPath}.setFilled(${2:bool hasFill})" },
-        { "trigger": "ofPath::setHexColor"                                           ,"contents": "${1:ofPath}.setHexColor(${2:int hex})" },
-        { "trigger": "ofPath::setMode"                                               ,"contents": "${1:ofPath}.setMode(${2:Mode mode})" },
-        { "trigger": "ofPath::setPolyWindingMode"                                    ,"contents": "${1:ofPath}.setPolyWindingMode(${2:ofPolyWindingMode mode})" },
-        { "trigger": "ofPath::setStrokeColor"                                        ,"contents": "${1:ofPath}.setStrokeColor(${2:const ofColor &color})" },
-        { "trigger": "ofPath::setStrokeHexColor"                                     ,"contents": "${1:ofPath}.setStrokeHexColor(${2:int hex})" },
-        { "trigger": "ofPath::setStrokeWidth"                                        ,"contents": "${1:ofPath}.setStrokeWidth(${2:float width})" },
-        { "trigger": "ofPath::setUseShapeColor"                                      ,"contents": "${1:ofPath}.setUseShapeColor(${2:bool useColor})" },
-        { "trigger": "ofPath::simplify"                                              ,"contents": "${1:ofPath}.simplify(${2:float tolerance=0.3})" },
-        { "trigger": "ofPath::tessellate"                                            ,"contents": "${1:ofPath}.tessellate()" },
-        { "trigger": "ofPath::translate"                                             ,"contents": "${1:ofPath}.translate(${2:const ofPoint &p})" },
+        { "trigger": "ofPath::arc \t(ofPoint)"                                       ,"contents": "${1:ofPath}.arc(${2:const ofPoint &centre}, float radiusX}, float radiusY}, float angleBegin}, float angleEnd})"},
+        { "trigger": "ofPath::arc \t(xy)"                                            ,"contents": "${1:ofPath}.arc(${2:float x}, float y}, ${3:float radiusX}, ${4:float radiusY}, ${5:float angleBegin}, ${6:float angleEnd})"},
+        { "trigger": "ofPath::arc \t(xyz)"                                           ,"contents": "${1:ofPath}.arc(${2:float x}, float y}, ${3:float z}, ${4:float radiusX}, ${5:float radiusY}, ${6:float angleBegin}, ${7:float angleEnd})"},
+        { "trigger": "ofPath::arc \t(ofPoint clockwise)"                             ,"contents": "${1:ofPath}.arc(${2:const ofPoint &centre}, ${3:float radiusX}, ${4:float radiusY}, ${5:float angleBegin}, ${6:float angleEnd}, ${7:bool clockwise})"},
+        { "trigger": "ofPath::arcNegative \t(ofPoint)"                               ,"contents": "${1:ofPath}.arcNegative(${2:const ofPoint &centre}, ${3:float radiusX}, ${4:float radiusY}, ${5:float angleBegin}, ${6:float angleEnd})"},
+        { "trigger": "ofPath::arcNegative \t(xy)"                                    ,"contents": "${1:ofPath}.arcNegative(${2:float x}, ${3:float y}, ${4:float radiusX}, ${5:float radiusY}, ${6:float angleBegin}, ${7:float angleEnd})"},
+        { "trigger": "ofPath::arcNegative \t(xyz)"                                   ,"contents": "${1:ofPath}.arcNegative(${2:float x}, ${3:float y}, ${4:float z}, ${5:float radiusX}, ${6:float radiusY}, ${7:float angleBegin}, ${8:float angleEnd})"},
+        { "trigger": "ofPath::bezierTo \t(ofPoint)"                                  ,"contents": "${1:ofPath}.bezierTo(${2:const ofPoint &cp1}, ${3:const ofPoint &cp2}, ${4:const ofPoint &p})"},
+        { "trigger": "ofPath::bezierTo \t(xy)"                                       ,"contents": "${1:ofPath}.bezierTo(${2:float cx1}, ${3:float cy1}, ${4:float cx2}, ${5:float cy2}, ${6:float x}, ${7:float y})"},
+        { "trigger": "ofPath::bezierTo \t(xyz)"                                      ,"contents": "${1:ofPath}.bezierTo(${2:float cx1}, ${3:float cy1}, ${4:float cz1}, ${5:float cx2}, ${6:float cy2}, ${7:float cz2}, ${8:float x}, ${9:float y}, ${10:float z})"},
+        { "trigger": "ofPath::clear"                                                 ,"contents": "${1:ofPath}.clear()"},
+        { "trigger": "ofPath::close"                                                 ,"contents": "${1:ofPath}.close()"},
+        { "trigger": "ofPath::curveTo \t(ofPoint)"                                   ,"contents": "${1:ofPath}.curveTo(${2:const ofPoint &p})"},
+        { "trigger": "ofPath::curveTo \t(xy)"                                        ,"contents": "${1:ofPath}.curveTo(${2:float x}, ${3:float y})"},
+        { "trigger": "ofPath::curveTo \t(xyz)"                                       ,"contents": "${1:ofPath}.curveTo(${2:float x}, ${3:float y}, ${4:float z})"},
+        { "trigger": "ofPath::draw \t(xy)"                                           ,"contents": "${1:ofPath}.draw(${2:float x}, ${3:float y})"},
+        { "trigger": "ofPath::draw"                                                  ,"contents": "${1:ofPath}.draw()"},
+        { "trigger": "ofPath::flagShapeChanged"                                      ,"contents": "${1:ofPath}.flagShapeChanged()"},
+        { "trigger": "ofPath::generatePolylinesFromPaths"                            ,"contents": "${1:ofPath}.generatePolylinesFromPaths()"},
+        { "trigger": "ofPath::getArcResolution"                                      ,"contents": "${1:ofPath}.getArcResolution()"},
+        { "trigger": "ofPath::getCurveResolution"                                    ,"contents": "${1:ofPath}.getCurveResolution()"},
+        { "trigger": "ofPath::getFillColor"                                          ,"contents": "${1:ofPath}.getFillColor()"},
+        { "trigger": "ofPath::getOutline"                                            ,"contents": "${1:ofPath}.getOutline()"},
+        { "trigger": "ofPath::getStrokeColor"                                        ,"contents": "${1:ofPath}.getStrokeColor()"},
+        { "trigger": "ofPath::getStrokeWidth"                                        ,"contents": "${1:ofPath}.getStrokeWidth()"},
+        { "trigger": "ofPath::getSubPaths"                                           ,"contents": "${1:ofPath}.getSubPaths()"},
+        { "trigger": "ofPath::getTessellation"                                       ,"contents": "${1:ofPath}.getTessellation()"},
+        { "trigger": "ofPath::getUseShapeColor"                                      ,"contents": "${1:ofPath}.getUseShapeColor()"},
+        { "trigger": "ofPath::getWindingMode"                                        ,"contents": "${1:ofPath}.getWindingMode()"},
+        { "trigger": "ofPath::hasOutline"                                            ,"contents": "${1:ofPath}.hasOutline()"},
+        { "trigger": "ofPath::isFilled"                                              ,"contents": "${1:ofPath}.isFilled()"},
+        { "trigger": "ofPath::lastPath"                                              ,"contents": "${1:ofPath}.lastPath()"},
+        { "trigger": "ofPath::lastPolyline"                                          ,"contents": "${1:ofPath}.lastPolyline()"},
+        { "trigger": "ofPath::lineTo \t(ofPoint)"                                    ,"contents": "${1:ofPath}.lineTo(${2:const ofPoint &p})"},
+        { "trigger": "ofPath::lineTo \t(xy)"                                         ,"contents": "${1:ofPath}.lineTo(${2:float x, ${3:float y})"},
+        { "trigger": "ofPath::lineTo \t(xyz)"                                        ,"contents": "${1:ofPath}.lineTo(${2:float x, ${3:float y}, ${4:float z})"},
+        { "trigger": "ofPath::moveTo \t(ofPoint)"                                    ,"contents": "${1:ofPath}.moveTo(${2:const ofPoint &p})"},
+        { "trigger": "ofPath::moveTo \t(xy[z])"                                      ,"contents": "${1:ofPath}.moveTo(${2:float x, ${3:float y}, ${4:float z=0})"},
+        { "trigger": "ofPath::newSubPath"                                            ,"contents": "${1:ofPath}.newSubPath()"},
+        { "trigger": "ofPath::ofPath"                                                ,"contents": "${1:ofPath}.ofPath()"},
+        { "trigger": "ofPath::quadBezierTo \t(ofPoint)"                              ,"contents": "${1:ofPath}.quadBezierTo(${2:const ofPoint &cp1}, ${3:const ofPoint &cp2}, ${4:const ofPoint &p})"},
+        { "trigger": "ofPath::quadBezierTo \t(xy)"                                   ,"contents": "${1:ofPath}.quadBezierTo(${2:float cx1}, ${3:float cy1}, ${4:float cx2}, ${5:float cy2}, ${6:float x}, ${7:float y})"},
+        { "trigger": "ofPath::quadBezierTo \t(xyz)"                                  ,"contents": "${1:ofPath}.quadBezierTo(${2:float cx1}, ${3:float cy1}, ${4:float cz1}, ${5:float cx2}, ${6:float cy2}, ${7:float cz2}, ${8:float x}, ${9:float y}, ${10:float z})"},
+        { "trigger": "ofPath::rotate"                                                ,"contents": "${1:ofPath}.rotate(${2:float az}, ${3:const ofVec3f &axis})"},
+        { "trigger": "ofPath::scale"                                                 ,"contents": "${1:ofPath}.scale(${2:float x}, ${3:float y})"},
+        { "trigger": "ofPath::setArcResolution"                                      ,"contents": "${1:ofPath}.setArcResolution(${2:int res})"},
+        { "trigger": "ofPath::setColor"                                              ,"contents": "${1:ofPath}.setColor(${2:const ofColor &color})"},
+        { "trigger": "ofPath::setCurveResolution"                                    ,"contents": "${1:ofPath}.setCurveResolution(${2:int curveResolution})"},
+        { "trigger": "ofPath::setFillColor"                                          ,"contents": "${1:ofPath}.setFillColor(${2:const ofColor &color})"},
+        { "trigger": "ofPath::setFillHexColor"                                       ,"contents": "${1:ofPath}.setFillHexColor(${2:int hex})"},
+        { "trigger": "ofPath::setFilled"                                             ,"contents": "${1:ofPath}.setFilled(${2:bool hasFill})"},
+        { "trigger": "ofPath::setHexColor"                                           ,"contents": "${1:ofPath}.setHexColor(${2:int hex})"},
+        { "trigger": "ofPath::setMode"                                               ,"contents": "${1:ofPath}.setMode(${2:Mode mode})"},
+        { "trigger": "ofPath::setPolyWindingMode"                                    ,"contents": "${1:ofPath}.setPolyWindingMode(${2:ofPolyWindingMode mode})"},
+        { "trigger": "ofPath::setStrokeColor"                                        ,"contents": "${1:ofPath}.setStrokeColor(${2:const ofColor &color})"},
+        { "trigger": "ofPath::setStrokeHexColor"                                     ,"contents": "${1:ofPath}.setStrokeHexColor(${2:int hex})"},
+        { "trigger": "ofPath::setStrokeWidth"                                        ,"contents": "${1:ofPath}.setStrokeWidth(${2:float width})"},
+        { "trigger": "ofPath::setUseShapeColor"                                      ,"contents": "${1:ofPath}.setUseShapeColor(${2:bool useColor})"},
+        { "trigger": "ofPath::simplify"                                              ,"contents": "${1:ofPath}.simplify(${2:float tolerance=0.3})"},
+        { "trigger": "ofPath::tessellate"                                            ,"contents": "${1:ofPath}.tessellate()"},
+        { "trigger": "ofPath::translate"                                             ,"contents": "${1:ofPath}.translate(${2:const ofPoint &p})"},
 
-        { "trigger": "OF_POLY_WINDING_ODD"                                           ,"contents": "OF_POLY_WINDING_ODD" },
-        { "trigger": "OF_POLY_WINDING_NONZERO"                                       ,"contents": "OF_POLY_WINDING_NONZERO" },
-        { "trigger": "OF_POLY_WINDING_POSITIVE"                                      ,"contents": "OF_POLY_WINDING_POSITIVE" },
-        { "trigger": "OF_POLY_WINDING_NEGATIVE"                                      ,"contents": "OF_POLY_WINDING_NEGATIVE" },
-        { "trigger": "OF_POLY_WINDING_ABS_GEQ_TWO"                                   ,"contents": "OF_POLY_WINDING_ABS_GEQ_TWO" },
+        { "trigger": "OF_POLY_WINDING_ODD"                                           ,"contents": "OF_POLY_WINDING_ODD"},
+        { "trigger": "OF_POLY_WINDING_NONZERO"                                       ,"contents": "OF_POLY_WINDING_NONZERO"},
+        { "trigger": "OF_POLY_WINDING_POSITIVE"                                      ,"contents": "OF_POLY_WINDING_POSITIVE"},
+        { "trigger": "OF_POLY_WINDING_NEGATIVE"                                      ,"contents": "OF_POLY_WINDING_NEGATIVE"},
+        { "trigger": "OF_POLY_WINDING_ABS_GEQ_TWO"                                   ,"contents": "OF_POLY_WINDING_ABS_GEQ_TWO"},
 
         ///////////////////////////////////////////
         // ofPixels
-        { "trigger": "ofPixels::allocate \t(channel)"                                ,"contents": "${1:ofPixels}.allocate(${2:int w}, ${3:int h}, ${4:int channels})" },
-        { "trigger": "ofPixels::allocate \t(ofPixelFormat)"                          ,"contents": "${1:ofPixels}.allocate(${2:int w}, ${3:int h}, ${4:ofPixelFormat type})" },
-        { "trigger": "ofPixels::allocate \t(ofImageType)"                            ,"contents": "${1:ofPixels}.allocate(${2:int w}, ${3:int h}, ${4:ofImageType type})" },
-        { "trigger": "ofPixels::bicubicInterpolate"                                  ,"contents": "${1:ofPixels}.bicubicInterpolate(${2:const float *patch}, ${3:float x}, ${4:float y}, ${5:float x2}, ${6:float y2}, ${7:float x3}, ${8:float y3})" },
-        { "trigger": "ofPixels::clear"                                               ,"contents": "${1:ofPixels}.clear()" },
-        { "trigger": "ofPixels::copyFrom \t(PixelType)"                              ,"contents": "${1:ofPixels}.copyFrom(${2:const ofPixels_< PixelType > &mom})" },
-        { "trigger": "ofPixels::copyFrom \t(SrcType)"                                ,"contents": "${1:ofPixels}.copyFrom(${2:const ofPixels_< SrcType > &mom})" },
-        { "trigger": "ofPixels::crop"                                                ,"contents": "${1:ofPixels}.crop(${2:int x}, ${2:int y}, ${3:int width}, ${4:int height})" },
-        { "trigger": "ofPixels::cropTo"                                              ,"contents": "${1:ofPixels}.cropTo(${2:ofPixels_< PixelType > &toPix}, ${3:int x}, ${4:int y}, ${5:int _width}, ${6:int _height})" },
-        { "trigger": "ofPixels::getBitsPerChannel"                                   ,"contents": "${1:ofPixels}.getBitsPerChannel()" },
-        { "trigger": "ofPixels::getBitsPerPixel"                                     ,"contents": "${1:ofPixels}.getBitsPerPixel()" },
-        { "trigger": "ofPixels::getBytesPerChannel"                                  ,"contents": "${1:ofPixels}.getBytesPerChannel()" },
-        { "trigger": "ofPixels::getBytesPerPixel"                                    ,"contents": "${1:ofPixels}.getBytesPerPixel()" },
-        { "trigger": "ofPixels::getChannel"                                          ,"contents": "${1:ofPixels}.getChannel(${2:int channel)" },
-        { "trigger": "ofPixels::getColor"                                            ,"contents": "${1:ofPixels}.getColor(${2:int x}, ${3:int y})" },
-        { "trigger": "ofPixels::getHeight"                                           ,"contents": "${1:ofPixels}.getHeight()" },
-        { "trigger": "ofPixels::getImageType"                                        ,"contents": "${1:ofPixels}.getImageType()" },
-        { "trigger": "ofPixels::getNumChannels"                                      ,"contents": "${1:ofPixels}.getNumChannels()" },
-        { "trigger": "ofPixels::getPixelIndex"                                       ,"contents": "${1:ofPixels}.getPixelIndex(${2:int x}, ${3:int y})" },
-        { "trigger": "ofPixels::getPixels"                                           ,"contents": "${1:ofPixels}.getPixels()" },
-        { "trigger": "ofPixels::getWidth"                                            ,"contents": "${1:ofPixels}.getWidth()" },
-        { "trigger": "ofPixels::isAllocated"                                         ,"contents": "${1:ofPixels}.isAllocated()" },
-        { "trigger": "ofPixels::mirror"                                              ,"contents": "${1:ofPixels}.mirror(${2:bool vertically}, ${3:bool horizontal})" },
-        { "trigger": "ofPixels::mirrorTo"                                            ,"contents": "${1:ofPixels}.mirrorTo(${2:ofPixels_< PixelType > &dst, bool vertically}, ${3:bool horizontal})" },
-        { "trigger": "ofPixels::ofPixels"                                            ,"contents": "${1:ofPixels}.ofPixels()" },
-        { "trigger": "ofPixels::ofPixels \t(PixelType)"                              ,"contents": "${1:ofPixels}.ofPixels(${2:const ofPixels_< PixelType > &mom})" },
-        { "trigger": "ofPixels::ofPixels \t(SrcType)"                                ,"contents": "${1:ofPixels}.ofPixels(${2:const ofPixels_< SrcType > &mom})" },
-        { "trigger": "ofPixels::operator \t(PixelType)"                              ,"contents": "${1:ofPixels}.operator(${2:const ofPixels_< PixelType > &mom})" },
-        { "trigger": "ofPixels::operator \t(SrcType)"                                ,"contents": "${1:ofPixels}.operator(${2:const ofPixels_< SrcType > &mom})" },
-        { "trigger": "ofPixels::operator"                                            ,"contents": "${1:ofPixels}.operator(${2:int pos})" },
-        { "trigger": "ofPixels::pasteInto"                                           ,"contents": "${1:ofPixels}.pasteInto(${2:ofPixels_< PixelType > &dst}, ${3:int x}, ${4:int y})" },
-        { "trigger": "ofPixels::resize"                                              ,"contents": "${1:ofPixels}.resize(${2:int dstWidth}, ${3:int dstHeight}, ${4:ofInterpolationMethod interpMethod=OF_INTERPOLATE_NEAREST_NEIGHBOR})" },
-        { "trigger": "ofPixels::resizeTo"                                            ,"contents": "${1:ofPixels}.resizeTo(${2:ofPixels_< PixelType > &dst}, ${4:ofInterpolationMethod interpMethod=OF_INTERPOLATE_NEAREST_NEIGHBOR})" },
-        { "trigger": "ofPixels::rotate"                                              ,"contents": "${1:ofPixels}.rotate(${2:int nClockwiseRotations})" },
-        { "trigger": "ofPixels::rotate \t(PixelType)"                                ,"contents": "${1:ofPixels}.rotate(${2:ofPixels_< PixelType > &dst}, ${3:int nClockwiseRotations})" },
-        { "trigger": "ofPixels::set \t(PixelType)"                                   ,"contents": "${1:ofPixels}.set(${2:PixelType val})" },
-        { "trigger": "ofPixels::set \t(channel)"                                     ,"contents": "${1:ofPixels}.set(${2:int channel, PixelType val})" },
-        { "trigger": "ofPixels::setChannel"                                          ,"contents": "${1:ofPixels}.setChannel(${2:int channel, ${3:const ofPixels_< PixelType > channelPixels})" },
-        { "trigger": "ofPixels::setColor"                                            ,"contents": "${1:ofPixels}.setColor(${2:int x, ${3:int y}, ${4:ofColor_< PixelType > color})" },
-        { "trigger": "ofPixels::setFromAlignedPixels"                                ,"contents": "${1:ofPixels}.setFromAlignedPixels(${2:const PixelType *newPixels}, ${3:int width}, ${4:int height}, ${5:int channels}, ${6:int stride})" },
-        { "trigger": "ofPixels::setFromExternalPixels"                               ,"contents": "${1:ofPixels}.setFromExternalPixels(${2:PixelType *newPixels}, ${3:int w}, ${4:int h}, ${5:int channels})" },
-        { "trigger": "ofPixels::setFromPixels \t(PixelType)"                         ,"contents": "${1:ofPixels}.setFromPixels(${2:const PixelType *newPixels}, ${3:int w}, ${4:int h}, ${5:int channels})" },
-        { "trigger": "ofPixels::setFromPixels \t(ofImageType)"                       ,"contents": "${1:ofPixels}.setFromPixels(${2:const PixelType *newPixels}, ${3:int w}, ${4:int h}, ${5:ofImageType type})" },
-        { "trigger": "ofPixels::setImageType"                                        ,"contents": "${1:ofPixels}.setImageType(${2:ofImageType imageType})" },
-        { "trigger": "ofPixels::setNumChannels"                                      ,"contents": "${1:ofPixels}.setNumChannels(${2:int numChannels})" },
-        { "trigger": "ofPixels::size"                                                ,"contents": "${1:ofPixels}.size()" },
-        { "trigger": "ofPixels::swap"                                                ,"contents": "${1:ofPixels}.swap(${2:ofPixels_< PixelType > &pix})" },
-        { "trigger": "ofPixels::swapRgb"                                             ,"contents": "${1:ofPixels}.swapRgb(})" },
-        /////////////////////////////////////////////
+        { "trigger": "ofPixels::allocate \t(channel)"                                ,"contents": "${1:ofPixels}.allocate(${2:int w}, ${3:int h}, ${4:int channels})"},
+        { "trigger": "ofPixels::allocate \t(ofPixelFormat)"                          ,"contents": "${1:ofPixels}.allocate(${2:int w}, ${3:int h}, ${4:ofPixelFormat type})"},
+        { "trigger": "ofPixels::allocate \t(ofImageType)"                            ,"contents": "${1:ofPixels}.allocate(${2:int w}, ${3:int h}, ${4:ofImageType type})"},
+        { "trigger": "ofPixels::bicubicInterpolate"                                  ,"contents": "${1:ofPixels}.bicubicInterpolate(${2:const float *patch}, ${3:float x}, ${4:float y}, ${5:float x2}, ${6:float y2}, ${7:float x3}, ${8:float y3})"},
+        { "trigger": "ofPixels::clear"                                               ,"contents": "${1:ofPixels}.clear()"},
+        { "trigger": "ofPixels::copyFrom \t(PixelType)"                              ,"contents": "${1:ofPixels}.copyFrom(${2:const ofPixels_< PixelType > &mom})"},
+        { "trigger": "ofPixels::copyFrom \t(SrcType)"                                ,"contents": "${1:ofPixels}.copyFrom(${2:const ofPixels_< SrcType > &mom})"},
+        { "trigger": "ofPixels::crop"                                                ,"contents": "${1:ofPixels}.crop(${2:int x}, ${2:int y}, ${3:int width}, ${4:int height})"},
+        { "trigger": "ofPixels::cropTo"                                              ,"contents": "${1:ofPixels}.cropTo(${2:ofPixels_< PixelType > &toPix}, ${3:int x}, ${4:int y}, ${5:int _width}, ${6:int _height})"},
+        { "trigger": "ofPixels::getBitsPerChannel"                                   ,"contents": "${1:ofPixels}.getBitsPerChannel()"},
+        { "trigger": "ofPixels::getBitsPerPixel"                                     ,"contents": "${1:ofPixels}.getBitsPerPixel()"},
+        { "trigger": "ofPixels::getBytesPerChannel"                                  ,"contents": "${1:ofPixels}.getBytesPerChannel()"},
+        { "trigger": "ofPixels::getBytesPerPixel"                                    ,"contents": "${1:ofPixels}.getBytesPerPixel()"},
+        { "trigger": "ofPixels::getChannel"                                          ,"contents": "${1:ofPixels}.getChannel(${2:int channel)"},
+        { "trigger": "ofPixels::getColor"                                            ,"contents": "${1:ofPixels}.getColor(${2:int x}, ${3:int y})"},
+        { "trigger": "ofPixels::getHeight"                                           ,"contents": "${1:ofPixels}.getHeight()"},
+        { "trigger": "ofPixels::getImageType"                                        ,"contents": "${1:ofPixels}.getImageType()"},
+        { "trigger": "ofPixels::getNumChannels"                                      ,"contents": "${1:ofPixels}.getNumChannels()"},
+        { "trigger": "ofPixels::getPixelIndex"                                       ,"contents": "${1:ofPixels}.getPixelIndex(${2:int x}, ${3:int y})"},
+        { "trigger": "ofPixels::getPixels"                                           ,"contents": "${1:ofPixels}.getPixels()"},
+        { "trigger": "ofPixels::getWidth"                                            ,"contents": "${1:ofPixels}.getWidth()"},
+        { "trigger": "ofPixels::isAllocated"                                         ,"contents": "${1:ofPixels}.isAllocated()"},
+        { "trigger": "ofPixels::mirror"                                              ,"contents": "${1:ofPixels}.mirror(${2:bool vertically}, ${3:bool horizontal})"},
+        { "trigger": "ofPixels::mirrorTo"                                            ,"contents": "${1:ofPixels}.mirrorTo(${2:ofPixels_< PixelType > &dst, bool vertically}, ${3:bool horizontal})"},
+        { "trigger": "ofPixels::ofPixels"                                            ,"contents": "${1:ofPixels}.ofPixels()"},
+        { "trigger": "ofPixels::ofPixels \t(PixelType)"                              ,"contents": "${1:ofPixels}.ofPixels(${2:const ofPixels_< PixelType > &mom})"},
+        { "trigger": "ofPixels::ofPixels \t(SrcType)"                                ,"contents": "${1:ofPixels}.ofPixels(${2:const ofPixels_< SrcType > &mom})"},
+        { "trigger": "ofPixels::operator \t(PixelType)"                              ,"contents": "${1:ofPixels}.operator(${2:const ofPixels_< PixelType > &mom})"},
+        { "trigger": "ofPixels::operator \t(SrcType)"                                ,"contents": "${1:ofPixels}.operator(${2:const ofPixels_< SrcType > &mom})"},
+        { "trigger": "ofPixels::operator"                                            ,"contents": "${1:ofPixels}.operator(${2:int pos})"},
+        { "trigger": "ofPixels::pasteInto"                                           ,"contents": "${1:ofPixels}.pasteInto(${2:ofPixels_< PixelType > &dst}, ${3:int x}, ${4:int y})"},
+        { "trigger": "ofPixels::resize"                                              ,"contents": "${1:ofPixels}.resize(${2:int dstWidth}, ${3:int dstHeight}, ${4:ofInterpolationMethod interpMethod=OF_INTERPOLATE_NEAREST_NEIGHBOR})"},
+        { "trigger": "ofPixels::resizeTo"                                            ,"contents": "${1:ofPixels}.resizeTo(${2:ofPixels_< PixelType > &dst}, ${4:ofInterpolationMethod interpMethod=OF_INTERPOLATE_NEAREST_NEIGHBOR})"},
+        { "trigger": "ofPixels::rotate"                                              ,"contents": "${1:ofPixels}.rotate(${2:int nClockwiseRotations})"},
+        { "trigger": "ofPixels::rotate \t(PixelType)"                                ,"contents": "${1:ofPixels}.rotate(${2:ofPixels_< PixelType > &dst}, ${3:int nClockwiseRotations})"},
+        { "trigger": "ofPixels::set \t(PixelType)"                                   ,"contents": "${1:ofPixels}.set(${2:PixelType val})"},
+        { "trigger": "ofPixels::set \t(channel)"                                     ,"contents": "${1:ofPixels}.set(${2:int channel, PixelType val})"},
+        { "trigger": "ofPixels::setChannel"                                          ,"contents": "${1:ofPixels}.setChannel(${2:int channel, ${3:const ofPixels_< PixelType > channelPixels})"},
+        { "trigger": "ofPixels::setColor"                                            ,"contents": "${1:ofPixels}.setColor(${2:int x, ${3:int y}, ${4:ofColor_< PixelType > color})"},
+        { "trigger": "ofPixels::setFromAlignedPixels"                                ,"contents": "${1:ofPixels}.setFromAlignedPixels(${2:const PixelType *newPixels}, ${3:int width}, ${4:int height}, ${5:int channels}, ${6:int stride})"},
+        { "trigger": "ofPixels::setFromExternalPixels"                               ,"contents": "${1:ofPixels}.setFromExternalPixels(${2:PixelType *newPixels}, ${3:int w}, ${4:int h}, ${5:int channels})"},
+        { "trigger": "ofPixels::setFromPixels \t(PixelType)"                         ,"contents": "${1:ofPixels}.setFromPixels(${2:const PixelType *newPixels}, ${3:int w}, ${4:int h}, ${5:int channels})"},
+        { "trigger": "ofPixels::setFromPixels \t(ofImageType)"                       ,"contents": "${1:ofPixels}.setFromPixels(${2:const PixelType *newPixels}, ${3:int w}, ${4:int h}, ${5:ofImageType type})"},
+        { "trigger": "ofPixels::setImageType"                                        ,"contents": "${1:ofPixels}.setImageType(${2:ofImageType imageType})"},
+        { "trigger": "ofPixels::setNumChannels"                                      ,"contents": "${1:ofPixels}.setNumChannels(${2:int numChannels})"},
+        { "trigger": "ofPixels::size"                                                ,"contents": "${1:ofPixels}.size()"},
+        { "trigger": "ofPixels::swap"                                                ,"contents": "${1:ofPixels}.swap(${2:ofPixels_< PixelType > &pix})"},
+        { "trigger": "ofPixels::swapRgb"                                             ,"contents": "${1:ofPixels}.swapRgb(})"},
+        //////////////////////////////////////////////
         // ofPolyUtils
         { "trigger": "ofGetBoundingBox \t(const ofPolyline)"                                                ,"contents": "ofGetBoundingBox(${1:const ofPolyline &polyline})"},
         { "trigger": "ofGetClosestPoint \t(const ofPoint, const ofPoint, const ofPoint, float)"             ,"contents": "ofGetClosestPoint(${1:const ofPoint &p1}, ${2:const ofPoint &p2}, ${3:const ofPoint &p3}, ${4:float *normalizedPosition=NULL})"},
         { "trigger": "ofGetResampledCount \t(const ofPolyline, int)"                                        ,"contents": "ofGetResampledCount(${1:const ofPolyline &polyline}, ${2:int count})"},
         { "trigger": "ofGetResampledSpacing \t(const ofPolyline, float)"                                    ,"contents": "ofGetResampledSpacing(${1:const ofPolyline &polyline}, ${2:float spacing})"},
         { "trigger": "ofGetSmoothed \t(const ofPolyline, int, float)"                                       ,"contents": "ofGetSmoothed(${1:const ofPolyline &polyline}, ${2:int smoothingSize}, ${3:float smoothingShape=0})"},
+
+
+
+
+        ////////////////////// 3D /////////////////////
         ///////////////////////////////////////////
         // ofCamera
         { "trigger": "ofCamera::begin \t(ofRectangle)"                               ,"contents": "${1:ofCamera}.begin(${2:ofRectangle viewport=ofGetCurrentViewport()})"},
@@ -802,8 +747,9 @@
         { "trigger": "ofFbo::setDefaultTextureIndex \t(int)"                                 ,"contents": "${1:ofFbo}.setDefaultTextureIndex(${2:int defaultTexture})"},
         { "trigger": "ofFbo::setUseTexture \t(bool)"                                         ,"contents": "${1:ofFbo}.setUseTexture(${2:bool bUseTex})"},
         { "trigger": "ofFbo::unbind"                                                         ,"contents": "${1:ofFbo}.unbind()"},
-        
-        /////////////////////////////////
+
+        ///////////////////// OpenGL /////////////////////////
+        //////////////////////////////////////////////////////
         // ofGLRenderer 
         { "trigger": "ofGLRenderer::bClearBg"                                                                                   ,"contents": "${1:ofGLRenderer}.bClearBg()"},
         { "trigger": "ofGLRenderer::background \t(const ofColor)"                                                               ,"contents": "${1:ofGLRenderer}.background(${2:const ofColor &c})"},
@@ -884,190 +830,11 @@
         { "trigger": "ofGLRenderer::update"                                                                                     ,"contents": "${1:ofGLRenderer}.update()"},
         { "trigger": "ofGLRenderer::viewport \t(ofRectangle)"                                                                   ,"contents": "${1:ofGLRenderer}.viewport(${2:ofRectangle viewport})"},
         { "trigger": "ofGLRenderer::viewport \t(float, float, float, float, bool)"                                              ,"contents": "${1:ofGLRenderer}.viewport(${2:float x=0}, ${3:float y=0}, ${4:float width=0}, ${5:float height=0}, ${6:bool invertY=true})"},
-        // orientation mode
-        { "trigger": "OF_ORIENTATION_UNKNOWN"                                                                                   ,"contents": "OF_ORIENTATION_UNKNOWN"},
-
-
-
-        /////////// Application ///////////////
-
-        //////////////////////////////////////
-        // ofAppBaseWindow
-        { "trigger": "ofAppBaseWindow::disableSetupScreen"                              ,"contents": "${1:ofAppBaseWindow}.disableSetupScreen()"},
-        { "trigger": "ofAppBaseWindow::doesHWOrientation"                               ,"contents": "${1:ofAppBaseWindow}.doesHWOrientation()"},
-        { "trigger": "ofAppBaseWindow::enableSetupScreen"                               ,"contents": "${1:ofAppBaseWindow}.enableSetupScreen()"},
-        { "trigger": "ofAppBaseWindow::getFrameNum"                                     ,"contents": "${1:ofAppBaseWindow}.getFrameNum()"},
-        { "trigger": "ofAppBaseWindow::getFrameRate"                                    ,"contents": "${1:ofAppBaseWindow}.getFrameRate()"},
-        { "trigger": "ofAppBaseWindow::getHeight"                                       ,"contents": "${1:ofAppBaseWindow}.getHeight()"},
-        { "trigger": "ofAppBaseWindow::getLastFrameTime"                                ,"contents": "${1:ofAppBaseWindow}.getLastFrameTime()"},
-        { "trigger": "ofAppBaseWindow::getOrientation"                                  ,"contents": "${1:ofAppBaseWindow}.getOrientation()"},
-        { "trigger": "ofAppBaseWindow::getScreenSize"                                   ,"contents": "${1:ofAppBaseWindow}.getScreenSize()"},
-        { "trigger": "ofAppBaseWindow::getWidth"                                        ,"contents": "${1:ofAppBaseWindow}.getWidth()"},
-        { "trigger": "ofAppBaseWindow::getWindowMode"                                   ,"contents": "${1:ofAppBaseWindow}.getWindowMode()"},
-        { "trigger": "ofAppBaseWindow::getWindowPosition"                               ,"contents": "${1:ofAppBaseWindow}.getWindowPosition()"},
-        { "trigger": "ofAppBaseWindow::getWindowSize"                                   ,"contents": "${1:ofAppBaseWindow}.getWindowSize()"},
-        { "trigger": "ofAppBaseWindow::hideCursor"                                      ,"contents": "${1:ofAppBaseWindow}.hideCursor()"},
-        { "trigger": "ofAppBaseWindow::initializeWindow"                                ,"contents": "${1:ofAppBaseWindow}.initializeWindow()"},
-        // { "trigger": "ofAppBaseWindow::runAppViaInfiniteLoop \t(ofBaseApp)"              ,"contents": "${1:ofAppBaseWindow}.runAppViaInfiniteLoop(${2:ofBaseApp * appPtr})"},
-        { "trigger": "ofAppBaseWindow::runAppViaInfiniteLoop \t(ofBaseApp)"             ,"contents": "${1:ofAppBaseWindow}.runAppViaInfiniteLoop(${2:ofBaseApp *appPtr})"},
-        { "trigger": "ofAppBaseWindow::setFrameRate \t(float)"                          ,"contents": "${1:ofAppBaseWindow}.setFrameRate(${2:float targetRate})"},
-        { "trigger": "ofAppBaseWindow::setFullscreen \t(bool)"                          ,"contents": "${1:ofAppBaseWindow}.setFullscreen(${2:bool fullscreen})"},
-        { "trigger": "ofAppBaseWindow::setOrientation \t(ofOrientation)"                ,"contents": "${1:ofAppBaseWindow}.setOrientation(${2:ofOrientation orientation})"},
-        { "trigger": "ofAppBaseWindow::setWindowPosition \t(int, int)"                  ,"contents": "${1:ofAppBaseWindow}.setWindowPosition(${2:int x}, ${3:int y})"},
-        { "trigger": "ofAppBaseWindow::setWindowShape \t(int, int)"                     ,"contents": "${1:ofAppBaseWindow}.setWindowShape(${2:int w}, ${3:int h})"},
-        { "trigger": "ofAppBaseWindow::setWindowTitle \t(string)"                       ,"contents": "${1:ofAppBaseWindow}.setWindowTitle(${2:string title})"},
-        { "trigger": "ofAppBaseWindow::setupOpenGL \t(int, int, int)"                   ,"contents": "${1:ofAppBaseWindow}.setupOpenGL(${2:int w}, ${3:int h}, ${4:int screenMode})"},
-        { "trigger": "ofAppBaseWindow::showCursor"                                      ,"contents": "${1:ofAppBaseWindow}.showCursor()"},
-        { "trigger": "ofAppBaseWindow::toggleFullscreen"                                ,"contents": "${1:ofAppBaseWindow}.toggleFullscreen()"},
-
-
-        ////////////////////////////////////
-        // ofAppRunner
-
-        { "trigger" : "ofDoesHWOrientation"                                             ,"contents": "ofDoesHWOrientation()"},
-        { "trigger" : "ofExit(int)"                                                     ,"contents": "ofExit(${1:int status=0})"},
-        { "trigger" : "ofGetAppPtr"                                                     ,"contents": "ofGetAppPtr()"},
-        { "trigger" : "ofGetFrameNum"                                                   ,"contents": "ofGetFrameNum()"},
-        { "trigger" : "ofGetFrameRate"                                                  ,"contents": "ofGetFrameRate()"},
-        { "trigger" : "ofGetHeight"                                                     ,"contents": "ofGetHeight()"},
-        { "trigger" : "ofGetLastFrameTime"                                              ,"contents": "ofGetLastFrameTime()"},
-        { "trigger" : "ofGetOrientation"                                                ,"contents": "ofGetOrientation()"},
-        { "trigger" : "ofGetScreenHeight"                                               ,"contents": "ofGetScreenHeight()"},
-        { "trigger" : "ofGetScreenWidth"                                                ,"contents": "ofGetScreenWidth()"},
-        { "trigger" : "ofGetWidth"                                                      ,"contents": "ofGetWidth()"},
-        { "trigger" : "ofGetWindowHeight"                                               ,"contents": "ofGetWindowHeight()"},
-        { "trigger" : "ofGetWindowMode"                                                 ,"contents": "ofGetWindowMode()"},
-        { "trigger" : "ofGetWindowPositionX"                                            ,"contents": "ofGetWindowPositionX()"},
-        { "trigger" : "ofGetWindowPositionY"                                            ,"contents": "ofGetWindowPositionY()"},
-        { "trigger" : "ofGetWindowRect"                                                 ,"contents": "ofGetWindowRect()"},
-        { "trigger" : "ofGetWindowSize"                                                 ,"contents": "ofGetWindowSize()"},
-        { "trigger" : "ofGetWindowWidth"                                                ,"contents": "ofGetWindowWidth()"},
-        { "trigger" : "ofHideCursor"                                                    ,"contents": "ofHideCursor()"},
-        { "trigger" : "ofRunApp \t(ofBaseApp)"                                          ,"contents": "ofRunApp(${1:ofBaseApp * app})"},
-        { "trigger" : "ofRunApp \t(ofPtr< ofBaseApp >)"                                 ,"contents": "ofRunApp(${1:ofPtr< ofBaseApp > OFSA})"},
-        { "trigger" : "ofRunApp \t(ofBaseApp)"                                          ,"contents": "ofRunApp(${1:ofBaseApp *OFSA=NULL})"},
-        { "trigger" : "ofSetAppPtr \t(ofPtr< ofBaseApp >)"                              ,"contents": "ofSetAppPtr(${1:ofPtr< ofBaseApp > appPtr})"},
-        { "trigger" : "ofSetFrameRate \t(int)"                                          ,"contents": "ofSetFrameRate(${1:int targetRate})"},
-        { "trigger" : "ofSetFrameRate \t(int)"                                          ,"contents": "ofSetFrameRate(${1:int targetRate})"},
-        { "trigger" : "ofSetFullscreen \t(bool fullscreen)"                             ,"contents": "ofSetFullscreen(${1:bool fullscreen})"},
-        { "trigger" : "ofSetOrientation \t(ofOrientation)"                              ,"contents": "ofSetOrientation(${1:ofOrientation orientation})"},
-        { "trigger" : "ofSetVerticalSync \t(bool)"                                      ,"contents": "ofSetVerticalSync(${1:bool bSync})"},
-        { "trigger" : "ofSetWindowPosition \t(int)"                                     ,"contents": "ofSetWindowPosition(${1:int x})"},
-        { "trigger" : "ofSetWindowPosition \t(int, int)"                                ,"contents": "ofSetWindowPosition(${1:int x}, ${2:int y})"},
-        { "trigger" : "ofSetWindowShape \t(int)"                                        ,"contents": "ofSetWindowShape(${1:int width})"},
-        { "trigger" : "ofSetWindowShape \t(int, int)"                                   ,"contents": "ofSetWindowShape(${1:int width}, ${2:int height})"},
-        { "trigger" : "ofSetWindowTitle"                                                ,"contents": "ofSetWindowTitle()"},
-        { "trigger" : "ofSetWindowTitle \t(string)"                                     ,"contents": "ofSetWindowTitle(${1:string title})"},
-        { "trigger" : "ofSetupOpenGL \t(ofAppBaseWindow, int, int, int)"                ,"contents": "ofSetupOpenGL(${1:ofAppBaseWindow * windowPtr}, ${2:int w}, ${3:int h}, ${4:int screenMode})"},
-        { "trigger" : "ofSetupOpenGL \t(int w, int h, int screenMode)"                  ,"contents": "ofSetupOpenGL(${1:int w}, ${2:int h}, ${3:int screenMode})"},
-        { "trigger" : "ofSetupOpenGL \t(ofAppBaseWindow, int, int, int)"                ,"contents": "ofSetupOpenGL(${1:ofAppBaseWindow *windowPtr}, ${2:int w}, ${3:int h}, ${4:int screenMode})"},
-        { "trigger" : "ofShowCursor"                                                    ,"contents": "ofShowCursor()"},
-        { "trigger" : "ofSleepMillis \t(int)"                                           ,"contents": "ofSleepMillis(${1:int millis})"},
-        { "trigger" : "ofToggleFullscreen"                                              ,"contents": "ofToggleFullscreen()"},
-
-        ////////////////////////////
-        // screenMode
-        { "trigger": "OF_WINDOW \tscreenMode"                ,"contents": "OF_WINDOW"},
-        { "trigger": "OF_FULLSCREEN \tscreenMode"            ,"contents": "OF_FULLSCREEN"},
-        { "trigger": "OF_GAME_MODE \tscreenMode"             ,"contents": "OF_GAME_MODE"},
-
-
-
-
-        ////////////////////////////////////
-        // ofBaseApp
-        //
-        // TODO docs site down, when I was doing the rest of apps [martin]
-
-        ////////////////////////////////////
-        // ofDragInfo
-        //
-        // TODO docs site down [martin]
-
-
-
-
-        ///////////// Events //////////////
-
         //////////////////////////////////
-        // ofAudioEventArgs
-        { "trigger": "ofAudioEventArgs::buffer"                         ,"contents": "${1:ofAudioEventArgs}.buffer()"},
-        { "trigger": "ofAudioEventArgs::bufferSize"                     ,"contents": "${1:ofAudioEventArgs}.bufferSize()"},
+        // ofOrientation
+        { "trigger": "OF_ORIENTATION_UNKNOWN \tofOrientation"                                                                   ,"contents": "OF_ORIENTATION_UNKNOWN"},
 
-
-        //////////////////////////////////
-        // ofCoreEvents
-        //
-        // I don't thin they should be in auto-complete, it's oF internals [martin]
-
-        //////////////////////////////////
-        // ofEvent
-        { "trigger": "ofEvent"                                                      ,"contents": "ofEvent<${2:float}> ${1:onVolumeChange}"},
-        { "trigger": "ofNotifyEvent"                                                ,"contents": "ofNotifyEvent(${1:onVolumeChange}, ${2:10.0})"},
-        { "trigger": "ofAddListener \t(ofEvent,this, &testApp:onVolumeChange)"      ,"contents": "ofAddListener(${1:mySoundObject.onVolumeChange},${2:this}, ${3:&testApp:onVolumeChange})"},
-
-        //////////////////////////////////
-        // ofEvents functions
-        { "trigger": "ofGetKeyPressed \t(int)"                              ,"contents": "ofGetKeyPressed(${1:int key=-1})"},
-        { "trigger": "ofGetMousePressed \t(int)"                            ,"contents": "ofGetMousePressed(${1:int button=-1})"},
-        { "trigger": "ofGetMouseX"                                          ,"contents": "ofGetMouseX()"},
-        { "trigger": "ofGetMouseY"                                          ,"contents": "ofGetMouseY()"},
-        { "trigger": "ofGetPreviousMouseX"                                  ,"contents": "ofGetPreviousMouseX()"},
-        { "trigger": "ofGetPreviousMouseY"                                  ,"contents": "ofGetPreviousMouseY()"},
-        { "trigger": "ofSetEscapeQuitsApp \t(bool)"                         ,"contents": "ofSetEscapeQuitsApp(${1:bool bQuitOnEsc})"},
-
-
-
-        //////////////// ofxXmlSettings /////////////
-        // ofXmlSettings is a exceptions, it's so widly usedin ofApps. [martin]
-        ////////////////////////////////////////////
-        // ofxXmlSettings methods
-        { "trigger": "ofxXmlSettings::addAttribute \t(const string, const string, int, int)"                ,"contents": "${1:ofxXmlSettings}.addAttribute(${2:const string &tag}, ${3:const string &attribute}, ${4:int value}, ${5:int which=0})"},
-        { "trigger": "ofxXmlSettings::addAttribute \t(const string, const string, double, int)"             ,"contents": "${1:ofxXmlSettings}.addAttribute(${2:const string &tag}, ${3:const string &attribute}, ${4:double value}, ${5:int which=0})"},
-        { "trigger": "ofxXmlSettings::addAttribute \t(const string, const string, const string, int)"       ,"contents": "${1:ofxXmlSettings}.addAttribute(${2:const string &tag}, ${3:const string &attribute}, ${4:const string &value}, ${5:int which=0})"},
-        { "trigger": "ofxXmlSettings::addAttribute \t(const string, const string, int)"                     ,"contents": "${1:ofxXmlSettings}.addAttribute(${2:const string &tag}, ${3:const string &attribute}, ${4:int value})"},
-        { "trigger": "ofxXmlSettings::addAttribute \t(const string, const string, double)"                  ,"contents": "${1:ofxXmlSettings}.addAttribute(${2:const string &tag}, ${3:const string &attribute}, ${4:double value})"},
-        { "trigger": "ofxXmlSettings::addAttribute \t(const string, const string, const string)"            ,"contents": "${1:ofxXmlSettings}.addAttribute(${2:const string &tag}, ${3:const string &attribute}, ${4:const string &value})"},
-        { "trigger": "ofxXmlSettings::addTag \t(const string)"                                              ,"contents": "${1:ofxXmlSettings}.addTag(${2:const string &tag})"},
-        { "trigger": "ofxXmlSettings::addValue \t(const string, int)"                                       ,"contents": "${1:ofxXmlSettings}.addValue(${2:const string &tag}, ${3:int value})"},
-        { "trigger": "ofxXmlSettings::addValue \t(const string, double)"                                    ,"contents": "${1:ofxXmlSettings}.addValue(${2:const string &tag}, ${3:double value})"},
-        { "trigger": "ofxXmlSettings::addValue \t(const string, const string)"                              ,"contents": "${1:ofxXmlSettings}.addValue(${2:const string &tag}, ${3:const string &value})"},
-        { "trigger": "ofxXmlSettings::attributeExists \t(const string, const string, int)"                  ,"contents": "${1:ofxXmlSettings}.attributeExists(${2:const string &tag}, ${3:const string &attribute}, ${4:int which=0})"},
-        { "trigger": "ofxXmlSettings::clear"                                                                ,"contents": "${1:ofxXmlSettings}.clear()"},
-        { "trigger": "ofxXmlSettings::clearTagAttributes \t(const string, int)"                             ,"contents": "${1:ofxXmlSettings}.clearTagAttributes(${2:const string &tag}, ${3:int which=0})"},
-        { "trigger": "ofxXmlSettings::clearTagContents \t(const string, int)"                               ,"contents": "${1:ofxXmlSettings}.clearTagContents(${2:const string &tag}, ${3:int which=0})"},
-        { "trigger": "ofxXmlSettings::copyXmlToString \t(string)"                                           ,"contents": "${1:ofxXmlSettings}.copyXmlToString(${2:string &str})"},
-        { "trigger": "ofxXmlSettings::getAttribute \t(const string, const string, int, int)"                ,"contents": "${1:ofxXmlSettings}.getAttribute(${2:const string &tag}, ${3:const string &attribute}, ${4:int defaultValue}, ${5:int which=0})"},
-        { "trigger": "ofxXmlSettings::getAttribute \t(const string, const string, double, int)"             ,"contents": "${1:ofxXmlSettings}.getAttribute(${2:const string &tag}, ${3:const string &attribute}, ${4:double defaultValue}, ${5:int which=0})"},
-        { "trigger": "ofxXmlSettings::getAttribute \t(const string, const string, const string, int)"       ,"contents": "${1:ofxXmlSettings}.getAttribute(${2:const string &tag}, ${3:const string &attribute}, ${4:const string &defaultValue}, ${5:int which=0})"},
-        { "trigger": "ofxXmlSettings::getAttributeNames \t(const string, vector< string >, int)"            ,"contents": "${1:ofxXmlSettings}.getAttributeNames(${2:const string &tag}, ${3:vector< string > &outNames}, ${:4int which=0})"},
-        { "trigger": "ofxXmlSettings::getNumAttributes \t(const string, int)"                               ,"contents": "${1:ofxXmlSettings}.getNumAttributes(${2:const string &tag}, ${3:int which=0})"},
-        { "trigger": "ofxXmlSettings::getNumTags \t(const string)"                                          ,"contents": "${1:ofxXmlSettings}.getNumTags(${2:const string &tag})"},
-        { "trigger": "ofxXmlSettings::getPushLevel"                                                         ,"contents": "${1:ofxXmlSettings}.getPushLevel()"},
-        { "trigger": "ofxXmlSettings::getValue \t(const string, int , int)"                                 ,"contents": "${1:ofxXmlSettings}.getValue(${2:const string &tag}, ${3:int defaultValue}, ${4:int which=0})"},
-        { "trigger": "ofxXmlSettings::getValue \t(const string, double, int)"                               ,"contents": "${1:ofxXmlSettings}.getValue(${2:const string &tag}, ${3:double defaultValue}, ${4:int which=0})"},
-        { "trigger": "ofxXmlSettings::getValue \t(const string, const string, int)"                         ,"contents": "${1:ofxXmlSettings}.getValue(${2:const string &tag}, ${3:const string &defaultValue}, ${4:int which=0})"},
-        { "trigger": "ofxXmlSettings::loadFile \t(const string)"                                            ,"contents": "${1:ofxXmlSettings}.loadFile(${2:const string &xmlFile})"},
-        { "trigger": "ofxXmlSettings::loadFromBuffer \t(string)"                                            ,"contents": "${1:ofxXmlSettings}.loadFromBuffer({$2:string buffer})"},
-        { "trigger": "ofxXmlSettings::popTag"                                                               ,"contents": "${1:ofxXmlSettings}.popTag()"},
-        { "trigger": "ofxXmlSettings::pushTag \t(const string, int)"                                        ,"contents": "${1:ofxXmlSettings}.pushTag(${2:const string &tag}, ${3:int which=0})"},
-        { "trigger": "ofxXmlSettings::removeAttribute \t(const string, const string, int)"                  ,"contents": "${1:ofxXmlSettings}.removeAttribute(${2:const string &tag}, ${3:const string &attribute}, ${4:int which=0})"},
-        { "trigger": "ofxXmlSettings::removeTag \t(const string, int)"                                      ,"contents": "${1:ofxXmlSettings}.removeTag(${2:const string &tag}, ${3:int which=0})"},
-        { "trigger": "ofxXmlSettings::saveFile \t(const string)"                                            ,"contents": "${1:ofxXmlSettings}.saveFile(${2:const string &xmlFile})"},
-        { "trigger": "ofxXmlSettings::saveFile"                                                             ,"contents": "${1:ofxXmlSettings}.saveFile()"},
-        { "trigger": "ofxXmlSettings::setAttribute \t(const string, const string, int, int)"                ,"contents": "${1:ofxXmlSettings}.setAttribute($2{:const string &tag}, ${3:const string &attribute}, ${4:int value}, ${5:int which=0})"},
-        { "trigger": "ofxXmlSettings::setAttribute \t(const string, const string, double, int)"             ,"contents": "${1:ofxXmlSettings}.setAttribute($2{:const string &tag}, ${3:const string &attribute}, ${4:double value}, ${5:int which=0})"},
-        { "trigger": "ofxXmlSettings::setAttribute \t(const string, const string, const string, int)"       ,"contents": "${1:ofxXmlSettings}.setAttribute($2{:const string &tag}, ${3:const string &attribute}, ${4:const string &value}, ${5:int which=0})"},
-        { "trigger": "ofxXmlSettings::setAttribute \t(const string, const string, int)"                     ,"contents": "${1:ofxXmlSettings}.setAttribute($2{:const string &tag}, ${3:const string &attribute}, ${4:int value})"},
-        { "trigger": "ofxXmlSettings::setAttribute \t(const string, const string, double)"                  ,"contents": "${1:ofxXmlSettings}.setAttribute($2{:const string &tag}, ${3:const string &attribute}, ${4:double value})"},
-        { "trigger": "ofxXmlSettings::setAttribute \t(const string, const string, const string)"            ,"contents": "${1:ofxXmlSettings}.setAttribute($2{:const string &tag}, ${3:const string &attribute}, ${4:const string &value})"},
-        { "trigger": "ofxXmlSettings::setValue \t(const string, int, int)"                                  ,"contents": "${1:ofxXmlSettings}.setValue(${2:const string &tag}, ${3:int value}, ${4:int which=0})"},
-        { "trigger": "ofxXmlSettings::setValue \t(const string, double, int)"                               ,"contents": "${1:ofxXmlSettings}.setValue(${2:const string &tag}, ${3:double value}, ${4:int which=0})"},
-        { "trigger": "ofxXmlSettings::setValue \t(const string, const string, int)"                         ,"contents": "${1:ofxXmlSettings}.setValue(${2:const string &tag}, ${3:const string &value}, ${4:int which=0})"},
-        { "trigger": "ofxXmlSettings::tagExists \t(const string, int)"                                      ,"contents": "${1:ofxXmlSettings}.tagExists(${2:const string &tag}, ${3:int which=0})"},
-        { "trigger": "ofxXmlSettings::bDocLoaded"                                                           ,"contents": "${1:ofxXmlSettings}.bDocLoaded"},
-        { "trigger": "ofxXmlSettings::doc"                                                                  ,"contents": "${1:ofxXmlSettings}.doc"},
-
+        /////////////// VIDEO ////////////////////
         /////////////////////////////////////
         // ofVideoGrabber
         { "trigger": "ofVideoGrabber::close"                                       ,"contents": "${1:ofVideoGrabber}.close()"},
@@ -1157,14 +924,14 @@
         { "trigger": "ofVideoPlayer::speed"                                             ,"contents": "${1:ofVideoPlayer}.speed"},
         { "trigger": "ofVideoPlayer::tex"                                               ,"contents": "${1:ofVideoPlayer}.tex"},
         { "trigger": "ofVideoPlayer::width"                                             ,"contents": "${1:ofVideoPlayer}.width"},
-
+        ///////////////////////////////////
         // ofLoopType
         { "trigger": "OF_LOOP_NONE \tloopType"            ,"contents": "OF_LOOP_NONE"},
         { "trigger": "OF_LOOP_NORMAL \tloopType"          ,"contents": "OF_LOOP_NORMAL"},
         { "trigger": "OF_LOOP_PALINDROME \tloopType"      ,"contents": "OF_LOOP_PALINDROME"},
 
-
-        /////////////////////////////////////
+        ///////////////// AUDIO /////////////////
+        /////////////////////////////////////////
         // ofSoundPlayer
 
 
@@ -1172,9 +939,8 @@
         // ofSoundStream
 
 
-
-
-        //////////////////////////////
+        /////////////////// MATH //////////////////
+        //////////////////////////////////////////
         // ofMath
         { "trigger": "ofAngleDifferenceDegrees \t(float, float)"                                      ,"contents": "ofAngleDifferenceDegrees(${1:float currentAngle}, ${2:float targetAngle})"},
         { "trigger": "ofAngleDifferenceRadians \t(float, float)"                                      ,"contents": "ofAngleDifferenceRadians(${1:float currentAngle}, ${2:float targetAngle})"},
@@ -1237,9 +1003,9 @@
         /////////////////////////////////////
         // ofVec4f
 
-        //////////////////// utils ///////////////////
-        
-        /////////////////////////////////////
+
+        ///////////////////// UTILS /////////////////////////
+        ////////////////////////////////////////////////////
         // ofBuffer
 
         /////////////////////////////////////
@@ -1282,15 +1048,6 @@
         { "trigger": "ofFile::setReadOnly \t(bool)"                                     ,"contents": "${1:ofFile}.setReadOnly(${2:bool readable})"},
         { "trigger": "ofFile::setWriteable \t(bool)"                                    ,"contents": "${1:ofFile}.setWriteable(${2:bool writeable})"},
         { "trigger": "ofFile::writeFromBuffer \t(ofBuffer)"                             ,"contents": "${1:ofFile}.writeFromBuffer(${2:ofBuffer &buffer})"},
-
-        // ofFile::operator!=(const ofFile &file)                      ofFile::operator!=(const ofFile &file)
-        // ofFile::operator<(const ofFile &file)                       ofFile::operator<(const ofFile &file)
-        // ofFile::operator<=(const ofFile &file)                      ofFile::operator<=(const ofFile &file)
-        // ofFile::operator=(const ofFile &mom)                        ofFile::operator=(const ofFile &mom)
-        // ofFile::operator==(const ofFile &file)                      ofFile::operator==(const ofFile &file)
-        // ofFile::operator>(const ofFile &file)                       ofFile::operator>(const ofFile &file)
-        // ofFile::operator>=(const ofFile &file)                      ofFile::operator>=(const ofFile &file)
-
         /////////////////////////////////////
         // ofFileDialogResult
         { "trigger": "ofFileDialogResult::getName"                     ,"contents": "${1:ofFileDialogResult}.getName()"},
@@ -1298,7 +1055,6 @@
         { "trigger": "ofFileDialogResult::bSuccess"                    ,"contents": "${1:ofFileDialogResult}.bSuccess"},
         { "trigger": "ofFileDialogResult::fileName"                    ,"contents": "${1:ofFileDialogResult}.fileName"},
         { "trigger": "ofFileDialogResult::filePath"                    ,"contents": "${1:ofFileDialogResult}.filePath"},
-
         /////////////////////////////////////
         // ofFilePath
         { "trigger": "ofFilePath::addLeadingSlash(string)"                                  ,"contents": "${1:ofFilePath}.addLeadingSlash(${2:string path})"},
@@ -1317,10 +1073,6 @@
         { "trigger": "ofFilePath::join(string, string)"                                     ,"contents": "${1:ofFilePath}.join(${2:string path1}, ${3:string path2})"},
         { "trigger": "ofFilePath::removeExt(string)"                                        ,"contents": "${1:ofFilePath}.removeExt(${2:string filename})"},
         { "trigger": "ofFilePath::removeTrailingSlash(string)"                              ,"contents": "${1:ofFilePath}.removeTrailingSlash(${2:string path})"},
-
-
-
-
         /////////////////////////////////////
         // ofFileUtils
         { "trigger": "ofBufferFromFile \t(const string, bool)"             ,"contents": "ofBufferFromFile(${1:const string &path}, ${2:bool binary=false})"},
@@ -1344,6 +1096,8 @@
         /////////////////////////////////////
         // ofURLFileLoader
 
+        /////////////////////////////////////
+        // ofUtils
         /////////////////////////////////////
         // ofUtils
         { "trigger": "ofBinaryToChar \t(const string)"                                    ,"contents": "ofBinaryToChar(${1:const string &value})"},
@@ -1387,7 +1141,7 @@
         { "trigger": "ofSetDataPathRoot \t(string)"                                       ,"contents": "ofSetDataPathRoot(${1:string root})"},
         { "trigger": "ofSort \t(vector< T >)"                                             ,"contents": "ofSort(${1:vector< T > &values})"},
         { "trigger": "ofSort \t(vector< T >, BoolFunction)"                               ,"contents": "ofSort(${1:vector< T > &values}, ${2:BoolFunction compare})"},
-        { "trigger": "ofSplitString \t(const string&, const string&)"                     ,"contents": "ofSplitString(${1:const string& str}, ${2:const string& delimiter = " "})"},
+        { "trigger": "ofSplitString \t(const string&, const string&)"                     ,"contents": "ofSplitString(${1:const string& str}, ${2:const string& delimiter = '$3'})"},
         { "trigger": "ofSplitString \t(const string, const string, bool, bool)"           ,"contents": "ofSplitString(${1:const string &source}, ${2:const string &delimiter}, ${3:bool ignoreEmpty=false}, ${4:bool trim=false})"},
         { "trigger": "ofStringReplace \t(string, string, string)"                         ,"contents": "ofStringReplace(${1:string &input}, ${2:string searchStr}, ${3:string replaceStr})"},
         { "trigger": "ofSystem \t(string)"                                                ,"contents": "ofSystem(${1:string command})"},
@@ -1415,9 +1169,54 @@
         { "trigger": "ofVAArgsToString \t(const char, ...)"                               ,"contents": "ofVAArgsToString(${1:const char *format},${2:...})"},
         { "trigger": "ofVAArgsToString \t(const char, va_list)"                           ,"contents": "ofVAArgsToString(${1:const char *format}, ${2:va_list args})"},
 
-
-
-
+        ///////////////////// OFX ADDONS //////////////////////
+        //////////////////////////////////////////////////////
+        // ofxXmlSettings methods
+        { "trigger": "ofxXmlSettings::addAttribute \t(const string, const string, int, int)"                ,"contents": "${1:ofxXmlSettings}.addAttribute(${2:const string &tag}, ${3:const string &attribute}, ${4:int value}, ${5:int which=0})"},
+        { "trigger": "ofxXmlSettings::addAttribute \t(const string, const string, double, int)"             ,"contents": "${1:ofxXmlSettings}.addAttribute(${2:const string &tag}, ${3:const string &attribute}, ${4:double value}, ${5:int which=0})"},
+        { "trigger": "ofxXmlSettings::addAttribute \t(const string, const string, const string, int)"       ,"contents": "${1:ofxXmlSettings}.addAttribute(${2:const string &tag}, ${3:const string &attribute}, ${4:const string &value}, ${5:int which=0})"},
+        { "trigger": "ofxXmlSettings::addAttribute \t(const string, const string, int)"                     ,"contents": "${1:ofxXmlSettings}.addAttribute(${2:const string &tag}, ${3:const string &attribute}, ${4:int value})"},
+        { "trigger": "ofxXmlSettings::addAttribute \t(const string, const string, double)"                  ,"contents": "${1:ofxXmlSettings}.addAttribute(${2:const string &tag}, ${3:const string &attribute}, ${4:double value})"},
+        { "trigger": "ofxXmlSettings::addAttribute \t(const string, const string, const string)"            ,"contents": "${1:ofxXmlSettings}.addAttribute(${2:const string &tag}, ${3:const string &attribute}, ${4:const string &value})"},
+        { "trigger": "ofxXmlSettings::addTag \t(const string)"                                              ,"contents": "${1:ofxXmlSettings}.addTag(${2:const string &tag})"},
+        { "trigger": "ofxXmlSettings::addValue \t(const string, int)"                                       ,"contents": "${1:ofxXmlSettings}.addValue(${2:const string &tag}, ${3:int value})"},
+        { "trigger": "ofxXmlSettings::addValue \t(const string, double)"                                    ,"contents": "${1:ofxXmlSettings}.addValue(${2:const string &tag}, ${3:double value})"},
+        { "trigger": "ofxXmlSettings::addValue \t(const string, const string)"                              ,"contents": "${1:ofxXmlSettings}.addValue(${2:const string &tag}, ${3:const string &value})"},
+        { "trigger": "ofxXmlSettings::attributeExists \t(const string, const string, int)"                  ,"contents": "${1:ofxXmlSettings}.attributeExists(${2:const string &tag}, ${3:const string &attribute}, ${4:int which=0})"},
+        { "trigger": "ofxXmlSettings::clear"                                                                ,"contents": "${1:ofxXmlSettings}.clear()"},
+        { "trigger": "ofxXmlSettings::clearTagAttributes \t(const string, int)"                             ,"contents": "${1:ofxXmlSettings}.clearTagAttributes(${2:const string &tag}, ${3:int which=0})"},
+        { "trigger": "ofxXmlSettings::clearTagContents \t(const string, int)"                               ,"contents": "${1:ofxXmlSettings}.clearTagContents(${2:const string &tag}, ${3:int which=0})"},
+        { "trigger": "ofxXmlSettings::copyXmlToString \t(string)"                                           ,"contents": "${1:ofxXmlSettings}.copyXmlToString(${2:string &str})"},
+        { "trigger": "ofxXmlSettings::getAttribute \t(const string, const string, int, int)"                ,"contents": "${1:ofxXmlSettings}.getAttribute(${2:const string &tag}, ${3:const string &attribute}, ${4:int defaultValue}, ${5:int which=0})"},
+        { "trigger": "ofxXmlSettings::getAttribute \t(const string, const string, double, int)"             ,"contents": "${1:ofxXmlSettings}.getAttribute(${2:const string &tag}, ${3:const string &attribute}, ${4:double defaultValue}, ${5:int which=0})"},
+        { "trigger": "ofxXmlSettings::getAttribute \t(const string, const string, const string, int)"       ,"contents": "${1:ofxXmlSettings}.getAttribute(${2:const string &tag}, ${3:const string &attribute}, ${4:const string &defaultValue}, ${5:int which=0})"},
+        { "trigger": "ofxXmlSettings::getAttributeNames \t(const string, vector< string >, int)"            ,"contents": "${1:ofxXmlSettings}.getAttributeNames(${2:const string &tag}, ${3:vector< string > &outNames}, ${:4int which=0})"},
+        { "trigger": "ofxXmlSettings::getNumAttributes \t(const string, int)"                               ,"contents": "${1:ofxXmlSettings}.getNumAttributes(${2:const string &tag}, ${3:int which=0})"},
+        { "trigger": "ofxXmlSettings::getNumTags \t(const string)"                                          ,"contents": "${1:ofxXmlSettings}.getNumTags(${2:const string &tag})"},
+        { "trigger": "ofxXmlSettings::getPushLevel"                                                         ,"contents": "${1:ofxXmlSettings}.getPushLevel()"},
+        { "trigger": "ofxXmlSettings::getValue \t(const string, int , int)"                                 ,"contents": "${1:ofxXmlSettings}.getValue(${2:const string &tag}, ${3:int defaultValue}, ${4:int which=0})"},
+        { "trigger": "ofxXmlSettings::getValue \t(const string, double, int)"                               ,"contents": "${1:ofxXmlSettings}.getValue(${2:const string &tag}, ${3:double defaultValue}, ${4:int which=0})"},
+        { "trigger": "ofxXmlSettings::getValue \t(const string, const string, int)"                         ,"contents": "${1:ofxXmlSettings}.getValue(${2:const string &tag}, ${3:const string &defaultValue}, ${4:int which=0})"},
+        { "trigger": "ofxXmlSettings::loadFile \t(const string)"                                            ,"contents": "${1:ofxXmlSettings}.loadFile(${2:const string &xmlFile})"},
+        { "trigger": "ofxXmlSettings::loadFromBuffer \t(string)"                                            ,"contents": "${1:ofxXmlSettings}.loadFromBuffer({$2:string buffer})"},
+        { "trigger": "ofxXmlSettings::popTag"                                                               ,"contents": "${1:ofxXmlSettings}.popTag()"},
+        { "trigger": "ofxXmlSettings::pushTag \t(const string, int)"                                        ,"contents": "${1:ofxXmlSettings}.pushTag(${2:const string &tag}, ${3:int which=0})"},
+        { "trigger": "ofxXmlSettings::removeAttribute \t(const string, const string, int)"                  ,"contents": "${1:ofxXmlSettings}.removeAttribute(${2:const string &tag}, ${3:const string &attribute}, ${4:int which=0})"},
+        { "trigger": "ofxXmlSettings::removeTag \t(const string, int)"                                      ,"contents": "${1:ofxXmlSettings}.removeTag(${2:const string &tag}, ${3:int which=0})"},
+        { "trigger": "ofxXmlSettings::saveFile \t(const string)"                                            ,"contents": "${1:ofxXmlSettings}.saveFile(${2:const string &xmlFile})"},
+        { "trigger": "ofxXmlSettings::saveFile"                                                             ,"contents": "${1:ofxXmlSettings}.saveFile()"},
+        { "trigger": "ofxXmlSettings::setAttribute \t(const string, const string, int, int)"                ,"contents": "${1:ofxXmlSettings}.setAttribute($2{:const string &tag}, ${3:const string &attribute}, ${4:int value}, ${5:int which=0})"},
+        { "trigger": "ofxXmlSettings::setAttribute \t(const string, const string, double, int)"             ,"contents": "${1:ofxXmlSettings}.setAttribute($2{:const string &tag}, ${3:const string &attribute}, ${4:double value}, ${5:int which=0})"},
+        { "trigger": "ofxXmlSettings::setAttribute \t(const string, const string, const string, int)"       ,"contents": "${1:ofxXmlSettings}.setAttribute($2{:const string &tag}, ${3:const string &attribute}, ${4:const string &value}, ${5:int which=0})"},
+        { "trigger": "ofxXmlSettings::setAttribute \t(const string, const string, int)"                     ,"contents": "${1:ofxXmlSettings}.setAttribute($2{:const string &tag}, ${3:const string &attribute}, ${4:int value})"},
+        { "trigger": "ofxXmlSettings::setAttribute \t(const string, const string, double)"                  ,"contents": "${1:ofxXmlSettings}.setAttribute($2{:const string &tag}, ${3:const string &attribute}, ${4:double value})"},
+        { "trigger": "ofxXmlSettings::setAttribute \t(const string, const string, const string)"            ,"contents": "${1:ofxXmlSettings}.setAttribute($2{:const string &tag}, ${3:const string &attribute}, ${4:const string &value})"},
+        { "trigger": "ofxXmlSettings::setValue \t(const string, int, int)"                                  ,"contents": "${1:ofxXmlSettings}.setValue(${2:const string &tag}, ${3:int value}, ${4:int which=0})"},
+        { "trigger": "ofxXmlSettings::setValue \t(const string, double, int)"                               ,"contents": "${1:ofxXmlSettings}.setValue(${2:const string &tag}, ${3:double value}, ${4:int which=0})"},
+        { "trigger": "ofxXmlSettings::setValue \t(const string, const string, int)"                         ,"contents": "${1:ofxXmlSettings}.setValue(${2:const string &tag}, ${3:const string &value}, ${4:int which=0})"},
+        { "trigger": "ofxXmlSettings::tagExists \t(const string, int)"                                      ,"contents": "${1:ofxXmlSettings}.tagExists(${2:const string &tag}, ${3:int which=0})"},
+        { "trigger": "ofxXmlSettings::bDocLoaded"                                                           ,"contents": "${1:ofxXmlSettings}.bDocLoaded"},
+        { "trigger": "ofxXmlSettings::doc"                                                                  ,"contents": "${1:ofxXmlSettings}.doc"},
 
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////
         // EMPTY - Kept so that all JSON objects above can keep the trailing ","
