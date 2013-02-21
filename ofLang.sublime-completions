@@ -180,7 +180,6 @@
 
         //////////////////////////////////////
         // ofStyle
-        { "trigger": "ofStyle"                                                      ,"contents": "ofStyle"},
         { "trigger": "ofStyle::bFill"                                               ,"contents": "${1:ofStyle}.bFill"},
         { "trigger": "ofStyle::bgColor"                                             ,"contents": "${1:ofStyle}.bgColor"},
         { "trigger": "ofStyle::blending"                                            ,"contents": "${1:ofStyle}.blending"},
@@ -364,6 +363,7 @@
         { "trigger": "OF_GRADIENT_CIRCULAR \tofGradientMode"                         ,"contents": "OF_GRADIENT_CIRCULAR"},
         /////////////////////////////////////////////
         // ofImage
+        { "trigger": "ofImage \tinstance"                                            ,"contents": "ofImage ${1:myImage}"},
         { "trigger": "ofImage::allocate"                                             ,"contents": "${1:ofImage}.allocate(${2:int w}, ${3:int h}, ${4:ofImageType type})"},
         { "trigger": "ofImage::bAllocated"                                           ,"contents": "${1:ofImage}.bAllocated()"},
         { "trigger": "ofImage::bind"                                                 ,"contents": "${1:ofImage}.bind()"},
@@ -1011,6 +1011,7 @@
 
         ///////////////////////////
         // ofMaterial
+        { "trigger": "ofMaterial \tinstance"                                                                    ,"contents": "ofMaterial ${1:myMaterial}"},
         { "trigger": "ofMaterial::begin"                                                                        ,"contents": "${1:ofMaterial}.begin()"},
         { "trigger": "ofMaterial::end"                                                                          ,"contents": "${1:ofMaterial}.end()"},
         { "trigger": "ofMaterial::getAmbientColor"                                                              ,"contents": "${1:ofMaterial}.getAmbientColor()"},
@@ -1039,6 +1040,7 @@
 
         ///////////////////////////
         // ofTexture
+        { "trigger": "ofTexture \tinstance"                                                                                     ,"contents": "ofTexture ${1:myTexture}"},
         { "trigger": "ofTexture::allocate \t(int, int, int)"                                                                    ,"contents": "${1:ofTexture}.allocate(${2:int w}, {$3:int h}, ${4:int glInternalFormat})"},
         { "trigger": "ofTexture::allocate \t(int, int, int, bool)"                                                              ,"contents": "${1:ofTexture}.allocate(${2:int w}, ${3:int h}, ${4:int glInternalFormat}, ${5:bool bUseARBExtention})"},
         { "trigger": "ofTexture::allocate \t(const ofTextureData)"                                                              ,"contents": "${1:ofTexture}.allocate(${2:const ofTextureData &textureData})"},
@@ -1127,8 +1129,9 @@
 
 
         /////////////// VIDEO ////////////////////
-        /////////////////////////////////////
+        //////////////////////////////////////////
         // ofVideoGrabber
+        { "trigger": "ofVideoGrabber \tinstance"                                   ,"contents": "ofVideoGrabber ${1:myVideoGrabber}"},
         { "trigger": "ofVideoGrabber::close"                                       ,"contents": "${1:ofVideoGrabber}.close()"},
         { "trigger": "ofVideoGrabber::draw(float, float, float, float)"            ,"contents": "${1:ofVideoGrabber}.draw(${2:float x}, ${3:float y}, ${4:float w}, ${5:float h})"},
         { "trigger": "ofVideoGrabber::draw(float, float)"                          ,"contents": "${1:ofVideoGrabber}.draw(${2:float x}, ${3:float y})"},
@@ -1161,6 +1164,7 @@
 
         /////////////////////////////////////
         // ofVideoPlayer
+        { "trigger": "ofVideoPlayer \tinstance"                                          ,"contents": "ofVideoPlayer ${1:myVideoPlayer}"},
         { "trigger": "ofVideoPlayer::close"                                             ,"contents": "${1:ofVideoPlayer}.close()"},
         { "trigger": "ofVideoPlayer::closeMovie"                                        ,"contents": "${1:ofVideoPlayer}.closeMovie()"},
         { "trigger": "ofVideoPlayer::draw \t(float, float, float, float)"               ,"contents": "${1:ofVideoPlayer}.draw(${2:float x}, ${3:float y}, ${4:float w}, ${5:float h})"},
@@ -1229,6 +1233,27 @@
 
         /////////////////////////////////////
         // ofSoundStream
+
+        ///////////////////////////
+        // ofSerial
+        { "trigger": "ofSerial \tinstance"                                  ,"contents": "ofSerial ${1:mySerial}"},
+        { "trigger": "ofSerial::available"                                  ,"contents": "${1:ofSerial}.available()"},
+        { "trigger": "ofSerial::close"                                      ,"contents": "${1:ofSerial}.close()"},
+        { "trigger": "ofSerial::drain"                                      ,"contents": "${1:ofSerial}.drain()"},
+        { "trigger": "ofSerial::enumerateDevices"                           ,"contents": "${1:ofSerial}.enumerateDevices()"},
+        { "trigger": "ofSerial::flush \t(bool, bool)"                       ,"contents": "${1:ofSerial}.flush(${2:bool flushIn=true}, ${3:bool flushOut=true})"},
+        { "trigger": "ofSerial::getDeviceList"                              ,"contents": "${1:ofSerial}.getDeviceList()"},
+        { "trigger": "ofSerial::listDevices"                                ,"contents": "${1:ofSerial}.listDevices()"},
+        { "trigger": "ofSerial::readByte"                                   ,"contents": "${1:ofSerial}.readByte()"},
+        { "trigger": "ofSerial::readBytes \t(unsigned char, int)"           ,"contents": "${1:ofSerial}.readBytes(${2:unsigned char * buffer}, ${3:int length})"},
+        { "trigger": "ofSerial::readBytes \t(unsigned char, int)"           ,"contents": "${1:ofSerial}.readBytes(${2:unsigned char *buffer}, ${3:int length})"},
+        { "trigger": "ofSerial::setVerbose \t(bool)"                        ,"contents": "${1:ofSerial}.setVerbose(${2:bool bLoudmouth})"},
+        { "trigger": "ofSerial::setup"                                      ,"contents": "${1:ofSerial}.setup()"},
+        { "trigger": "ofSerial::setup \t(string, int)"                      ,"contents": "${1:ofSerial}.setup(${2:string portName}, ${3:int baudrate})"},
+        { "trigger": "ofSerial::setup \t(int, int)"                         ,"contents": "${1:ofSerial}.setup(${2:int deviceNumber}, ${3:int baudrate})"},
+        { "trigger": "ofSerial::writeByte \t(unsigned char)"                ,"contents": "${1:ofSerial}.writeByte(${2:unsigned char singleByte})"},
+        { "trigger": "ofSerial::writeBytes \t(unsigned char, int)"          ,"contents": "${1:ofSerial}.writeBytes(${2:unsigned char * buffer}, ${3:int length})"},
+        { "trigger": "ofSerial::writeBytes \t(unsigned char, int)"          ,"contents": "${1:ofSerial}.writeBytes(${2:unsigned char *buffer}, ${3:int length})"},
 
 
         /////////////////// MATH //////////////////
@@ -1305,6 +1330,7 @@
 
         /////////////////////////////////////
         // ofFile
+        { "trigger": "ofFile \tinstance"                                                ,"contents": "ofFile ${1:myFile}"},
         { "trigger": "ofFile::canExecute"                                               ,"contents": "${1:ofFile}.canExecute()"},
         { "trigger": "ofFile::canRead"                                                  ,"contents": "${1:ofFile}.canRead()"},
         { "trigger": "ofFile::canWrite"                                                 ,"contents": "${1:ofFile}.canWrite()"},
