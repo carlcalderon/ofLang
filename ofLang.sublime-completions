@@ -149,14 +149,56 @@
         ///////////////// TYPES  ///////////////
         ////////////////////////////////////////
         // ofColor
-        { "trigger": "ofColor"                                                      ,"contents": "ofColor ${1:color}"},
-        // TODO
+        { "trigger": "ofColor \tinstance"                       ,"contents": "ofColor ${1:myColor}"},
+        { "trigger": "ofFloatColor \tinstance"                  ,"contents": "ofFloatColor ${1:myColor}"},
+        { "trigger": "ofShortColor \tinstance"                  ,"contents": "ofShortColor ${1:myColor}"},
+
+        { "trigger": "ofColor_::clamp"                                                              ,"contents": "${1:ofColor_}.clamp()"},
+        { "trigger": "ofColor_::fromHex \t(int, float)"                                             ,"contents": "${1:ofColor_}.fromHex(${2:int hexColor}, ${3:float alpha=limit()})"},
+        { "trigger": "ofColor_::fromHsb \t(float, float, float, float)"                             ,"contents": "${1:ofColor_}.fromHsb(${2:float hue}, ${3:float saturation}, ${4:float brightness}, ${5:float alpha=limit()})"},
+        { "trigger": "ofColor_::getBrightness"                                                      ,"contents": "${1:ofColor_}.getBrightness()"},
+        { "trigger": "ofColor_::getClamped"                                                         ,"contents": "${1:ofColor_}.getClamped()"},
+        { "trigger": "ofColor_::getHex"                                                             ,"contents": "${1:ofColor_}.getHex()"},
+        { "trigger": "ofColor_::getHsb \t(float, float, float)"                                     ,"contents": "${1:ofColor_}.getHsb(${2:float &hue}, ${3:float &saturation}, ${4:float &brightness})"},
+        { "trigger": "ofColor_::getHue"                                                             ,"contents": "${1:ofColor_}.getHue()"},
+        { "trigger": "ofColor_::getInverted"                                                        ,"contents": "${1:ofColor_}.getInverted()"},
+        { "trigger": "ofColor_::getLerped(const ofColor_< PixelType >, float)"                      ,"contents": "${1:ofColor_}.getLerped(${2:const ofColor_< PixelType > &target}, ${3:float amount})"},
+        { "trigger": "ofColor_::getLightness"                                                       ,"contents": "${1:ofColor_}.getLightness()"},
+        { "trigger": "ofColor_::getSaturation"                                                      ,"contents": "${1:ofColor_}.getSaturation()"},
+        { "trigger": "ofColor_::invert"                                                             ,"contents": "${1:ofColor_}.invert()"},
+        { "trigger": "ofColor_::lerp \t(const ofColor_< PixelType >, float)"                        ,"contents": "${1:ofColor_}.lerp(${2:const ofColor_< PixelType > &target}, ${3:float amount})"},
+        { "trigger": "ofColor_::limit"                                                              ,"contents": "${1:ofColor_}.limit()"},
+        { "trigger": "ofColor_::set \t(float, float, float, float)"                                 ,"contents": "${1:ofColor_}.set(${2:float _r}, ${3:float _g}, ${4:float _b}, ${5:float _a=limit()})"},
+        { "trigger": "ofColor_::set \t(float, float)"                                               ,"contents": "${1:ofColor_}.set(${2:float _gray}, ${3:float _a=limit()})"},
+        { "trigger": "ofColor_::set \t(ofColor_< PixelType > const)"                                ,"contents": "${1:ofColor_}.set(${2:ofColor_< PixelType > const &color})"},
+        { "trigger": "ofColor_::setBrightness \t(float)"                                            ,"contents": "${1:ofColor_}.setBrightness(${2:float brightness})"},
+        { "trigger": "ofColor_::setHex \t(int, float)"                                              ,"contents": "${1:ofColor_}.setHex(${2:int hexColor}, ${3:float alpha=limit()})"},
+        { "trigger": "ofColor_::setHsb \t(float, float, float, float)"                              ,"contents": "${1:ofColor_}.setHsb(${2:float hue}, ${3:float saturation}, ${4:float brightness}, ${5:float alpha=limit()})"},
+        { "trigger": "ofColor_::setHsb \t(float, float, float)"                                     ,"contents": "${1:ofColor_}.setHsb(${2:float hue}, ${3:float saturation}, ${4:float brightness})"},
+        { "trigger": "ofColor_::setHue \t(float)"                                                   ,"contents": "${1:ofColor_}.setHue(${2:float hue})"},
+        { "trigger": "ofColor_::setSaturation \t(float)"                                            ,"contents": "${1:ofColor_}.setSaturation(${2:float saturation})"},
+        { "trigger": "ofColor_::a \talpha"                                                          ,"contents": "${1:ofColor_}.a"},
+        { "trigger": "ofColor_::b"                                                                  ,"contents": "${1:ofColor_}.b"},
+        { "trigger": "ofColor_::black"                                                              ,"contents": "${1:ofColor_}.black "},
+        { "trigger": "ofColor_::blue"                                                               ,"contents": "${1:ofColor_}.blue"},
+        { "trigger": "ofColor_::cyan"                                                               ,"contents": "${1:ofColor_}.cyan"},
+        { "trigger": "ofColor_::g"                                                                  ,"contents": "${1:ofColor_}.g"},
+        { "trigger": "ofColor_::gray"                                                               ,"contents": "${1:ofColor_}.gray"},
+        { "trigger": "ofColor_::green"                                                              ,"contents": "${1:ofColor_}.green"},
+        { "trigger": "ofColor_::magenta"                                                            ,"contents": "${1:ofColor_}.magenta"},
+        { "trigger": "ofColor_::r"                                                                  ,"contents": "${1:ofColor_}.r"},
+        { "trigger": "ofColor_::red"                                                                ,"contents": "${1:ofColor_}.red"},
+        { "trigger": "ofColor_::white"                                                              ,"contents": "${1:ofColor_}.white"},
+        { "trigger": "ofColor_::yellow"                                                             ,"contents": "${1:ofColor_}.yellow"},
 
         //////////////////////////////////////
         // ofPoint
         { "trigger": "ofPoint"                                                      ,"contents": "ofPoint ${1:point}"},
         { "trigger": "ofPoint::set \t(float, float, float)"                         ,"contents": "set(${1:float _x}, ${2:float _y}, ${3:float _z})"},
-        // TODO, so many operators, should they even be here?
+        { "trigger": "ofPoint::v \tvariable"                ,"contents": "${1:ofPoint}.v"},
+        { "trigger": "ofPoint::x \tvariable"                ,"contents": "${1:ofPoint}.x"},
+        { "trigger": "ofPoint::y \tvariable"                ,"contents": "${1:ofPoint}.y"},
+        { "trigger": "ofPoint::z \tvariable"                ,"contents": "${1:ofPoint}.z"},
 
         //////////////////////////////////////
         // ofPtr
@@ -170,12 +212,94 @@
         { "trigger": "ofRectangle::set \t(const ofPoint &p, float w, float h)"          ,"contents": "${1:ofRectangle}.set(${2:const ofPoint &p}, ${3:float w}, ${4:float h})"},
         { "trigger": "ofRectangle::set \t(const ofRectangle &rect)"                     ,"contents": "${1:ofRectangle}.set(${2:const ofRectangle &rect})"},
         { "trigger": "ofRectangle::set \t(const ofPoint &p0, const ofPoint &p1)"        ,"contents": "${1:ofRectangle}.set(${2:const ofPoint &p0}, ${3:const ofPoint &p1})"},
-        { "trigger": "ofRectangle \theight"                                             ,"contents": "${1:ofRectangle}.height"},
-        { "trigger": "ofRectangle \tposition"                                           ,"contents": "${1:ofRectangle}.position"},
-        { "trigger": "ofRectangle \twidth"                                              ,"contents": "${1:ofRectangle}.width"},
-        { "trigger": "ofRectangle \tx"                                                  ,"contents": "${1:ofRectangle}.x"},
-        { "trigger": "ofRectangle \ty"                                                  ,"contents": "${1:ofRectangle}.y"},
-        // TODO 
+        { "trigger": "ofRectangle \tinstance"                                                     ,"contents": "ofRectangle ${1:myRectangle}"},
+        { "trigger": "ofRectangle::height \tvariable"                                             ,"contents": "${1:ofRectangle}.height"},
+        { "trigger": "ofRectangle::position \tvariable"                                           ,"contents": "${1:ofRectangle}.position"},
+        { "trigger": "ofRectangle::width \tvariable"                                              ,"contents": "${1:ofRectangle}.width"},
+        { "trigger": "ofRectangle::x \tvariable"                                                  ,"contents": "${1:ofRectangle}.x"},
+        { "trigger": "ofRectangle::y \tvariable"                                                  ,"contents": "${1:ofRectangle}.y"},
+
+        { "trigger": "ofRectangle::alignTo \t(const ofPoint, ofAlignHorz, ofAlignVert)"                                                         ,"contents": "${1:ofRectangle}.alignTo(${2:const ofPoint &targetPoint}, ${3:ofAlignHorz thisHorzAnchor=OF_ALIGN_HORZ_CENTER}, ${4:ofAlignVert thisVertAnchor=OF_ALIGN_VERT_CENTER})"},
+        { "trigger": "ofRectangle::alignTo \t(const ofRectangle, ofAlignHorz, ofAlignVert)"                                                     ,"contents": "${1:ofRectangle}.alignTo(${2:const ofRectangle &targetRect}, ${3:ofAlignHorz sharedHorzAnchor=OF_ALIGN_HORZ_CENTER}, ${4:ofAlignVert sharedVertAnchor=OF_ALIGN_VERT_CENTER})"},
+        { "trigger": "ofRectangle::alignTo \t(const ofRectangle, ofAlignHorz, ofAlignVert, ofAlignHorz, ofAlignVert)"                           ,"contents": "${1:ofRectangle}.alignTo(${2:const ofRectangle &targetRect}, ${3:ofAlignHorz targetHorzAnchor}, ${4:ofAlignVert targetVertAnchor}, ${5:ofAlignHorz thisHorzAnchor}, ${6:ofAlignVert thisVertAnchor})"},
+        { "trigger": "ofRectangle::alignToHorz \t(const float, ofAlignHorz)"                                                                    ,"contents": "${1:ofRectangle}.alignToHorz(${2:const float &targetX}, ${3:ofAlignHorz thisHorzAnchor=OF_ALIGN_HORZ_CENTER})"},
+        { "trigger": "ofRectangle::alignToHorz \t(const ofRectangle, ofAlignHorz)"                                                              ,"contents": "${1:ofRectangle}.alignToHorz(${2:const ofRectangle &targetRect}, ${3:ofAlignHorz sharedAnchor=OF_ALIGN_HORZ_CENTER})"},
+        { "trigger": "ofRectangle::alignToHorz \t(const ofRectangle, ofAlignHorz, ofAlignHorz)"                                                 ,"contents": "${1:ofRectangle}.alignToHorz(${2:const ofRectangle &targetRect}, ${3:ofAlignHorz targetHorzAnchor}, ${4:ofAlignHorz thisHorzAnchor})"},
+        { "trigger": "ofRectangle::alignToVert \t(const float &targetY, ofAlignVert)"                                                           ,"contents": "${1:ofRectangle}.alignToVert(${2:const float &targetY}, ${3:ofAlignVert sharedAnchor=OF_ALIGN_VERT_CENTER})"},
+        { "trigger": "ofRectangle::alignToVert \t(const ofRectangle, ofAlignVert)"                                                              ,"contents": "${1:ofRectangle}.alignToVert(${2:const ofRectangle &targetRect}, ${3:ofAlignVert sharedAnchor=OF_ALIGN_VERT_CENTER})"},
+        { "trigger": "ofRectangle::alignToVert \t(const ofRectangle, ofAlignVert, ofAlignVert)"                                                 ,"contents": "${1:ofRectangle}.alignToVert(${2:const ofRectangle &targetRect}, ${3:ofAlignVert targetVertAnchor}, ${4:ofAlignVert thisVertAnchor})"},
+        { "trigger": "ofRectangle::getArea"                                                                                                     ,"contents": "${1:ofRectangle}.getArea()"},
+        { "trigger": "ofRectangle::getAspectRatio"                                                                                              ,"contents": "${1:ofRectangle}.getAspectRatio()"},
+        { "trigger": "ofRectangle::getBottom"                                                                                                   ,"contents": "${1:ofRectangle}.getBottom()"},
+        { "trigger": "ofRectangle::getBottomLeft"                                                                                               ,"contents": "${1:ofRectangle}.getBottomLeft()"},
+        { "trigger": "ofRectangle::getBottomRight"                                                                                              ,"contents": "${1:ofRectangle}.getBottomRight()"},
+        { "trigger": "ofRectangle::getCenter"                                                                                                   ,"contents": "${1:ofRectangle}.getCenter()"},
+        { "trigger": "ofRectangle::getHeight"                                                                                                   ,"contents": "${1:ofRectangle}.getHeight()"},
+        { "trigger": "ofRectangle::getHorzAnchor \t(ofAlignHorz)"                                                                               ,"contents": "${1:ofRectangle}.getHorzAnchor(${2:ofAlignHorz anchor})"},
+        { "trigger": "ofRectangle::getIntersection \t(const ofRectangle)"                                                                       ,"contents": "${1:ofRectangle}.getIntersection(${2:const ofRectangle &rect})"},
+        { "trigger": "ofRectangle::getLeft"                                                                                                     ,"contents": "${1:ofRectangle}.getLeft()"},
+        { "trigger": "ofRectangle::getMax"                                                                                                      ,"contents": "${1:ofRectangle}.getMax()"},
+        { "trigger": "ofRectangle::getMaxX"                                                                                                     ,"contents": "${1:ofRectangle}.getMaxX()"},
+        { "trigger": "ofRectangle::getMaxY"                                                                                                     ,"contents": "${1:ofRectangle}.getMaxY()"},
+        { "trigger": "ofRectangle::getMin"                                                                                                      ,"contents": "${1:ofRectangle}.getMin()"},
+        { "trigger": "ofRectangle::getMinX"                                                                                                     ,"contents": "${1:ofRectangle}.getMinX()"},
+        { "trigger": "ofRectangle::getMinY"                                                                                                     ,"contents": "${1:ofRectangle}.getMinY()"},
+        { "trigger": "ofRectangle::getPerimeter"                                                                                                ,"contents": "${1:ofRectangle}.getPerimeter()"},
+        { "trigger": "ofRectangle::getPosition"                                                                                                 ,"contents": "${1:ofRectangle}.getPosition()"},
+        { "trigger": "ofRectangle::getPositionRef"                                                                                              ,"contents": "${1:ofRectangle}.getPositionRef()"},
+        { "trigger": "ofRectangle::getRight"                                                                                                    ,"contents": "${1:ofRectangle}.getRight()"},
+        { "trigger": "ofRectangle::getStandardized"                                                                                             ,"contents": "${1:ofRectangle}.getStandardized()"},
+        { "trigger": "ofRectangle::getTop"                                                                                                      ,"contents": "${1:ofRectangle}.getTop()"},
+        { "trigger": "ofRectangle::getTopLeft"                                                                                                  ,"contents": "${1:ofRectangle}.getTopLeft()"},
+        { "trigger": "ofRectangle::getTopRight"                                                                                                 ,"contents": "${1:ofRectangle}.getTopRight()"},
+        { "trigger": "ofRectangle::getUnion \t(const ofRectangle)"                                                                              ,"contents": "${1:ofRectangle}.getUnion(${2:const ofRectangle &rect})"},
+        { "trigger": "ofRectangle::getVertAnchor \t(ofAlignVert)"                                                                               ,"contents": "${1:ofRectangle}.getVertAnchor(${2:ofAlignVert anchor})"},
+        { "trigger": "ofRectangle::getWidth"                                                                                                    ,"contents": "${1:ofRectangle}.getWidth()"},
+        { "trigger": "ofRectangle::getX"                                                                                                        ,"contents": "${1:ofRectangle}.getX()"},
+        { "trigger": "ofRectangle::getY"                                                                                                        ,"contents": "${1:ofRectangle}.getY()"},
+        { "trigger": "ofRectangle::growToInclude \t(float, float)"                                                                              ,"contents": "${1:ofRectangle}.growToInclude(${2:float px}, ${3:float py})"},
+        { "trigger": "ofRectangle::growToInclude \t(const ofPoint)"                                                                             ,"contents": "${1:ofRectangle}.growToInclude(${2:const ofPoint &p})"},
+        { "trigger": "ofRectangle::growToInclude \t(const ofRectangle)"                                                                         ,"contents": "${1:ofRectangle}.growToInclude(${2:const ofRectangle &rect})"},
+        { "trigger": "ofRectangle::growToInclude \t(const ofPoint, const ofPoint)"                                                              ,"contents": "${1:ofRectangle}.growToInclude(${2:const ofPoint &p0}, ${3:const ofPoint &p1})"},
+        { "trigger": "ofRectangle::inside \t(const ofPoint)"                                                                                    ,"contents": "${1:ofRectangle}.inside(${2:const ofPoint &p})"},
+        { "trigger": "ofRectangle::inside \t(float, float)"                                                                                     ,"contents": "${1:ofRectangle}.inside(${2:float px}, ${3:float py})"},
+        { "trigger": "ofRectangle::inside \t(const ofRectangle)"                                                                                ,"contents": "${1:ofRectangle}.inside(${2:const ofRectangle &rect})"},
+        { "trigger": "ofRectangle::inside \t(const ofPoint, const ofPoint)"                                                                     ,"contents": "${1:ofRectangle}.inside(${2:const ofPoint &p0}, ${3:const ofPoint &p1})"},
+        { "trigger": "ofRectangle::intersects \t(const ofRectangle)"                                                                            ,"contents": "${1:ofRectangle}.intersects(${2:const ofRectangle &rect})"},
+        { "trigger": "ofRectangle::intersects \t(const ofPoint, const ofPoint)"                                                                 ,"contents": "${1:ofRectangle}.intersects(${2:const ofPoint &p0}, ${3:const ofPoint &p1})"},
+        { "trigger": "ofRectangle::isEmpty"                                                                                                     ,"contents": "${1:ofRectangle}.isEmpty()"},
+        { "trigger": "ofRectangle::isStandardized"                                                                                              ,"contents": "${1:ofRectangle}.isStandardized()"},
+        { "trigger": "ofRectangle::scale \t(float)"                                                                                             ,"contents": "${1:ofRectangle}.scale({$2:float s})"},
+        { "trigger": "ofRectangle::scale \t(float, float)"                                                                                      ,"contents": "${1:ofRectangle}.scale(${2:float sX}, ${2:float sY})"},
+        { "trigger": "ofRectangle::scale \t(const ofPoint)"                                                                                     ,"contents": "${1:ofRectangle}.scale(${2:const ofPoint &s})"},
+        { "trigger": "ofRectangle::scaleFromCenter \t(float)"                                                                                   ,"contents": "${1:ofRectangle}.scaleFromCenter(${2:float s})"},
+        { "trigger": "ofRectangle::scaleFromCenter \t(float, float)"                                                                            ,"contents": "${1:ofRectangle}.scaleFromCenter(${2:float sX}, ${3:float sY})"},
+        { "trigger": "ofRectangle::scaleFromCenter \t(const ofPoint)"                                                                           ,"contents": "${1:ofRectangle}.scaleFromCenter(${2:const ofPoint &s})"},
+        { "trigger": "ofRectangle::scaleHeight \t(float)"                                                                                       ,"contents": "${1:ofRectangle}.scaleHeight(${2:float sY})"},
+        { "trigger": "ofRectangle::scaleTo \t(const ofRectangle, ofScaleMode)"                                                                  ,"contents": "${1:ofRectangle}.scaleTo(${2:const ofRectangle &targetRect}, ${3:ofScaleMode scaleMode=OF_SCALEMODE_FIT})"},
+        { "trigger": "ofRectangle::scaleTo \t(const ofRectangle, ofAspectRatioMode, ofAlignHorz, ofAlignVert)"                                  ,"contents": "${1:ofRectangle}.scaleTo(${2:const ofRectangle &targetRect}, ${3:ofAspectRatioMode subjectAspectRatioMode}, ${4:ofAlignHorz sharedHorzAnchor=OF_ALIGN_HORZ_CENTER}, ${5:ofAlignVert sharedVertAnchor=OF_ALIGN_VERT_CENTER})"},
+        { "trigger": "ofRectangle::scaleTo \t(const ofRectangle, ofAspectRatioMode, ofAlignHorz, ofAlignVert, ofAlignHorz, ofAlignVert)"        ,"contents": "${1:ofRectangle}.scaleTo(${2:const ofRectangle &targetRect}, ${3:ofAspectRatioMode subjectAspectRatioMode}, ${4:ofAlignHorz modelHorzAnchor}, ${5:ofAlignVert modelVertAnchor}, ${6:ofAlignHorz subjectHorzAnchor}, ${7:ofAlignVert subjectVertAnchor})"},
+        { "trigger": "ofRectangle::scaleWidth \t(float)"                                                                                        ,"contents": "${1:ofRectangle}.scaleWidth(${2:float sX})"},
+        { "trigger": "ofRectangle::set \t(float, float, float, float)"                                                                          ,"contents": "${1:ofRectangle}.set(${2:float px}, ${3:float py}, ${4:float w}, ${5:float h})"},
+        { "trigger": "ofRectangle::set \t(const ofPoint, float, float)"                                                                         ,"contents": "${1:ofRectangle}.set(${2:const ofPoint &p}, ${3:float w}, ${4:float h})"},
+        { "trigger": "ofRectangle::set \t(const ofRectangle)"                                                                                   ,"contents": "${1:ofRectangle}.set(${2:const ofRectangle &rect})"},
+        { "trigger": "ofRectangle::set \t(const ofPoint, const ofPoint)"                                                                        ,"contents": "${1:ofRectangle}.set(${2:const ofPoint &p0}, ${3:const ofPoint &p1})"},
+        { "trigger": "ofRectangle::setFromCenter \t(float, float, float, float)"                                                                ,"contents": "${1:ofRectangle}.setFromCenter(${2:float px}, ${3:float py}, ${4:float w}, ${5:float h})"},
+        { "trigger": "ofRectangle::setFromCenter \t(const ofPoint, float, float)"                                                               ,"contents": "${1:ofRectangle}.setFromCenter(${2:const ofPoint &p}, ${3:float w}, ${4:float h})"},
+        { "trigger": "ofRectangle::setHeight \t(float)"                                                                                         ,"contents": "${1:ofRectangle}.setHeight(${2:float h})"},
+        { "trigger": "ofRectangle::setPosition \t(float, float)"                                                                                ,"contents": "${1:ofRectangle}.setPosition(${2:float px}, ${3:float py})"},
+        { "trigger": "ofRectangle::setPosition \t(const ofPoint)"                                                                               ,"contents": "${1:ofRectangle}.setPosition(${2:const ofPoint &p})"},
+        { "trigger": "ofRectangle::setWidth \t(float)"                                                                                          ,"contents": "${1:ofRectangle}.setWidth(${2:float w})"},
+        { "trigger": "ofRectangle::setX \t(float)"                                                                                              ,"contents": "${1:ofRectangle}.setX(${2:float px})"},
+        { "trigger": "ofRectangle::setY \t(float)"                                                                                              ,"contents": "${1:ofRectangle}.setY(${2:float py})"},
+        { "trigger": "ofRectangle::standardize"                                                                                                 ,"contents": "${1:ofRectangle}.standardize()"},
+        { "trigger": "ofRectangle::translate \t(float, float)"                                                                                  ,"contents": "${1:ofRectangle}.translate(${2:float dx}, ${3:float dy})"},
+        { "trigger": "ofRectangle::translate \t(const ofPoint)"                                                                                 ,"contents": "${1:ofRectangle}.translate(${2:const ofPoint &dp})"},
+        { "trigger": "ofRectangle::translateX \t(float)"                                                                                        ,"contents": "${1:ofRectangle}.translateX(${2:float dx})"},
+        { "trigger": "ofRectangle::translateY \t(float)"                                                                                        ,"contents": "${1:ofRectangle}.translateY(${2:float dy})"},
+        // scaleMode
+        { "trigger": "OF_SCALEMODE_FIT \tscaleMode"             ,"contents": "OF_SCALEMODE_FIT"},
+        { "trigger": "OF_ALIGN_HORZ_CENTER"                     ,"contents": "OF_ALIGN_HORZ_CENTER"},
 
 
         //////////////////////////////////////
@@ -1398,13 +1522,42 @@
 
         /////////////////////////////////////
         // ofHttpRequest
-
+        // ofHttpRequest methods
+        { "trigger": "ofHttpRequest::getID"                                     ,"contents": "${1:ofHttpRequest}.getID()"},
+        { "trigger": "ofHttpRequest::name"                                      ,"contents": "${1:ofHttpRequest}.name"},
+        { "trigger": "ofHttpRequest::saveTo"                                    ,"contents": "${1:ofHttpRequest}.saveTo"},
+        { "trigger": "ofHttpRequest::url"                                       ,"contents": "${1:ofHttpRequest}.url"},
         /////////////////////////////////////
         // ofHttpResponse
-
+        // ofHttpResponse variables
+        { "trigger": "ofHttpResponse::data"                                     ,"contents": "ofHttpResponse::data"},
+        { "trigger": "ofHttpResponse::error"                                    ,"contents": "ofHttpResponse::error"},
+        { "trigger": "ofHttpResponse::request"                                  ,"contents": "ofHttpResponse::request"},
+        { "trigger": "ofHttpResponse::status"                                   ,"contents": "ofHttpResponse::status"},
         /////////////////////////////////////
         // ofLog
+        // log levels
+        { "trigger": "OF_LOG_VERBOSE \tlogLevel"                                    ,"contents": "OF_LOG_VERBOSE"},
+        { "trigger": "OF_LOG_NOTICE \tlogLevel"                                     ,"contents": "OF_LOG_NOTICE"},
+        { "trigger": "OF_LOG_WARNING \tlogLevel"                                    ,"contents": "OF_LOG_WARNING"},
+        { "trigger": "OF_LOG_ERROR \tlogLevel"                                      ,"contents": "OF_LOG_ERROR"},
+        { "trigger": "OF_LOG_FATAL_ERROR \tlogLevel"                                ,"contents": "OF_LOG_FATAL_ERROR"},
+        { "trigger": "OF_LOG_SILENT \tlogLevel"                                     ,"contents": "OF_LOG_SILENT"},
 
+        // ofLog methods
+        { "trigger": "ofLog::setAutoSpace \t(bool)"                             ,"contents": "ofLog::setAutoSpace(bool autoSpace)"},
+        { "trigger": "ofLog::setChannel \t(ofPtr< ofBaseLoggerChannel >)"       ,"contents": "ofLog::setChannel(ofPtr< ofBaseLoggerChannel > channel)"},
+
+
+        // ofLog functions
+        { "trigger": "ofLogLevel \tinstance"                                            ,"contents": "ofLogLevel logLevel;"},
+        { "trigger": "ofGetLogLevel"                                                    ,"contents": "ofGetLogLevel()"},
+        { "trigger": "ofGetLogLevelName \t(ofLogLevel)"                                 ,"contents": "ofGetLogLevelName(${1:ofLogLevel level})"},
+        { "trigger": "ofLogToConsole"                                                   ,"contents": "ofLogToConsole()"},
+        { "trigger": "ofLogToFile \t(const string, bool)"                               ,"contents": "ofLogToFile(${1:const string &path}, ${2:bool append=false})"},
+        { "trigger": "ofSetLogLevel \t(ofLogLevel)"                                     ,"contents": "ofSetLogLevel(${1:ofLogLevel logLevel})"},
+        { "trigger": "ofSetLogLevel \t(string, ofLogLevel)"                             ,"contents": "ofSetLogLevel(${1:string module}, ${2:ofLogLevel logLevel})"},
+        { "trigger": "ofSetLoggerChannel \t(ofPtr< ofBaseLoggerChannel >)"              ,"contents": "ofSetLoggerChannel(${1:ofPtr< ofBaseLoggerChannel > loggerChannel})"},
         /////////////////////////////////////
         // ofSystemUtils
 
@@ -1413,7 +1566,22 @@
 
         /////////////////////////////////////
         // ofURLFileLoader
-
+        // ofURLFileLoader methods
+        { "trigger": "ofURLFileLoader::clear"                                               ,"contents": "${1:ofURLFileLoader}.clear()"},
+        { "trigger": "ofURLFileLoader::get \t(string)"                                      ,"contents": "${1:ofURLFileLoader}.get(string url)"},
+        { "trigger": "ofURLFileLoader::getAsync \t(string, string)"                         ,"contents": "${1:ofURLFileLoader}.getAsync(${2:string url}, ${3:string name='$4'})"},
+        { "trigger": "ofURLFileLoader::remove \t(int)"                                      ,"contents": "${1:ofURLFileLoader}.remove(${2:int id})"},
+        { "trigger": "ofURLFileLoader::saveAsync \t(string, string)"                        ,"contents": "${1:ofURLFileLoader}.saveAsync(${2:string url}, ${3:string path})"},
+        { "trigger": "ofURLFileLoader::saveTo \t(string, string)"                           ,"contents": "${1:ofURLFileLoader}.saveTo(${2:string url}, ${3:string path})"},
+        // ofURLFileLoader functions
+        { "trigger": "ofLoadURL \t(string)"                                                     ,"contents": "ofLoadURL(${1:string url})"},
+        { "trigger": "ofLoadURLAsync \t(string, string)"                                        ,"contents": "ofLoadURLAsync(${1:string url}, ${2:string name='$3'})"},
+        { "trigger": "ofRegisterURLNotification \t(T)"                                          ,"contents": "ofRegisterURLNotification(${1:T *obj})"},
+        { "trigger": "ofRemoveAllURLRequests"                                                   ,"contents": "ofRemoveAllURLRequests()"},
+        { "trigger": "ofRemoveURLRequest \t(int)"                                               ,"contents": "ofRemoveURLRequest(${1:int id})"},
+        { "trigger": "ofSaveURLAsync \t(string, string)"                                        ,"contents": "ofSaveURLAsync(${2:string url}, ${3:string path})"},
+        { "trigger": "ofSaveURLTo \t(string, string)"                                           ,"contents": "ofSaveURLTo(${2:string url}, ${3:string path})"},
+        { "trigger": "ofUnregisterURLNotification \t(T)"                                        ,"contents": "ofUnregisterURLNotification(${2:T *obj})"},
         /////////////////////////////////////
         // ofUtils
         /////////////////////////////////////
