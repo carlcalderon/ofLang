@@ -85,7 +85,7 @@
         { "trigger": "ofShowCursor"                      ,"contents": "ofShowCursor()"},
         { "trigger": "ofSleepMillis"                     ,"contents": "ofSleepMillis(${1:int millis})"},
         { "trigger": "ofToggleFullscreen"                ,"contents": "ofToggleFullscreen()"},
-        
+
         ////////////////////////////
         // screenMode
         { "trigger": "OF_WINDOW \tscreenMode"     ,"contents": "OF_WINDOW"},
@@ -484,11 +484,11 @@
         { "trigger": "ofViewport"                                                    ,"contents": "ofViewport(${1:float x=0}, ${2:float y=0}, ${3:float width=0}, ${4:float height=0}, ${5:bool invertY=true})" },
         { "trigger": "ofViewport \t(ofRectangle)"                                    ,"contents": "ofViewport(${1:ofRectangle viewport})" },
         { "trigger": "ofbClearBg"                                                    ,"contents": "ofbClearBg()" },
-        
+
         ////////////////////////////////////
         // ofGradientModes
-        { "trigger": "OF_GRADIENT_CIRCULAR \tofGradientMode"                         ,"contents": "OF_GRADIENT_CIRCULAR"},
-        
+        { "trigger": "OF_GRADIENT_CIRCULAR \tofGradientMode" ,"contents": "OF_GRADIENT_CIRCULAR"},
+
         /////////////////////////////////////////////
         // ofImage
         { "trigger": "ofImage \tinstance"                        ,"contents": "ofImage ${1:myImage}"},
@@ -628,7 +628,7 @@
         { "trigger": "ofPath::simplify"                   ,"contents": "${1:ofPath}.simplify(${2:float tolerance=0.3})"},
         { "trigger": "ofPath::tessellate"                 ,"contents": "${1:ofPath}.tessellate()"},
         { "trigger": "ofPath::translate"                  ,"contents": "${1:ofPath}.translate(${2:const ofPoint &p})"},
-        
+
         ///////////////////////////
         // int polyMode
         { "trigger": "OF_POLY_WINDING_ODD \tpolyMode"         ,"contents": "OF_POLY_WINDING_ODD"},
@@ -636,7 +636,7 @@
         { "trigger": "OF_POLY_WINDING_POSITIVE \tpolyMode"    ,"contents": "OF_POLY_WINDING_POSITIVE"},
         { "trigger": "OF_POLY_WINDING_NEGATIVE \tpolyMode"    ,"contents": "OF_POLY_WINDING_NEGATIVE"},
         { "trigger": "OF_POLY_WINDING_ABS_GEQ_TWO \tpolyMode" ,"contents": "OF_POLY_WINDING_ABS_GEQ_TWO"},
-        
+
         ///////////////////////////
         // ofPolyline
         { "trigger:": "ofPolyline::addVertex \t(ofPoint)"          ,"contents": "${1:ofPolyline}.addVertex(${2:const ofPoint &p})"},
@@ -933,7 +933,7 @@
         { "trigger": "ofMesh::usingIndices"                         ,"contents": "${1:ofMesh}.usingIndices()"},
         { "trigger": "ofMesh::usingNormals"                         ,"contents": "${1:ofMesh}.usingNormals()"},
         { "trigger": "ofMesh::usingTextures"                        ,"contents": "${1:ofMesh}.usingTextures()"},
-        
+
         /////////////////////////////////
         // ofNode
         { "trigger": "ofNode::boom"                     ,"contents": "${1:ofNode}.boom(${2:float amount})"},
