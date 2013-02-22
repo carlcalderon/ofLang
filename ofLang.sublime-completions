@@ -193,12 +193,12 @@
 
         //////////////////////////////////////
         // ofPoint
-        { "trigger": "ofPoint"                                                      ,"contents": "ofPoint ${1:point}"},
-        { "trigger": "ofPoint::set \t(float, float, float)"                         ,"contents": "set(${1:float _x}, ${2:float _y}, ${3:float _z})"},
-        { "trigger": "ofPoint::v \tvariable"                ,"contents": "${1:ofPoint}.v"},
-        { "trigger": "ofPoint::x \tvariable"                ,"contents": "${1:ofPoint}.x"},
-        { "trigger": "ofPoint::y \tvariable"                ,"contents": "${1:ofPoint}.y"},
-        { "trigger": "ofPoint::z \tvariable"                ,"contents": "${1:ofPoint}.z"},
+        { "trigger": "ofPoint"      ,"contents": "ofPoint ${1:point}"},
+        { "trigger": "ofPoint::set" ,"contents": "set(${1:float _x}, ${2:float _y}, ${3:float _z})"},
+        { "trigger": "ofPoint::v"   ,"contents": "${1:ofPoint}.v"},
+        { "trigger": "ofPoint::x"   ,"contents": "${1:ofPoint}.x"},
+        { "trigger": "ofPoint::y"   ,"contents": "${1:ofPoint}.y"},
+        { "trigger": "ofPoint::z"   ,"contents": "${1:ofPoint}.z"},
 
         //////////////////////////////////////
         // ofPtr
