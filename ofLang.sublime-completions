@@ -15,7 +15,7 @@
 
     "completions":
     [
-        ///////////////////////////////////////////////////////////////////////////////////////////////////////////        
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
         /////////// Application ///////////////
         ///////////////////////////////////////
@@ -475,7 +475,7 @@
         { "trigger": "ofTranslate \t(ofPoint)"                                       ,"contents": "ofTranslate(${1:const ofPoint &p})" },
         { "trigger": "ofTriangle \t(xy)"                                             ,"contents": "ofTriangle(${1:float x1}, ${2:float y1}, ${3:float x2}, ${4:float y2}, ${5:float x3}, ${6:float y3})" },
         { "trigger": "ofTriangle \t(xyz)"                                            ,"contents": "ofTriangle(${1:float x1}, ${2:float y1}, ${3:float z1}, ${4:float x2}, ${5:float y2}, ${6:float z2}, ${7:float x3}, ${8:float y3}, ${9:float z3})" },
-        { "trigger": "ofTriangle \t(ofPoint, ofPoint, ofPoint)"                      ,"contents": "ofTriangle(${1:const ofPoint &p1}, ${2:const ofPoint &p2}, ${3:const ofPoint &p3})" },
+        { "trigger": "ofTriangle \t(ofPoint)"                                        ,"contents": "ofTriangle(${1:const ofPoint &p1}, ${2:const ofPoint &p2}, ${3:const ofPoint &p3})" },
         { "trigger": "ofVertex \t(xy)"                                               ,"contents": "ofVertex(${1:float x}, ${2:float y})" },
         { "trigger": "ofVertex \t(xyz)"                                              ,"contents": "ofVertex(${1:float x}, ${2:float y}, ${3:float z})" },
         { "trigger": "ofVertex \t(ofPoint)"                                          ,"contents": "ofVertex(${1:ofPoint &p})" },
@@ -773,9 +773,6 @@
         { "trigger": "ofTrueTypeFont::bLoadedOk"                                                    ,"contents": "${1:ofTrueTypeFont}.bLoadedOk"},
         { "trigger": "ofTrueTypeFont::nCharacters"                                                  ,"contents": "${1:ofTrueTypeFont}.nCharacters"},
 
-
-
-
         ////////////////////// 3D /////////////////////
         ///////////////////////////////////////////
         // ofCamera
@@ -973,7 +970,9 @@
         { "trigger": "ofNode::restoreTransformGL"                                    ,"contents": "${1:ofNode}.restoreTransformGL()"},
         { "trigger": "ofNode::roll\t(float)"                                         ,"contents": "${1:ofNode}.roll(${2:float degrees})"},
         { "trigger": "ofNode::rotate\t(const)"                                       ,"contents": "${1:ofNode}.rotate(${2:const ofQuaternion &q})"},
-        ///////////////////////////////
+
+        ///////////////////// OpenGL /////////////////////////
+        /////////////////////////////////////////////////////
         // ofFbo
         { "trigger": "ofFbo::allocate \t(int, int, int, int)"                                ,"contents": "${1:ofFbo}.allocate(${2:int width}, ${3:int height}, ${4:int internalformat=GL_RGBA}, ${5:int numSamples=0})"},
         { "trigger": "ofFbo::allocate \t(Settings)"                                          ,"contents": "${1:ofFbo}.allocate(${2:Settings settings=Settings()})"},
@@ -1011,9 +1010,8 @@
         { "trigger": "ofFbo::setUseTexture \t(bool)"                                         ,"contents": "${1:ofFbo}.setUseTexture(${2:bool bUseTex})"},
         { "trigger": "ofFbo::unbind"                                                         ,"contents": "${1:ofFbo}.unbind()"},
 
-        ///////////////////// OpenGL /////////////////////////
         //////////////////////////////////////////////////////
-        // ofGLRenderer 
+        // ofGLRenderer
         { "trigger": "ofGLRenderer::bClearBg"                                                                                   ,"contents": "${1:ofGLRenderer}.bClearBg()"},
         { "trigger": "ofGLRenderer::background \t(const ofColor)"                                                               ,"contents": "${1:ofGLRenderer}.background(${2:const ofColor &c})"},
         { "trigger": "ofGLRenderer::background \t(float)"                                                                       ,"contents": "${1:ofGLRenderer}.background(${2:float brightness})"},
@@ -1164,6 +1162,58 @@
         { "trigger": "GL_TRIANGLE_STRIP \tGLenum"                       ,"contents": "GL_TRIANGLE_STRIP"},
 
         ///////////////////////////
+        // ofShader
+        { "trigger" : "ofShader::begin"                               ,"contents": "${1:ofShader}.begin()"},
+        { "trigger" : "ofShader::end"                                 ,"contents": "${1:ofShader}.end()"},
+        { "trigger" : "ofShader::getAttributeLocation"                ,"contents": "${1:ofShader}.getAttributeLocation(${2:const char *name})"},
+        { "trigger" : "ofShader::getGeometryMaxOutputCount"           ,"contents": "${1:ofShader}.getGeometryMaxOutputCount()"},
+        { "trigger" : "ofShader::getProgram"                          ,"contents": "${1:ofShader}.getProgram()"},
+        { "trigger" : "ofShader::getShader"                           ,"contents": "${1:ofShader}.getShader(GLenum type)"},
+        { "trigger" : "ofShader::linkProgram"                         ,"contents": "${1:ofShader}.linkProgram()"},
+        { "trigger" : "ofShader::load \t(name)"                       ,"contents": "${1:ofShader}.load(${2:string shaderName})"},
+        { "trigger" : "ofShader::load"                                ,"contents": "${1:ofShader}.load(${2:string vertName}, ${3:string fragName}, ${4:string geomName=\"\"})"},
+        { "trigger" : "ofShader::printActiveAttributes"               ,"contents": "${1:ofShader}.printActiveAttributes()"},
+        { "trigger" : "ofShader::printActiveUniforms"                 ,"contents": "${1:ofShader}.printActiveUniforms()"},
+        { "trigger" : "ofShader::setAttribute1d"                      ,"contents": "${1:ofShader}.setAttribute1d(${2:GLint location}, ${3:double v1})"},
+        { "trigger" : "ofShader::setAttribute1f"                      ,"contents": "${1:ofShader}.setAttribute1f(${2:GLint location}, ${3:float v1})"},
+        { "trigger" : "ofShader::setAttribute1s"                      ,"contents": "${1:ofShader}.setAttribute1s(${2:GLint location}, ${3:short v1})"},
+        { "trigger" : "ofShader::setAttribute2d"                      ,"contents": "${1:ofShader}.setAttribute2d(${2:GLint location}, ${3:double v1}, ${4:double v2})"},
+        { "trigger" : "ofShader::setAttribute2f"                      ,"contents": "${1:ofShader}.setAttribute2f(${2:GLint location}, ${3:float v1}, ${4:float v2})"},
+        { "trigger" : "ofShader::setAttribute2s"                      ,"contents": "${1:ofShader}.setAttribute2s(${2:GLint location}, ${3:short v1}, ${4:short v2})"},
+        { "trigger" : "ofShader::setAttribute3d"                      ,"contents": "${1:ofShader}.setAttribute3d(${2:GLint location}, ${3:double v1}, ${4:double v2}, ${5:double v3})"},
+        { "trigger" : "ofShader::setAttribute3f"                      ,"contents": "${1:ofShader}.setAttribute3f(${2:GLint location}, ${3:float v1}, ${4:float v2}, ${5:float v3})"},
+        { "trigger" : "ofShader::setAttribute3s"                      ,"contents": "${1:ofShader}.setAttribute3s(${2:GLint location}, ${3:short v1}, ${4:short v2}, ${5:short v3})"},
+        { "trigger" : "ofShader::setAttribute4d"                      ,"contents": "${1:ofShader}.setAttribute4d(${2:GLint location}, ${3:double v1}, ${4:double v2}, ${5:double v3}, ${6:double v4})"},
+        { "trigger" : "ofShader::setAttribute4f"                      ,"contents": "${1:ofShader}.setAttribute4f(${2:GLint location}, ${3:float v1}, ${4:float v2}, ${5:float v3}, ${6:float v4})"},
+        { "trigger" : "ofShader::setAttribute4s"                      ,"contents": "${1:ofShader}.setAttribute4s(${2:GLint location}, ${3:short v1}, ${4:short v2}, ${5:short v3}, ${6:short v4})"},
+        { "trigger" : "ofShader::setGeometryInputType"                ,"contents": "${1:ofShader}.setGeometryInputType(${2:GLenum type})"},
+        { "trigger" : "ofShader::setGeometryOutputCount"              ,"contents": "${1:ofShader}.setGeometryOutputCount(${2:int count})"},
+        { "trigger" : "ofShader::setGeometryOutputType"               ,"contents": "${1:ofShader}.setGeometryOutputType(GLenum type)"},
+        { "trigger" : "ofShader::setUniform1f"                        ,"contents": "${1:ofShader}.setUniform1f(${2:const char *name}, ${3:float v1})"},
+        { "trigger" : "ofShader::setUniform1fv"                       ,"contents": "${1:ofShader}.setUniform1fv(${2:const char name}, ${3:float v}, ${4:int count=1})"},
+        { "trigger" : "ofShader::setUniform1i"                        ,"contents": "${1:ofShader}.setUniform1i(${2:const char *name}, ${3:int v1})"},
+        { "trigger" : "ofShader::setUniform1iv"                       ,"contents": "${1:ofShader}.setUniform1iv(${2:const char name}, ${3:int v}, ${4:int count=1})"},
+        { "trigger" : "ofShader::setUniform2f"                        ,"contents": "${1:ofShader}.setUniform2f(${2:const char *name}, ${3:float v1}, ${4:float v2})"},
+        { "trigger" : "ofShader::setUniform2fv"                       ,"contents": "${1:ofShader}.setUniform2fv(${2:const char name}, ${3:float v}, ${4:int count=1})"},
+        { "trigger" : "ofShader::setUniform2i"                        ,"contents": "${1:ofShader}.setUniform2i(${2:const char *name}, ${3:int v1}, ${4:int v2})"},
+        { "trigger" : "ofShader::setUniform2iv"                       ,"contents": "${1:ofShader}.setUniform2iv(${2:const char name}, ${3:int v}, ${4:int count=1})"},
+        { "trigger" : "ofShader::setUniform3f"                        ,"contents": "${1:ofShader}.setUniform3f(${2:const char *name}, ${3:float v1}, ${4:float v2}, ${5:float v3})"},
+        { "trigger" : "ofShader::setUniform3fv"                       ,"contents": "${1:ofShader}.setUniform3fv(${2:const char name}, ${3:float v}, ${4:int count=1})"},
+        { "trigger" : "ofShader::setUniform3i"                        ,"contents": "${1:ofShader}.setUniform3i(${2:const char *name}, ${3:int v1}, ${4:int v2}, ${5:int v3})"},
+        { "trigger" : "ofShader::setUniform3iv"                       ,"contents": "${1:ofShader}.setUniform3iv(${2:const char name}, ${3:int v}, ${4:int count=1})"},
+        { "trigger" : "ofShader::setUniform4f"                        ,"contents": "${1:ofShader}.setUniform4f(${2:const char *name}, ${3:float v1}, ${4:float v2}, ${5:float v3}, ${6:float v4})"},
+        { "trigger" : "ofShader::setUniform4fv"                       ,"contents": "${1:ofShader}.setUniform4fv(${2:const char name}, ${3:float v}, ${4:int count=1})"},
+        { "trigger" : "ofShader::setUniform4i"                        ,"contents": "${1:ofShader}.setUniform4i(${2:const char *name}, ${3:int v1}, ${4:int v2}, ${5:int v3}, ${6:int v4})"},
+        { "trigger" : "ofShader::setUniform4iv"                       ,"contents": "${1:ofShader}.setUniform4iv(${2:const char name}, ${3:int v}, ${4:int count=1})"},
+        { "trigger" : "ofShader::setUniformMatrix4f"                  ,"contents": "${1:ofShader}.setUniformMatrix4f(${2:const char *name}, ${3:const ofMatrix4x4 &m})"},
+        { "trigger" : "ofShader::setUniformTexture(ofBaseHasTexture)" ,"contents": "${1:ofShader}.setUniformTexture(${2:const char *name}, ${3:ofBaseHasTexture &img}, ${4:int textureLocation})"},
+        { "trigger" : "ofShader::setUniformTexture(ofTexture)"        ,"contents": "${1:ofShader}.setUniformTexture(${2:const char *name}, ${3:ofTexture &img}, ${4:int textureLocation})"},
+        { "trigger" : "ofShader::setUniformTexture(target)"           ,"contents": "${1:ofShader}.setUniformTexture(${2:const char *name}, ${3:int textureTarget}, ${4:GLint textureID}, ${5:int textureLocation})"},
+        { "trigger" : "ofShader::setupShaderFromFile"                 ,"contents": "${1:ofShader}.setupShaderFromFile(${2:GLenum type}, ${3:string filename})"},
+        { "trigger" : "ofShader::setupShaderFromSource"               ,"contents": "${1:ofShader}.setupShaderFromSource(${2:GLenum type}, ${3:string source})"},
+        { "trigger" : "ofShader::unload"                              ,"contents": "${1:ofShader}.unload()"},
+
+        ///////////////////////////
         // ofTexture
         { "trigger": "ofTexture \tinstance"                                                                                     ,"contents": "ofTexture ${1:myTexture}"},
         { "trigger": "ofTexture::allocate \t(int, int, int)"                                                                    ,"contents": "${1:ofTexture}.allocate(${2:int w}, {$3:int h}, ${4:int glInternalFormat})"},
@@ -1244,13 +1294,98 @@
         { "trigger": "ofTextureData::textureID"                                                         ,"contents": "${1:ofTextureData}.textureID"},
         { "trigger": "ofTextureData::textureTarget"                                                     ,"contents": "${1:ofTextureData}.textureTarget"},
         { "trigger": "ofTextureData::width"                                                             ,"contents": "${1:ofTextureData}.width"},
-        ///////////////////////////
+        /////////////////
         // ofVbo
-        // TODO 
-        
-        ///////////////////////////
+        { "trigger": "ofVbo::bind"                             ,"contents": "${1:ofVbo}.bind()"},
+        { "trigger": "ofVbo::clear"                            ,"contents": "${1:ofVbo}.clear()"},
+        { "trigger": "ofVbo::clearColors"                      ,"contents": "${1:ofVbo}.clearColors()"},
+        { "trigger": "ofVbo::clearIndices"                     ,"contents": "${1:ofVbo}.clearIndices()"},
+        { "trigger": "ofVbo::clearNormals"                     ,"contents": "${1:ofVbo}.clearNormals()"},
+        { "trigger": "ofVbo::clearTexCoords"                   ,"contents": "${1:ofVbo}.clearTexCoords()"},
+        { "trigger": "ofVbo::clearVertices"                    ,"contents": "${1:ofVbo}.clearVertices()"},
+        { "trigger": "ofVbo::disableColors"                    ,"contents": "${1:ofVbo}.disableColors()"},
+        { "trigger": "ofVbo::disableIndices"                   ,"contents": "${1:ofVbo}.disableIndices()"},
+        { "trigger": "ofVbo::disableNormals"                   ,"contents": "${1:ofVbo}.disableNormals()"},
+        { "trigger": "ofVbo::disableTexCoords"                 ,"contents": "${1:ofVbo}.disableTexCoords()"},
+        { "trigger": "ofVbo::draw"                             ,"contents": "${1:ofVbo}.draw(${2:int drawMode}, ${3:int first}, ${4:int total})"},
+        { "trigger": "ofVbo::drawElements"                     ,"contents": "${1:ofVbo}.drawElements(int drawMode, int amt)"},
+        { "trigger": "ofVbo::enableColors"                     ,"contents": "${1:ofVbo}.enableColors()"},
+        { "trigger": "ofVbo::enableIndices"                    ,"contents": "${1:ofVbo}.enableIndices()"},
+        { "trigger": "ofVbo::enableNormals"                    ,"contents": "${1:ofVbo}.enableNormals()"},
+        { "trigger": "ofVbo::enableTexCoords"                  ,"contents": "${1:ofVbo}.enableTexCoords()"},
+        { "trigger": "ofVbo::getColorId"                       ,"contents": "${1:ofVbo}.getColorId()"},
+        { "trigger": "ofVbo::getIndexId"                       ,"contents": "${1:ofVbo}.getIndexId()"},
+        { "trigger": "ofVbo::getIsAllocated"                   ,"contents": "${1:ofVbo}.getIsAllocated()"},
+        { "trigger": "ofVbo::getNormalId"                      ,"contents": "${1:ofVbo}.getNormalId()"},
+        { "trigger": "ofVbo::getTexCoordId"                    ,"contents": "${1:ofVbo}.getTexCoordId()"},
+        { "trigger": "ofVbo::getUsingColors"                   ,"contents": "${1:ofVbo}.getUsingColors()"},
+        { "trigger": "ofVbo::getUsingIndices"                  ,"contents": "${1:ofVbo}.getUsingIndices()"},
+        { "trigger": "ofVbo::getUsingNormals"                  ,"contents": "${1:ofVbo}.getUsingNormals()"},
+        { "trigger": "ofVbo::getUsingTexCoords"                ,"contents": "${1:ofVbo}.getUsingTexCoords()"},
+        { "trigger": "ofVbo::getUsingVerts"                    ,"contents": "${1:ofVbo}.getUsingVerts()"},
+        { "trigger": "ofVbo::getVertId"                        ,"contents": "${1:ofVbo}.getVertId()"},
+        { "trigger": "ofVbo::setColorData \t(ofFloatColor)"    ,"contents": "${1:ofVbo}.setColorData(${2:const ofFloatColor} ${3:*colors}, ${4:int total}, ${5:int usage})"},
+        { "trigger": "ofVbo::setColorData \t(color, stride)"   ,"contents": "${1:ofVbo}.setColorData(${2:const float *color0r},${3: int total}, ${4:int usage}, ${5:int stride=0})"},
+        { "trigger": "ofVbo::setIndexData"                     ,"contents": "${1:ofVbo}.setIndexData(${2:const ofIndexType} ${3:*indices}, ${4:int total}, ${5:int usage})"},
+        { "trigger": "ofVbo::setMesh"                          ,"contents": "${1:ofVbo}.setMesh(${2:const ofMesh &mesh}, ${3:int usage})"},
+        { "trigger": "ofVbo::setNormalData \t(ofVec3f)"        ,"contents": "${1:ofVbo}.setNormalData(${2:const ofVec3f *normals}, ${3:int total}, ${4:int usage})"},
+        { "trigger": "ofVbo::setNormalData \t(normal)"         ,"contents": "${1:ofVbo}.setNormalData(${2:const float *normal0x}, ${3:int total}, ${4:int usage}, ${5:int stride=0})"},
+        { "trigger": "ofVbo::setTexCoordData \t(ofVec2f)"      ,"contents": "${1:ofVbo}.setTexCoordData(${2:const ofVec2f *texCoords}, ${3:int total}, ${4:int usage})"},
+        { "trigger": "ofVbo::setTexCoordData \t(texCoord)"     ,"contents": "${1:ofVbo}.setTexCoordData(${2:const float *texCoord0x}, ${3:int total}, ${4:int usage}, ${5:int stride=0})"},
+        { "trigger": "ofVbo::setVertexData \t(ofVec3f)"        ,"contents": "${1:ofVbo}.setVertexData(${2:const ofVec3f *verts}, ${3:int total}, ${4:int usage})"},
+        { "trigger": "ofVbo::setVertexData \t(ofVec2f)"        ,"contents": "${1:ofVbo}.setVertexData(${2:const ofVec2f *verts}, ${3:int total}, ${4:int usage})"},
+        { "trigger": "ofVbo::setVertexData"                    ,"contents": "${1:ofVbo}.setVertexData(${2:const float *vert0x}, ${3:int numCoords}, ${4:int total}, ${5:int usage}, ${6:int stride=0})"},
+        { "trigger": "ofVbo::unbind"                           ,"contents": "${1:ofVbo}.unbind()"},
+        { "trigger": "ofVbo::updateColorData \t(ofFloatColor)" ,"contents": "${1:ofVbo}.updateColorData(${2:const ofFloatColor *colors}, ${3:int total})"},
+        { "trigger": "ofVbo::updateColorData"                  ,"contents": "${1:ofVbo}.updateColorData(${2:const float *color0r}, ${3:int total})"},
+        { "trigger": "ofVbo::updateIndexData)"                 ,"contents": "${1:ofVbo}.updateIndexData(${2:const ofIndexType *indices}, ${3:int total})"},
+        { "trigger": "ofVbo::updateMesh"                       ,"contents": "${1:ofVbo}.updateMesh(${2:const ofMesh &mesh})"},
+        { "trigger": "ofVbo::updateNormalData \t(ofVec3f)"     ,"contents": "${1:ofVbo}.updateNormalData(${2:const ofVec3f *normals}, ${3:int total})"},
+        { "trigger": "ofVbo::updateNormalData"                 ,"contents": "${1:ofVbo}.updateNormalData(${2:const float *normal0x}, ${3:int total})"},
+        { "trigger": "ofVbo::updateTexCoordData \t(ofVec2f)"   ,"contents": "${1:ofVbo}.updateTexCoordData(${2:const ofVec2f *texCoords}, ${3:int total})"},
+        { "trigger": "ofVbo::updateTexCoordData"               ,"contents": "${1:ofVbo}.updateTexCoordData(${2:const float *texCoord0x}, ${3:int total})"},
+        { "trigger": "ofVbo::updateVertexData \t(ofVec3f)"     ,"contents": "${1:ofVbo}.updateVertexData(${2:const ofVec3f *verts}, ${3:int total})"},
+        { "trigger": "ofVbo::updateVertexData \t(ofVec2f)"     ,"contents": "${1:ofVbo}.updateVertexData(${2:const ofVec2f *verts}, ${3:int total})"},
+        { "trigger": "ofVbo::updateVertexData"                 ,"contents": "${1:ofVbo}.updateVertexData(${2:const float *ver0x}, ${3:int total})"},
+
+        // colorUsag
+        { "trigger": "GL_STREAM_DRAW \tusage"  ,"contents": "GL_STREAM_DRAW"},
+        { "trigger": "GL_STREAM_READ \tusage"  ,"contents": "GL_STREAM_READ"},
+        { "trigger": "GL_STREAM_COPY \tusage"  ,"contents": "GL_STREAM_COPY"},
+        { "trigger": "GL_STATIC_DRAW \tusage"  ,"contents": "GL_STATIC_DRAW"},
+        { "trigger": "GL_STATIC_READ \tusage"  ,"contents": "GL_STATIC_READ"},
+        { "trigger": "GL_STATIC_COPY \tusage"  ,"contents": "GL_STATIC_COPY"},
+        { "trigger": "GL_DYNAMIC_DRAW \tusage" ,"contents": "GL_DYNAMIC_DRAW"},
+        { "trigger": "GL_DYNAMIC_READ \tusage" ,"contents": "GL_DYNAMIC_READ"},
+        { "trigger": "GL_DYNAMIC_COPY \tusage" ,"contents": "GL_DYNAMIC_COPY"},
+
+        // drawMode
+        { "trigger": "GL_POINTS \tdrawMode"         ,"contents": "GL_POINTS"},
+        { "trigger": "GL_LINE_STRIP \tdrawMode"     ,"contents": "GL_LINE_STRIP"},
+        { "trigger": "GL_LINE_LOOP \tdrawMode"      ,"contents": "GL_LINE_LOOP"},
+        { "trigger": "GL_LINES \tdrawMode"          ,"contents": "GL_LINES"},
+        { "trigger": "GL_TRIANGLE_STRIP \tdrawMode" ,"contents": "GL_TRIANGLE_STRIP"},
+        { "trigger": "GL_TRIANGLE_FAN \tdrawMode"   ,"contents": "GL_TRIANGLE_FAN"},
+        { "trigger": "GL_TRIANGLES \tdrawMode"      ,"contents": "GL_TRIANGLES"},
+        { "trigger": "GL_QUAD_STRIP \tdrawMode"     ,"contents": "GL_QUAD_STRIP"},
+        { "trigger": "GL_QUADS \tdrawMode"          ,"contents": "GL_QUADS"},
+        { "trigger": "GL_POLYGON \tdrawMode"        ,"contents": "GL_POLYGON"},
+
+        ////////////////
         // ofVboMesh
-        // TODO
+        { "trigger": "ofVboMesh::disableColors"   ,"contents": "ofVboMesh::disableColors()"},
+        { "trigger": "ofVboMesh::disableIndices"  ,"contents": "ofVboMesh::disableIndices()"},
+        { "trigger": "ofVboMesh::disableNormals"  ,"contents": "ofVboMesh::disableNormals()"},
+        { "trigger": "ofVboMesh::disableTextures" ,"contents": "ofVboMesh::disableTextures()"},
+        { "trigger": "ofVboMesh::enableColors"    ,"contents": "ofVboMesh::enableColors()"},
+        { "trigger": "ofVboMesh::enableIndices"   ,"contents": "ofVboMesh::enableIndices()"},
+        { "trigger": "ofVboMesh::enableNormals"   ,"contents": "ofVboMesh::enableNormals()"},
+        { "trigger": "ofVboMesh::enableTextures"  ,"contents": "ofVboMesh::enableTextures()"},
+        { "trigger": "ofVboMesh::setUsage"        ,"contents": "ofVboMesh::setUsage(${1:int usage})"},
+        { "trigger": "ofVboMesh::usingColors"     ,"contents": "ofVboMesh::usingColors()"},
+        { "trigger": "ofVboMesh::usingIndices"    ,"contents": "ofVboMesh::usingIndices()"},
+        { "trigger": "ofVboMesh::usingNormals"    ,"contents": "ofVboMesh::usingNormals()"},
+        { "trigger": "ofVboMesh::usingTextures"   ,"contents": "ofVboMesh::usingTextures()"},
 
 
         /////////////// VIDEO ////////////////////
