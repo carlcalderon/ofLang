@@ -333,7 +333,7 @@
         // ofEvent
         { "trigger": "ofEvent"       ,"contents": "ofEvent<${2:float}> ${1:onVolumeChange}"},
         { "trigger": "ofNotifyEvent" ,"contents": "ofNotifyEvent(${1:onVolumeChange}, ${2:10.0})"},
-        { "trigger": "ofAddListener" ,"contents": "ofAddListener(${1:mySoundObject.onVolumeChange},${2:this}, ${3:&testApp:onVolumeChange})"},
+        { "trigger": "ofAddListener" ,"contents": "ofAddListener(${1:mySoundObject.onVolumeChange}, ${2:this}, &${3:testApp}::${4:onVolumeChange})"},
         //////////////////////////////////
         // ofEvents functions
         { "trigger": "ofGetKeyPressed"     ,"contents": "ofGetKeyPressed(${1:int key=-1})"},
