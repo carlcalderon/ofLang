@@ -1785,7 +1785,7 @@
         { "trigger": "ofToInt \t(const string&)"                                          ,"contents": "ofToInt(${1:const string& intString})"},
         { "trigger": "ofToInt \t(const string)"                                           ,"contents": "ofToInt(${1:const string &intString})"},
         { "trigger": "ofToLower \t(const string)"                                         ,"contents": "ofToLower(${1:const string &src})"},
-        { "trigger": "ofToString \t(int)"                                                 ,"contents": "ofToString({int value})"},
+        { "trigger": "ofToString"                                                         ,"contents": "ofToString($1)"},
         { "trigger": "ofToString \t(const T)"                                             ,"contents": "ofToString(${1:const T &value})"},
         { "trigger": "ofToString \t(const T, int)"                                        ,"contents": "ofToString(${1:const T &value, int precision})"},
         { "trigger": "ofToString \t(const vector< T >)"                                   ,"contents": "ofToString(${1:const vector< T > &values})"},
